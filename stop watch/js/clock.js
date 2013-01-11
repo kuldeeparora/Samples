@@ -6,11 +6,21 @@ $(function(){
 	var stop = false;
 	var timer;
 
-    secs.bind('webkitAnimationEnd', function(){
+    hours.bind('webkitAnimationEnd', function(){
         this.style.webkitAnimationName = '';
-        console.log("webkitAnimationName end");
     });
-    secs.addClass('flipup');
+	hours.addClass('flipup');
+    
+	mins.bind('webkitAnimationEnd', function(){
+        this.style.webkitAnimationName = '';
+    });
+	mins.addClass('flipup');
+    
+	secs.bind('webkitAnimationEnd', function(){
+        this.style.webkitAnimationName = '';
+    });
+	secs.addClass('flipup');
+	
 
     function updateDisplay(element, count){
         element.addClass(function(){
@@ -36,21 +46,24 @@ $(function(){
 				updateDisplay(secs, sCount++);
 				if(mCount < 60){
 					updateDisplay(mins, mCount++);
+					mins.css('webkitAnimationName', 'flip1');
 				}
 				else{
 					mCount = 0;
 					updateDisplay(mins, mCount++);
 					updateDisplay(hours, hCount++);	
+					mins.css('webkitAnimationName', 'flip1');
+					hours.css('webkitAnimationName', 'flip1');
 				}
 			}
 		}, 1000);
 	}
 
 	$('.startButton').toggle(function(){
-		$('.startLabel>p').html('Stop');
+		$('.startLabel').html('Stop');
 		updateClock();
 	}, function(){
-		$('.startLabel>p').html('Start');
+		$('.startLabel').html('Start');
 		clearInterval(timer);
 	});
 
