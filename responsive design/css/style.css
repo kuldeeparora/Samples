@@ -1,0 +1,378 @@
+@charset "UTF-8";
+
+/* RESET */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, figure {
+    margin: 0;
+    padding: 0;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+ul {
+    list-style: none;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}   
+img{
+	border: none;
+}
+
+/* GENERALS */
+
+html{
+	font-size: 125%; /* Igualamos 1em a 20px */
+}
+
+body{
+	overflow-x: hidden;
+	overflow-y: scroll;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 0.8em; /* Igualo 1em a 10px */
+	color: #000;
+	background-color: #42413C;	
+}
+
+a{
+	color:#42413C;
+	text-decoration:none;
+	-webkit-transition: color .25s ease-out;
+	-moz-transition: color .25s ease-out;
+	-o-transition: color .25s ease-out;
+	transition: color .25s ease-out;
+}
+
+a:visited {
+    color: #6E6C64;
+    text-decoration:underline;
+}
+
+
+a:hover, a:active, a:focus{
+	text-decoration:none;
+}
+
+
+h1, h2, h3, h4, h5, h6, p {
+margin-top: 0;
+padding-right: 15px;
+padding-left: 15px;
+line-height: 1.4;
+}
+
+h1{
+	font-size:2.5em;
+}
+
+h3{
+	font-size:1.2em;
+}
+h4{
+	margin-bottom:20px;
+}
+h5{
+	font-size:1em;
+}
+
+input[type=submit]{
+	-webkit-appearance: none;
+}
+
+.hide{
+	display:none;
+}
+
+hr{
+	clear:both;
+	margin-bottom:25px;
+	border:none;
+	border-top: 1px solid #B6B8B7;
+	border-bottom: 1px solid #fff;
+}
+
+
+/* SIDEBAR */
+
+nav.menuLeft {
+    float: left;
+    width: 180px;
+    background-color: #3cb6ce;
+    padding-bottom: 10px;
+}
+
+mark {
+    background: none;
+    display: block;
+    padding: 10px 0 10px 15px;
+}
+
+mark.a {
+    color: #000;
+}
+
+/* CONTENT */
+.wrapper{
+	width: 960px;
+    background-color: #FFF;
+    margin: 0 auto;
+	-webkit-transition: width 0.3s linear;
+	-moz-transition: width 0.3s linear;
+	transition: width 0.3s linear;
+}
+
+section{
+	position:relative;
+}
+
+.content {
+    padding: 10px 0;
+    width: 780px;
+    float: left;
+}
+
+article.content .welcome h2 {
+	color:#3cb6ce;
+	font-size: 1.6em;
+	font-weight: normal;
+	margin: 0;
+}
+
+article.content h2, h3, h4 {
+    margin: 16px 0 20px;
+}
+
+figure img {
+    margin-left:15px;
+}
+
+article.content a, footer a {
+    text-decoration : underline;
+}
+
+/* HEADER */
+
+header {
+	position: relative;
+	background-color: #3cb6ce;
+	min-height: 80px;
+}
+
+header h1 {
+	padding:0;
+}
+
+header h1 a {
+    display: block;
+    width: 180px;
+    height: 90px;
+    text-indent: -666em;
+    background: url(../images/logo.gif) no-repeat;
+    overflow: hidden;
+}
+
+/* NAV */
+
+.menu-icon {
+    display: none;
+    position: absolute;
+    top: 35px;
+    right: 10px;
+    width: 34px;
+    height: 24px;
+    background: url(../images/bg-sprite-icons.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    display:none;
+}
+
+section nav ul {
+    border-top: 1px solid #666;
+    margin-bottom: 5px;
+}
+
+section nav ul li {
+    border-bottom: 1px solid #666;
+    line-height: 1.4;
+}
+
+section nav ul li a, section nav ul li a:visited {
+    padding: 5px 5px 5px 15px;
+    display: block;
+    width: 160px;
+    text-decoration: none;
+    background-color: #C6D580;
+}
+
+section nav ul a:hover, section nav ul a:active, section nav ul a:focus {
+    background-color: #3cb6ce;
+    color: #FFF;
+}
+
+.subLeftNav{
+    border-bottom:1px #000 solid;
+    float:left;
+    border-top:0;
+}
+
+.subLeftNav li {
+    padding:0;
+    margin:0;
+    float:left;
+    font-weight:normal;
+    border: 0;
+}
+
+.subLeftNav li a {
+    color : #fff;
+}
+
+.subLeftNav ul li a:visited {
+    color : #fff;
+}
+
+
+/* FOOTER */
+
+footer{
+	clear:both;
+	overflow: hidden;
+	margin: 0 auto;
+    padding: 10px 0;
+    background-color: #CCC49F;
+    text-align: center;
+}
+
+footer nav {
+	margin: 0 auto;
+	width: 330px;
+}
+
+footer p{
+	clear: both;
+	padding:5px;
+}
+
+footer nav ul li{
+    float: left;
+    border-right: 1px solid #6E6C64;
+	padding: 0 5px;
+}
+
+footer nav ul li:last-child{
+    border-right: 0;
+}
+
+/* For Mobile */
+@media screen and (max-width:479px) {
+
+    nav.menuLeft ul li {
+        border-bottom: 0;
+    }
+
+    nav.menuLeft ul li a {
+        background: none;
+    }
+
+    nav.menuLeft ul {
+        border: 1px solid #6E6C64;
+        border-radius:6px;
+        width: 90%;
+        margin:0 auto;
+        text-align: left;
+	}
+
+    .subLeftNav{
+        border:0 !important;
+    }
+
+    .subLeftNav li {
+        padding:0;
+        margin:0;
+        float:left;
+        font-weight:normal;
+        border: 0;
+        padding-left:5px;
+    }
+
+    .subLeftNav li a {
+        color : #6E6C64;
+    }
+
+    .subLeftNav ul li a:visited {
+        color : #6E6C64;
+    }
+
+	.menu-icon {
+        display: block;
+    }
+
+    .menu-icon.off {
+        background-position: -97px 0;
+    }
+
+    .menuLeft.off ul li {
+        display: none;
+    }
+    .menuLeft.off ul li:first-child {
+        display: block;
+    }
+
+	nav.menuLeft {
+	    width: 100% !important;
+	    text-align: center;
+	}
+
+	mark, mark a{
+	    color: #6E6C64;
+	}
+	
+  	/* GENERALS */
+
+	.wrapper, .content {
+		width: 90%;
+		margin:0 5%;
+	}
+
+	header h1 {
+		top: 58px;
+		width: 220px;
+		height: 43px;
+	}
+
+	header h1 a {
+		-webkit-background-size: contain;
+		-moz-background-size: contain;
+		-o-background-size: contain;
+		background-size: contain;
+	}
+
+}
+
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+	only screen and (-moz-min-device-pixel-ratio: 1.5),
+	only screen and (-o-min-device-pixel-ratio: 3/2),
+	only screen and (min-device-pixel-ratio: 1.5) {
+
+		header h1 a  {
+			background-image: url(../images/logo@2x.gif);
+			-moz-background-size: contain;
+			-ie-background-size:contain;
+			-o-background-size:contain;
+			-webkit-background-size:contain;
+			background-size:contain;
+		}
+
+}
