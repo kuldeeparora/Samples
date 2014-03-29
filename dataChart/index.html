@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<title>Data Chart</title>
+	<link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+<ul id="form">
+	<li>Date <span><input type="text" placeholder="Date" id="date"></span></li>
+	<li>URL <span><input type="text" placeholder="URL" id="url"></span></li>
+	<li>Load Time <span><input type="text" placeholder="Load Time" id="loadTime"></span></li>
+	<li><input type="button" value="Save" id="saveData"></li>
+	<li><input type="button" value="Update" id="updateData" class="hide"></li>
+</ul>
+
+<table id="dataChart">
+	<thead>
+	<tr>
+		<td>Date</td>
+		<td>URL</td>
+		<td>Load Time</td>
+		<td>Modify</td>
+	</tr>
+	</thead>
+	<tbody></tbody>
+</table>
+
+
+</body>
+
+<script src='js/libs/jquery.min.js'></script>
+<script src='js/application/app.js'></script>
+</html>
