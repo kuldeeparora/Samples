@@ -1,0 +1,13 @@
+
+body {
+    color: #999999;
+    background-color: #eeeeee;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
