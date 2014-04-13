@@ -1,9 +1,19 @@
 'use strict';
 
 angular
-  .module('tvGuideApp', [
+  .module('yApp', [
     'ngCookies',
     'ngResource',
     'ngSanitize',
     'ngRoute'
-  ]);
+  ])
+  .config(function ($routeProvider) {
+    $routeProvider
+      .when('/', {
+        templateUrl: 'views/main.html',
+        controller: 'MainCtrl'
+      })
+      .otherwise({
+        redirectTo: '/'
+      });
+  });

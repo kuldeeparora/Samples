@@ -1,7 +1,11 @@
+TV Guide/node_modules
+TV Guide/dist
+TV Guide/.tmp
+TV Guide/.sass-cache
+TV Guide/app/bower_components
+node_modules
+/node_modules
 dist
 .tmp
 .sass-cache
-dataChart
-responsive design
-stop watch
-search
+app/bower_components

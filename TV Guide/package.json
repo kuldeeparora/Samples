@@ -1,7 +1,9 @@
 {
   "name": "tvguide",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "generator-jasmine": "^0.1.1"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-autoprefixer": "~0.4.0",
@@ -29,6 +31,7 @@
     "time-grunt": "~0.2.1",
     "karma-ng-html2js-preprocessor": "~0.1.0",
     "karma-ng-scenario": "~0.1.0",
+    "karma-jasmine": "~0.1.5",
     "grunt-karma": "~0.8.2"
   },
   "engines": {
