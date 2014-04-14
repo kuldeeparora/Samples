@@ -2,7 +2,7 @@
     'use strict';
 //    console.log(Demo.TvGuide.app);
     Demo.TvGuide.app.controller('DaytimeCtrl', function ($scope) {
-        var currentDate = new Date();
+        $scope.currentDate = new Date();
         var weekday = new Array(7);
             weekday[0] = "Sun";
             weekday[1] = "Mon";
@@ -13,18 +13,37 @@
             weekday[6] = "Sat";
         var weekdayLength = weekday.length;
 
-        $scope.days = [];
+        $scope.updateDates = function(){
+            $scope.days = [];
+            for (var i = 0; i < weekdayLength; i++ ){
+                var date=$scope.currentDate;
+                var today=new Date();
+                if(date.getDate()==today.getDate() && date.getYear()==today.getYear() && date.getMonth()==today.getMonth()){
+                    $scope.days.push({day: "Today", date: ""});
+                }else{
+                    var dayOfMonth = weekday[$scope.currentDate.getDay()];
+                    var dateOfMonth = $scope.currentDate.getDate();
+                    var digitSuffix =["th","st","nd","rd"];
+                    var dateMod = dateOfMonth%100;
+                    var suffix = digitSuffix[(dateMod-20)%10]||digitSuffix[dateMod]||digitSuffix[0];
+                    $scope.days.push({day: dayOfMonth, date: dateOfMonth+suffix});
+                }
 
-        $scope.days.push({day: "Today"});
-        currentDate.setDate(currentDate.getDate()+1)
-        for (var i = 1; i < weekdayLength; i++ ){
-            var day = weekday[currentDate.getDay()];
-            var date = currentDate.getDate()+"TH";
-            $scope.days.push({day: day, date: date});
-            currentDate.setDate(currentDate.getDate()+1)
+                $scope.currentDate.setDate($scope.currentDate.getDate()+1);
+            }
+        };
+
+        $scope.prevDays = function(){
+            $scope.currentDate.setDate($scope.currentDate.getDate() - 14);
+            $scope.updateDates();
         }
 
+        $scope.nextDays = function(){
+            $scope.currentDate.setDate($scope.currentDate.getDate() + 7);
+            $scope.updateDates();
+        }
 
+        $scope.updateDates();
     });
 
 }());

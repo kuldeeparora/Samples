@@ -1,15 +1,15 @@
 <div class="navbar-collapse">
 
-	<div class="prev-days"><a href=""> Prev 7 Days</a></div>
+	<div class="prev-days"><a href="" ng-click="prevDays()" ng-animate="">Prev 7 Days</a></div>
 	<ul id="dayNav" class="nav navbar-nav" ng-repeat="item in days">
 		<li>
 			<a href="">
 				<span class="day">{{ item.day }}</span><br>
-				<span class="date">{{ item.date }}</span>
+				<span class="date" ng-bind="item.date | uppercase"></span>
 			</a>
 		</li>
 	</ul>
-	<div class="next-days"><a href=""> Next 7 Days</a></div>
+	<div class="next-days"><a href="" ng-click="nextDays()"> Next 7 Days</a></div>
 
 	<ul id="timeNav" class="nav navbar-nav">
 		<li class="morning"><a href=""> Morning</a></li>
