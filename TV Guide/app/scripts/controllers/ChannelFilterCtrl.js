@@ -3,10 +3,11 @@
     Demo.TvGuide.app.controller('ChannelFilterCtrl', function ($scope, ChannelDropdown) {
         ChannelDropdown.getChannelDropdown().then(
             function(dropdownValues){
-                $scope.dropdownValues = dropdownValues;
-                console.log($scope.dropdownValues);
+                $scope.categories = dropdownValues.categories;
+                $scope.packages = dropdownValues.packages;
+                $scope.cities = dropdownValues.cities;
             }
-        )
+        );
     });
 }());
 

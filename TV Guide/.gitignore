@@ -1,3 +1,4 @@
+.gitignore
 TV Guide/node_modules
 TV Guide/dist
 TV Guide/.tmp
