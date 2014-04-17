@@ -5,4 +5,5 @@ dataChart
 responsive design
 stop watch
 search
-node_modules
+node_modules/*
+TV Guide/node_modules/*
