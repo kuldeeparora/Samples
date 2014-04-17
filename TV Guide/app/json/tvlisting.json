@@ -1,0 +1,44 @@
+{
+    "categories": [
+        "All Channels",
+        "My Channels",
+        "Favourite Channels",
+        "HD Channels",
+        "Streaming Channels",
+        "Entertainment",
+        "Factual",
+        "International",
+        "Kids",
+        "Lifestyle",
+        "Movies",
+        "Music",
+        "News",
+        "Shopping",
+        "Sport"
+    ],
+    "packages": [
+        "TV M",
+        "TV M+",
+        "TV L",
+        "TV XL"
+    ],
+    "cities": [
+        "Cambridge",
+        "East Midlands",
+        "East of England",
+        "East Yorkshire/Lincolnshire",
+        "London",
+        "North East",
+        "North West",
+        "Northern Ireland",
+        "Oxford",
+        "Scotland",
+        "South East",
+        "South England",
+        "South West",
+        "Wales",
+        "West England",
+        "West Midlands",
+        "Yorkshire &amp; North Midlands"
+    ]
+}
