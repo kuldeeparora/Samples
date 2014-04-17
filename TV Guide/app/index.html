@@ -19,23 +19,21 @@
   </head>
   <body ng-app="tvGuideApp">
 
-    <!-- Add your site or application content here -->
-    <!--<div class="container" ng-view=""></div>-->
 
-	<div ng-controller="MainCtrl">
-		this is a main ctrl
-		<div ng-controller="DayTimeCtrl" ng-include="views/daytime-nav.html">
-			<div ng-view=""></div>
-		</div>
-		<!--<div ng-controller="ChannelFilterCtrl" ng-include="views/channel-filter.html">-->
-			<!--<div ng-view=""></div>-->
-		<!--</div>-->
-		<!--<div ng-controller="ChannelViewCtrl" ng-include="views/channel-view.html">-->
-			<!--<div ng-view=""></div>-->
-		<!--</div>-->
-	</div>
-
-
+  <!-- Add your site or application content here -->
+  <div class="container">
+	  <div class="row" ng-controller="MainCtrl">
+		  <div ng-controller="DaytimeCtrl">
+			  <div ng-include src="'views/daytime-nav.html'">njn</div>
+		  </div>
+		  <div ng-controller="ChannelFilterCtrl">
+			  <div ng-include src="'views/channel-filter.html'">njn</div>
+		  </div>
+		  <div ng-controller="ChannelViewCtrl">
+			  <div ng-include src="'views/channel-view.html'">njn</div>
+		  </div>
+	  </div>
+  </div>
 
 
 

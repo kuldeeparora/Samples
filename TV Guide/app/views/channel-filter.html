@@ -1,1 +1,11 @@
-this is filters
+<select ng-model="category" ng-options="category as category for category in categories">
+	<option value="">-- choose category --</option>
+</select>
+
+<select ng-model="package" ng-options="package as package for package in packages">
+	<option value="">-- choose package --</option>
+</select>
+
+<select ng-model="city" ng-options="city as city for city in cities">
+	<option value="">-- choose city --</option>
+</select>

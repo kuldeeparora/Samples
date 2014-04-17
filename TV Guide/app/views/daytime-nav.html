@@ -1,21 +1,21 @@
-<div>
-	<ul id="dayNav">
-		<li class="prev-days">Prev 7 Days</li>
-		<li class="day-one">Day 1</li>
-		<li class="day-two">Day 2</li>
-		<li class="day-three">Day 3</li>
-		<li class="day-four">Day 4</li>
-		<li class="day-five">Day 5</li>
-		<li class="day-six">Day 6</li>
-		<li class="day-seven">Day 7</li>
-		<li class="next-days">Next 7 Days</li>
-	</ul>
+<div class="navbar-collapse">
 
-	<ul id="timeNav">
-		<li class="morning">Morning</li>
-		<li class="afternoon">Afternoon</li>
-		<li class="evening">Evening</li>
-		<li class="night">Night</li>
-		<li class="onnow">ON NOW</li>
+	<div class="prev-days"><a href="" ng-click="prevDays()" ng-animate="">Prev 7 Days</a></div>
+	<ul id="dayNav" class="nav navbar-nav" ng-repeat="item in days">
+		<li>
+			<a href="">
+				<span class="day">{{ item.day }}</span><br>
+				<span class="date" ng-bind="item.date | uppercase"></span>
+			</a>
+		</li>
+	</ul>
+	<div class="next-days"><a href="" ng-click="nextDays()"> Next 7 Days</a></div>
+
+	<ul id="timeNav" class="nav navbar-nav">
+		<li class="morning"><a href=""> Morning</a></li>
+		<li class="afternoon"><a href=""> Afternoon</a></li>
+		<li class="evening"><a href=""> Evening</a></li>
+		<li class="night"><a href=""> Night</a></li>
+		<li class="onnow"><a href=""> ON NOW</a></li>
 	</ul>
 </div>
