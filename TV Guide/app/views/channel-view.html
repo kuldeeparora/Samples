@@ -1,1 +1,28 @@
-this is channel view
+<div id="tvGuidePanel">
+	<div class="epg">
+		<div id="nowLine"></div>
+		<ul id="epgShows" ng-repeat="channel in channels">
+			<li>
+				<ul>
+					<li class="channel-number">
+						<p ng-bind="channel.channelInfo.number"></p>
+					</li>
+					<li class="epg-logo">
+						<div ng-bind="channel.channelInfo.slug">logo</div>
+					</li>
+					<li id="epgShowsList" ng-repeat="epgList in channel.channelInfo.transmissions">
+						<ul>
+							<li>
+								<a title="title of channel">
+									<span ng-bind="epgList.title"> Show name </span>
+									<span>{{epgList.start  | date:'HH:mm'}} - {{epgList.end | date:'HH:mm'}}</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+	</div>
+</div>

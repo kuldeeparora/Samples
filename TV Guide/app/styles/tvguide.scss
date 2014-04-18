@@ -1,3 +1,41 @@
-#dayTime {
-
+#tvGuidePanel {
+  ul, li {
+	margin: 0;
+	padding: 0;
+  }
+  #epgShows {
+	> li {
+	  width: 100%;
+	}
+	li {
+	  display: inline;
+	  background: none repeat scroll 0% 0% #E9E9E9;
+	  border-bottom: 1px solid #999;
+	  float: left;
+	  height: 60px;
+	  margin: 0px;
+	  overflow: hidden;
+	}
+	li {
+	  p {
+		color: #CCC;
+		float: left;
+		height: 59px;
+		margin: 0px 8px 0px 0px;
+		width: 34px;
+		background: none repeat scroll 0% 0% #000;
+		padding: 6px;
+	  }
+	  #epgShowsList {
+		ul {
+		  z-index: 5;
+		  margin-left: 150px;
+		  color: #000;
+		  li {
+			border-top: 1px solid #F9F9F9;
+		  }
+		}
+	  }
+	}
+  }
 }
