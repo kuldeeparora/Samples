@@ -1,6 +1,6 @@
 (function () {
     'use strict';
-    Demo.TvGuide.app.controller('DaytimeCtrl', function ($scope, EpgListing) {
+    Demo.TvGuide.app.controller('DaytimeCtrl', function ($scope, EpgListing, $rootScope) {
         $scope.date = new Date();
         var weekday = new Array(7);
         weekday[0] = 'Sun';
@@ -59,12 +59,8 @@
             }
         };
 
-        $scope.changeDate = function(){
-            EpgListing.getEpgListing('/json/epglisting_prev1.json').then(
-                function(epglisting){
-                    console.log('test');
-                }
-            );
+        $scope.changeDate = function(selectedDate){
+            $rootScope.$broadcast('updateEpgListing',{selectedDate : selectedDate});
         };
 
         $scope.updateDates();

@@ -3,7 +3,7 @@
 	<div class="prev-days"><a href="" ng-click="prevDays()" ng-animate="">Prev 7 Days</a></div>
 	<ul id="dayNav" class="nav navbar-nav" ng-repeat="item in days">
 		<li>
-			<a href="" ng-click="changeDate()">
+			<a href="" ng-click="changeDate(item.date)">
 				<span class="day">{{ item.day }}</span><br>
 				<span class="date" ng-bind="item.date | uppercase"></span>
 			</a>
