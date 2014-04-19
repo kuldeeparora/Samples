@@ -27,10 +27,8 @@
 		<div ng-controller="DaytimeCtrl">
 			<div ng-include src="'views/daytime-nav.html'"></div>
 		</div>
-		<div ng-controller="ChannelFilterCtrl">
+		<div ng-controller="ChannelCtrl">
 			<div ng-include src="'views/channel-filter.html'"></div>
-		</div>
-		<div ng-controller="ChannelViewCtrl">
 			<div ng-include src="'views/channel-view.html'"></div>
 		</div>
 	</div>
@@ -56,12 +54,12 @@
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <!--<script src="scripts/common.js"></script>-->
 <script src="scripts/boot.js"></script>
-<!--<script src="scripts/app.js"></script>-->
 <script src="scripts/controllers/MainCtrl.js"></script>
 <script src="scripts/controllers/DaytimeCtrl.js"></script>
-<script src="scripts/controllers/ChannelFilterCtrl.js"></script>
+<!--<script src="scripts/controllers/ChannelFilterCtrl.js"></script>-->
 <script src="scripts/services/ChannelServices.js"></script>
-<script src="scripts/controllers/ChannelViewCtrl.js"></script>
+<script src="scripts/controllers/ChannelCtrl.js"></script>
+<script src="scripts/app.js"></script>
 <!-- endbuild -->
 </body>
 </html>

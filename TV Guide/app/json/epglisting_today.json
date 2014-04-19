@@ -15733,6 +15733,9 @@
         "number": 513,
         "slug": "sky-sports-3",
         "url": "\/channels\/live\/sky-sports-3\/",
+        "package": "SKY_SPORTS",
+        "hd": false,
+        "live": true,
         "transmissions": [
             {
                 "title": "Watersports World",

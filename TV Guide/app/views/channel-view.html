@@ -2,7 +2,7 @@
 	<div class="epg">
 		<div id="nowLine"></div>
 		<ul id="epgShows" ng-repeat="channel in channels">
-			<li>
+			<li ng-show="category === channel.channelInfo.theme && package === channel.channelInfo.package">
 				<ul>
 					<li class="channel-number">
 						<p ng-bind="channel.channelInfo.number"></p>
@@ -23,6 +23,5 @@
 				</ul>
 			</li>
 		</ul>
-
 	</div>
 </div>

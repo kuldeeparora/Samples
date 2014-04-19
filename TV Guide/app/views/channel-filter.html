@@ -1,9 +1,10 @@
-<select ng-model="category" ng-options="category as category for category in categories">
-	<option value="">-- choose category --</option>
+<!--test-->
+<select ng-model="$parent.category" ng-options="theme as theme for theme in themes">
+	<!--<option value="">-- choose category --</option>-->
 </select>
 
-<select ng-model="package" ng-options="package as package for package in packages">
-	<option value="">-- choose package --</option>
+<select ng-model="$parent.package" ng-options="package as package for package in packages">
+	<!--<option value="">-- choose package --</option>-->
 </select>
 
 <select ng-model="city" ng-options="city as city for city in cities">
