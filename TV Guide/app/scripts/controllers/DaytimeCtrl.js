@@ -15,19 +15,18 @@
         $scope.updateDates = function () {
             $scope.days = [];
             for (var i = 0; i < weekdayLength; i++) {
-                var date = $scope.date;
-                var today = new Date();
-                if (date.getDate() === today.getDate() && date.getYear() === today.getYear() && date.getMonth() === today.getMonth()) {
-                    $scope.days.push({day: 'Today', date: ''});
-                } else {
-                    var dayOfMonth = weekday[$scope.date.getDay()];
-                    var dateOfMonth = $scope.date.getDate();
-                    var digitSuffix = ['th', 'st', 'nd', 'rd'];
-                    var dateMod = dateOfMonth % 100;
-                    var suffix = digitSuffix[(dateMod - 20) % 10] || digitSuffix[dateMod] || digitSuffix[0];
-                    $scope.days.push({day: dayOfMonth, date: dateOfMonth + suffix});
-                }
-
+//                var date = $scope.date;
+//                var today = new Date();
+//                if (date.getDate() === today.getDate() && date.getYear() === today.getYear() && date.getMonth() === today.getMonth()) {
+//                    $scope.days.push({day: 'Today', date: ''});
+//                } else {
+                var dayOfMonth = weekday[$scope.date.getDay()];
+                var dateOfMonth = $scope.date.getDate();
+                var digitSuffix = ['th', 'st', 'nd', 'rd'];
+                var dateMod = dateOfMonth % 100;
+                var suffix = digitSuffix[(dateMod - 20) % 10] || digitSuffix[dateMod] || digitSuffix[0];
+                $scope.days.push({day: dayOfMonth, date: dateOfMonth, suffix: suffix});
+//                }
                 $scope.date.setDate($scope.date.getDate() + 1);
             }
         };
@@ -38,7 +37,7 @@
             scopeDate.setDate(scopeDate.getDate()-7);
             var scopeTime = scopeDate.getTime();
             if(todayTime > scopeTime){
-                console.log('dont do anything');
+                return null;
             } else {
                 $scope.date.setDate($scope.date.getDate() - 14);
                 $scope.updateDates();
@@ -55,7 +54,7 @@
                 $scope.updateDates();
                 $scope.nextDate = $scope.date;
             } else {
-                console.log('dont do anything');
+                return null;
             }
         };
 

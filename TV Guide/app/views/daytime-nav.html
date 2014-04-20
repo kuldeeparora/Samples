@@ -4,8 +4,8 @@
 	<ul id="dayNav" class="nav navbar-nav" ng-repeat="item in days">
 		<li>
 			<a href="" ng-click="changeDate(item.date)">
-				<span class="day">{{ item.day }}</span><br>
-				<span class="date" ng-bind="item.date | uppercase"></span>
+				<span class="day" ng-bind="item.day"></span><br>
+				<span class="date">{{ item.date }}{{ item.suffix | uppercase }}</span>
 			</a>
 		</li>
 	</ul>

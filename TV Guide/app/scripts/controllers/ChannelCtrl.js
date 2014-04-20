@@ -1,14 +1,14 @@
 (function () {
     'use strict';
     Demo.TvGuide.app.controller('ChannelCtrl', function ($scope, EpgListing) {
-        EpgListing.getEpgListing('/json/20.json').then(function (epglisting) {
+        EpgListing.getEpgListing('/json/21.json').then(function (epglisting) {
             $scope.updateEpg(epglisting);
         });
 
         $scope.updateEpg = function (epglisting) {
             $scope.channels = [];
-            $scope.packages = [];
-            $scope.themes = [];
+            $scope.packages = ['All Packages'];
+            $scope.themes = ['All Channels'];
             for (var key in epglisting) {
                 $scope.channels.push({channelName: key, channelInfo: epglisting[key]});
                 if ($scope.packages.indexOf(epglisting[key].package) === -1) {
@@ -23,16 +23,30 @@
             }
         };
 
-        $scope.setDateEpg = function(){
+        $scope.checkFilter = function (channel) {
+            return (($scope.category === channel.channelInfo.theme && $scope.package === channel.channelInfo.package) || ($scope.category === 'All Channels' && $scope.package === 'All Packages'));
+        };
+
+        $scope.findMargin = function(){
+            parseInt($('.epg-shows-list').css('margin-left'));
+            console.log(parseInt($('.epg-shows-list').css('margin-left')));
+        };
+
+        $scope.prevEpisode = function(){
+            $scope.findMargin();
+//            console.log($scope.findMargin());
+            $('.epg-shows-list').css('margin-left', '100px');
+        };
+
+        $scope.nextEpisode = function(){
+            $('.epg-shows-list').css('margin-left', '-100px');
+            console.log('Next Episode');
         };
 
         $scope.$on('updateEpgListing', function (event, requestInfo) {
-//            switch(requestInfo.selectedDate){
-//
-//            }
-            EpgListing.getEpgListing('/json/21.json').then(function (epglisting) {
+            var selectedDate = requestInfo.selectedDate;
+            EpgListing.getEpgListing('/json/' + selectedDate + '.json').then(function (epglisting) {
                 $scope.updateEpg(epglisting);
-//                requestInfo.selectedDate;
             });
         });
 

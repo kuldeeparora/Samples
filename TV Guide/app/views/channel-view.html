@@ -1,27 +1,23 @@
 <div id="tvGuidePanel">
-	<div class="epg">
-		<div id="nowLine"></div>
-		<ul id="epgShows" ng-repeat="channel in channels">
-			<li ng-show="category === channel.channelInfo.theme && package === channel.channelInfo.package">
-				<ul>
-					<li class="channel-number">
-						<p ng-bind="channel.channelInfo.number"></p>
-					</li>
-					<li class="epg-logo">
-						<div ng-bind="channel.channelInfo.slug">logo</div>
-					</li>
-					<li id="epgShowsList" ng-repeat="epgList in channel.channelInfo.transmissions">
-						<ul>
-							<li>
-								<a title="title of channel">
-									<span ng-bind="epgList.title"> Show name </span>
-									<span>{{epgList.start  | date:'HH:mm'}} - {{epgList.end | date:'HH:mm'}}</span>
-								</a>
-							</li>
-						</ul>
+	<div class="prev-episode" ng-click="prevEpisode()"> Prev </div>
+	<div class="next-episode" ng-click="nextEpisode()"> Next </div>
+	<!--<div id="nowLine"></div>-->
+	<ul ng-repeat="channel in channels" ng-show="checkFilter(channel)">
+		<li>
+			<div class="channel-number">
+				<p ng-bind="channel.channelInfo.number"></p>
+			</div>
+			<div class="epg-logo" ng-bind="channel.channelInfo.slug"></div>
+			<div class="epg-shows">
+				<ul class="epg-shows-list">
+					<li ng-repeat="epgList in channel.channelInfo.transmissions">
+						<!--<a title="{{ epgList.title }}">-->
+						<span ng-bind="epgList.title"> Show name </span>
+						<!--<span>{{epgList.start*1000  | date:'HH:mm'}} - {{epgList.end*1000 | date:'HH:mm'}}</span>-->
+						<!--</a>-->
 					</li>
 				</ul>
-			</li>
-		</ul>
-	</div>
+			</div>
+		</li>
+	</ul>
 </div>
