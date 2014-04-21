@@ -28,19 +28,17 @@
         };
 
         $scope.findMargin = function(){
-            parseInt($('.epg-shows-list').css('margin-left'));
-            console.log(parseInt($('.epg-shows-list').css('margin-left')));
+            return parseInt($('.epg-shows-list').css('margin-left'));
         };
 
         $scope.prevEpisode = function(){
-            $scope.findMargin();
-//            console.log($scope.findMargin());
-            $('.epg-shows-list').css('margin-left', '100px');
+            $scope.addMargin = $scope.findMargin();
+            $('.epg-shows-list').css('margin-left', ($scope.addMargin + 100) + 'px');
         };
 
         $scope.nextEpisode = function(){
-            $('.epg-shows-list').css('margin-left', '-100px');
-            console.log('Next Episode');
+            $scope.removeMargin = $scope.findMargin();
+            $('.epg-shows-list').css('margin-left', ($scope.removeMargin - 100) + 'px');
         };
 
         $scope.$on('updateEpgListing', function (event, requestInfo) {

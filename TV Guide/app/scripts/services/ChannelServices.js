@@ -1,6 +1,6 @@
 (function () {
     'use strict';
-    Demo.TvGuide.app.factory('EpgListing', function ($http, $log, $q) {
+    Demo.TvGuide.app.service('EpgListing', function ($http, $log, $q) {
         return {
             getEpgListing : function(url){
                 var deferred = $q.defer();
