@@ -1,8 +1,51 @@
 .hide {
   display: none;
 }
+ul, li {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  list-style: none;
+}
+
+.epg-time-container {
+  background-color: #2c2c2c;
+//  float: left;
+  height: 30px;
+  overflow: hidden;
+  position: relative;
+  width: 810px;
+  #now-arrow {
+//	background: transparent url("arrow-now.png") no-repeat 2px 0;
+//	display: none;
+	height: 6px;
+	left: 0;
+	line-height: 6px;
+	margin-left: 0;
+	position: absolute;
+	top: 24px;
+	width: 14px;
+  }
+  .epg-time {
+	float: left;
+	height: 30px;
+	left: -16px;
+	margin-left: 150px;
+	position: absolute;
+	width: 5778px;
+	li {
+	  color: #ccc;
+	  float: left;
+	  font-size: 13px;
+	  height: 32px;
+	  line-height: 32px;
+	  width: 120px;
+	}
+  }
+}
 
 #tvGuidePanel {
+  width: 810px;
   .next-episode, .prev-episode {
 		position: absolute;
   }
@@ -11,11 +54,6 @@
   }
   .prev-episode {
 	left : 10px;
-  }
-  ul, li {
-	margin: 0;
-	padding: 0;
-	color: #fff;
   }
   div {
 	float: left;
@@ -59,6 +97,7 @@
 		  li {
 			border-top: 1px solid #F9F9F9;
 			color: #666;
+			overflow: hidden;
 			//			width: 100%;
 		  }
 		}
