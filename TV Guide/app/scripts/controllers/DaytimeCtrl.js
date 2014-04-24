@@ -92,6 +92,7 @@
                 var afterTime = -(((calculateTime+24)*60)*4);
                 $('.scroller').css('margin-left', afterTime+'px');
             }
+//            $('#nowArrow').css('margin-left', afterTime+'px');
         };
 
         $scope.updateDates();
