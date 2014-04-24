@@ -1,5 +1,4 @@
 <div class="navbar-collapse">
-
 	<div class="prev-days"><a href="" ng-click="prevDays()" ng-animate="">Prev 7 Days</a></div>
 	<ul id="dayNav" class="nav navbar-nav" ng-repeat="item in days">
 		<li>
@@ -12,10 +11,10 @@
 	<div class="next-days"><a href="" ng-click="nextDays()"> Next 7 Days</a></div>
 
 	<ul id="timeNav" class="nav navbar-nav">
-		<li class="morning"><a href=""> Morning</a></li>
-		<li class="afternoon"><a href=""> Afternoon</a></li>
-		<li class="evening"><a href=""> Evening</a></li>
-		<li class="night"><a href=""> Night</a></li>
-		<li class="onnow"><a href=""> ON NOW</a></li>
+		<li class="morning"><a href="" ng-click="morningTime()"> Morning</a></li>
+		<li class="afternoon"><a href="" ng-click="afternoonTime()"> Afternoon</a></li>
+		<li class="evening"><a href="" ng-click="eveningTime()"> Evening</a></li>
+		<li class="night"><a href="" ng-click="nightTime()"> Night</a></li>
+		<li class="onnow"><a href="" ng-click="onNowTime()"> ON NOW</a></li>
 	</ul>
 </div>

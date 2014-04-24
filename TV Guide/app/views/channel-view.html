@@ -1,3 +1,4 @@
+<div class="epg-time-blank"></div>
 <div class="epg-time-container">
 	<div id="now-arrow" class="scroller">&nbsp;</div>
 	<ul class="epg-time scroller">
@@ -61,14 +62,15 @@
 			</div>
 			<div class="epg-logo" ng-bind="channel.channelInfo.slug"></div>
 			<div class="epg-shows">
-				<ul class="epg-shows-list">
+				<ul class="epg-shows-list scroller">
 					<li ng-repeat="epgList in channel.channelInfo.transmissions">
-						<!--<a title="{{ epgList.title }}">-->
-						<span ng-bind="epgList.title"> Show name</span>
-						<!--<span ng-bind="findChannelWidth(epgList, $filter)"></span>-->
-						<br>
-						<span>{{epgList.start*1000  | date:'HH:mm'}} - {{epgList.end*1000 | date:'HH:mm'}}</span>
-						<!--</a>-->
+						<div ng-style="{'width':((epgList.end - epgList.start)/60)*4+'px' }">
+							<!--<a title="{{ epgList.title }}">-->
+							<span ng-bind="epgList.title"> Show name</span>
+							<br>
+							<span>{{epgList.start*1000  | date:'hh:mm'}} - {{epgList.end*1000 | date:'hh:mm'}}</span>
+							<!--</a>-->
+						</div>
 					</li>
 				</ul>
 			</div>

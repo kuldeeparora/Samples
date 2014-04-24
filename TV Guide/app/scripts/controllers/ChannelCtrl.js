@@ -1,7 +1,7 @@
 (function () {
     'use strict';
     Demo.TvGuide.app.controller('ChannelCtrl', function ($scope, EpgListing) {
-        EpgListing.getEpgListing('/json/23.json').then(function (epglisting) {
+        EpgListing.getEpgListing('/json/24.json').then(function (epglisting) {
             $scope.updateEpg(epglisting);
         });
 
@@ -17,18 +17,9 @@
                 if ($scope.themes.indexOf(epglisting[key].theme) === -1) {
                     $scope.themes.push(epglisting[key].theme);
                 }
-
                 $scope.category = $scope.themes[0];
                 $scope.package = $scope.packages[0];
             }
-//            $scope.findChannelWidth();
-        };
-
-        $scope.findChannelWidth = function(epgList, $filter){
-            var dateFilter = $filter('date');
-//            return dateFilter(new Date(), 'yyyy-MM-01');
-//            (epgList.end-epgList.start)*1000*(240/60);
-
         };
 
         $scope.checkFilter = function (channel) {
@@ -41,12 +32,12 @@
 
         $scope.prevEpisode = function(){
             $scope.addMargin = $scope.findMarginPrevNext();
-            $('.epg-shows-list').css('margin-left', ($scope.addMargin + 100) + 'px');
+            $('.scroller').css('margin-left', ($scope.addMargin + 240) + 'px');
         };
 
         $scope.nextEpisode = function(){
             $scope.removeMargin = $scope.findMarginPrevNext();
-            $('.epg-shows-list').css('margin-left', ($scope.removeMargin - 100) + 'px');
+            $('.scroller').css('margin-left', ($scope.removeMargin - 240) + 'px');
         };
 
         $scope.$on('updateEpgListing', function (event, requestInfo) {

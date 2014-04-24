@@ -62,6 +62,38 @@
             $rootScope.$broadcast('updateEpgListing',{selectedDate : selectedDate});
         };
 
+        $scope.morningTime= function(){
+            $('.scroller').css('margin-left', '0');
+        };
+
+        $scope.afternoonTime= function(){
+            $('.scroller').css('margin-left', '-1320px');
+        };
+
+        $scope.eveningTime= function(){
+            $('.scroller').css('margin-left', '-2760px');
+        };
+
+        $scope.nightTime= function(){
+            $('.scroller').css('margin-left', '-4200px');
+        };
+
+        $scope.onNowTime= function(){
+            var todayTime = new Date().getTime();
+            var startDt = new Date();
+            startDt.setHours(6);
+            startDt.setMinutes(0);
+            var startTime = startDt.getTime();
+            var calculateTime = ((((todayTime-startTime)/1000)/60)/60);
+            if (calculateTime > 0){
+                var beforeTime = -((calculateTime*60)*4);
+                $('.scroller').css('margin-left', beforeTime+'px');
+            } else {
+                var afterTime = -(((calculateTime+24)*60)*4);
+                $('.scroller').css('margin-left', afterTime+'px');
+            }
+        };
+
         $scope.updateDates();
 
     });
