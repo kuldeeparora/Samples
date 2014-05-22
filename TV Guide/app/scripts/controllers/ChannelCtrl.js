@@ -1,7 +1,7 @@
 (function () {
     'use strict';
     Demo.TvGuide.app.controller('ChannelCtrl', function ($scope, EpgListing) {
-        EpgListing.getEpgListing('/json/25.json').then(function (epglisting) {
+        EpgListing.getEpgListing('/json/23.json').then(function (epglisting) {
             $scope.updateEpg(epglisting);
         });
 
