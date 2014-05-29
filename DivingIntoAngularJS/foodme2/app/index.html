@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en" ng-app="foodme">
+<head>
+	<meta charset="utf-8">
+	<title>Angular FoodMe</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="bower_components/bootswatch/united/bootstrap.css">
+	<link rel="stylesheet" href="css/app.css">
+	<link rel="stylesheet" href="css/customer.css">
+	<link rel="stylesheet" href="css/restaurant-list.css">
+	<link rel="stylesheet" href="css/fm-rating.css">
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/customer.js"></script>
+	<script src="js/common/localStorage.js"></script>
+	<script src="js/common/filters.js"></script>
+	<script src="js/navigation.js"></script>
+	<script src="js/restaurants.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+	<div class="row">
+		<div class="col-lg-10 col-lg-offset-1">
+
+			<div class="navbar navbar-default" ng-controller="NavbarController">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="#/">FoodMe</a>
+					</div>
+					<div class="collapse navbar-collapse">
+						<ul class="nav navbar-nav">
+							<li ng-class="{active: routeIs('/')}"><a href="#/">Home</a></li>
+							<li ng-class="{active: routeIs('/how-it-works')}"><a href="#/how-it-works">How it works</a></li>
+							<li ng-class="{active: routeIs('/who-we-are')}"><a href="#/who-we-are">Who we are</a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="#/help">Help</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-10 col-lg-offset-1">
+			<ng-view></ng-view>
+		</div>
+	</div>
+</div>
+</div>
+</body>
+</html>
