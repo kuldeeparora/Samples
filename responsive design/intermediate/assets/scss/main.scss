@@ -1,0 +1,19 @@
+// Main scss styles
+
+// Normalize
+@import 'partials/normalize';
+
+// Helpers
+@import 'partials/global';
+@import 'partials/variable';
+@import 'partials/mixins';
+@import 'partials/utilities';
+
+// Typography and Elements
+@import 'partials/type';
+
+// Layout
+@import 'page/base';
+@import 'page/header';
+@import 'page/main';
+@import 'page/footer';

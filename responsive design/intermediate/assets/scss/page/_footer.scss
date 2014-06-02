@@ -1,0 +1,12 @@
+.main-footer {
+  @include panel($footer-bgcolor, $white);
+  text-align: center;
+  .sign-up {
+	@extend %wrapper;
+	form {
+	  padding: 85px 0;
+	  margin: 0 auto;
+	}
+	//	min-height: 192px;
+  }
+}

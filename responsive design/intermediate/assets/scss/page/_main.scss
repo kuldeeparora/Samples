@@ -1,0 +1,13 @@
+#container {
+  @include panel($white, $gray);
+  > section div, header div{
+	@extend %wrapper;
+  }
+  header {
+	color: $white;
+	background-color: $blue;
+	.description {
+	  margin: 15px 0;
+	}
+  }
+}

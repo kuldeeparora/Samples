@@ -1,0 +1,53 @@
+//
+// Variables
+// --------------------------------------------------
+
+// Breakpoints
+// --------------------------------------------------
+$mq-mobile: 320px;
+$mq-tablet: 768px;
+$mq-desktop: 1024px;
+$mq-widescreen: 1300px;
+
+
+// Global values
+// --------------------------------------------------
+
+//Color Values compass interactive or $ sass -i
+
+// Grays
+// -------------------------
+$black:                 #000 !default;
+$gray-dark:             lighten(#000000, 20%) !default; //#333
+$gray:                  lighten(#000000, 33.3%) !default; //#555
+$gray-light:            lighten(#000000, 60%) !default; //#999
+$gray-lightest:         lighten(#000000, 91.3%) !default; //#e9e9e9 collection heading
+
+// colors
+// -------------------------
+$white:                 #ffffff !default;
+$blue:                  #00ccff !default;
+$blue-dark:             #003366 !default;
+$green:                 #46a546 !default;
+$green-dark:			#006600 !default;
+$red:                   #9d261d !default;
+$orange:                #f89406 !default;
+$pink:                  #ff9999 !default;
+$purple:                #663366 !default;
+$magenta:               #660033 !default;
+$yellow:                #ffc40d !default;
+
+
+$footer-bgcolor: $blue-dark;
+$header-mainnav: $pink;
+$header-subnav: $magenta;
+
+// Fonts
+$font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// Text selection background color
+$selection-color: $blue;
+
+// Text Color
+$main-color: $gray-dark;
+$warningText: $red;

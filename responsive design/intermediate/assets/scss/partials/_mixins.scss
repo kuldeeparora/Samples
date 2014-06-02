@@ -1,0 +1,86 @@
+//
+// Mixins
+// --------------------------------------------------
+
+// Responsive Breakpoint
+// --------------------------------------------------
+
+@mixin mq($size, $direction: min-width, $media-type: only all) {
+  @if $size == mobile  {
+	@media #{$media-type} and (#{$direction}: $mq-mobile) {
+	  @content;
+	}
+  } @else if $size == tablet {
+	@media #{$media-type} and (#{$direction}: $mq-tablet) {
+	  @content;
+	}
+  } @else if $size == desktop  {
+	@media #{$media-type} and (#{$direction}: $mq-desktop) {
+	  @content;
+	}
+  } @else if $size == widescreen  {
+	@media #{$media-type} and (#{$direction}: $mq-widescreen) {
+	  @content;
+	}
+  } @else {
+	@media #{$media-type} and (#{$direction}: $size) {
+	  @content;
+	}
+  }
+}
+
+// UTILITY PLACEHOLDER & MIXINS
+// --------------------------------------------------
+@mixin panel($bgcolor, $color) {
+  background-color: $bgcolor;
+  color: $color;
+}
+
+%wrapper {
+  width: 942px;
+  margin: 0 auto;
+}
+
+%nav-link {
+  margin: 0 0 0 35px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+%active-link {
+	display: block;
+	position: absolute;
+	left: -9999px;
+	width: 210px;
+	margin-top: -1px;
+	opacity: 0;
+	background-color: #1c1f4e;
+	padding: 4px 0 0 0;
+	z-index: 1005;
+	border: 1px solid #6b6d8b;
+	border-top: 0;
+	text-align: left;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	-webkit-transition: opacity 100ms;
+	-moz-transition: opacity 100ms;
+	-o-transition: opacity 100ms;
+	transition: opacity 100ms;
+	-webkit-transform: scale3d(1,1,1);
+}
+
+// Clearfix
+// --------
+// For clearing floats like a boss h5bp.com/q
+@mixin clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+	display: table;
+	content: "";
+	line-height: 0;
+  }
+  &:after {
+	clear: both;
+  }
+}

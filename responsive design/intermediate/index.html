@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>uSwitch frontend developer test</title>
+	<meta name="description"
+		  content="Compare and switch gas and electricity suppliers, also compare broadband deals, mobile phone deals, car &amp; home insurance, credit cards, boiler cover &amp; more."/>
+	<meta name="keywords"
+		  content="energy comparison, gas and electricity, broadband mobile phones, car and home insurance, credit cards, boiler cover"/>
+
+	<link href="assets/css/main.css" rel="stylesheet"/>
+
+	<!--[if lt IE 9 &!(IEMobile)]>
+	<script src="assets/js/vendor/html5shiv.min.js"></script>
+	<script src="assets/js/vendor/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+<header class="main-header">
+	<nav role="navigation" class="main-nav">
+		<div class="main-nav-wrapper">
+			<a class="uswitch-logo" href="http://www.uswitch.com" title="uSwitch"></a>
+			<ul>
+				<li><a href="#">Gas & electricity</a></li>
+				<li><a href="#">Broadband, TV & home phone</a></li>
+				<li><a href="#">Mobiles</a></li>
+				<li><a href="#">Money & Insurance</a></li>
+				<li><a href="#" class="active">Account</a></li>
+				<li><a href="#">&#128269;</a></li>
+			</ul>
+		</div>
+	</nav>
+	<nav role="navigation" class="sub-nav">
+		<div class="sub-nav-wrapper">
+			<ul>
+				<li><a href="#">Your Account</a></li>
+				<li><a href="#">Your Settings</a></li>
+				<li><a href="#">Sign out</a></li>
+			</ul>
+		</div>
+	</nav>
+</header>
+<main id="container" role="main">
+	<header class="content-head" role="banner">
+		<div>
+			<h1>Welcome back Andrew, you can save up to 95.77/yr* by switching today!</h1>
+			<button class="uswitch-btn arrow" type="submit">View energy savings</button>
+			<p class="description">* Based on the information you gave us about your current energy plan.</p>
+		</div>
+	</header>
+	<section class="content-body">
+		<section>Today's top energy deal</section>
+		<section>Your current energy plan</section>
+		<article class="current-plan">current plan</article>
+		<section>current gas provider</section>
+	</section>
+</main>
+<footer class="main-footer">
+	<div class="sign-up">
+		<form>Signup for news & money-saving offers: <input type="text"><button name="SignUp">Sign up</button></form>
+	</div>
+</footer>
+
+<!--
+
+<main class="container" role="main">
+	<header role="banner">
+		<h1>Responsive
+			<span>A super lightweight HTML, CSS, and JavaScript framework for building responsive websites</span>
+		</h1>
+	</header>
+	<hr/>
+	<section>
+		<a href="https://github.com/ResponsiveBP/Responsive/releases/download/2.5.5/responsive.zip" role="button"
+		   class="download" data-ga-category="Home Actions" data-ga-action="Home Links"
+		   data-ga-label="Framework Download">Download Responsive</a>
+		<ul class="download-links">
+			<li>
+				<a href="https://github.com/responsivebp/responsive" data-ga-category="Home Actions"
+				   data-ga-action="Home Links" data-ga-label="GitHub project" rel="external">GitHub project</a>
+			</li>
+			<li>
+				Version 2.5.5
+			</li>
+		</ul>
+		<ul class="social-icons">
+			<li>
+				<iframe src="http://ghbtns.com/github-btn.html?user=responsivebp&repo=responsive&type=watch&count=true"
+						allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"
+						title="Star on GitHub"></iframe>
+			</li>
+			<li>
+				<iframe src="http://ghbtns.com/github-btn.html?user=responsivebp&repo=responsive&type=fork&count=true"
+						allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"
+						title="Fork on GitHub"></iframe>
+			</li>
+			<li>
+				<a href="https://twitter.com/share" class="twitter-share-button"
+				   data-text="Get Responsive - A smarter, lighter, responsive framework" data-via="responsivebp"
+				   data-hashtags="responsive,css,javascript,html,rwd">Tweet</a>
+			</li>
+			<li>
+				<a href="https://twitter.com/responsivebp" class="twitter-follow-button" data-show-count="false">Follow
+					@responsivebp</a>
+				<script>!function (d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+					if (!d.getElementById(id)) {
+						js = d.createElement(s);
+						js.id = id;
+						js.src = p + '://platform.twitter.com/widgets.js';
+						fjs.parentNode.insertBefore(js, fjs);
+					}
+				}(document, 'script', 'twitter-wjs');</script>
+			</li>
+		</ul>
+	</section>
+	<section>
+		<h1>
+			Bootstrap and Foundation are too heavy.
+		</h1>
+
+		<p>
+			They're great for prototyping but every time you start a real, front-facing, project with them you have to
+			overwrite lots of
+			designer styles that do nothing to add to the functionality of the website. That's annoying!
+		</p>
+
+		<p>
+			Responsive has been built with that in mind. It has been specifically designed and coded to be as
+			lightweight as possible to prevent the need to undo styles set by the
+			framework itself and allow developers to write efficient code and speed up development time.
+		</p>
+
+		<p>
+			Responsive is tiny. The combined CSS and JavaScript is <strong>only 20.6kb minified and gzipped</strong> but
+			there is a lot of functionality built into the framework.
+			It's designed to be dropped-in, as-is to your website such as you would with <a
+				href="http://necolas.github.io/normalize.css/" target="_blank" rel="nofollow">Normalize.css</a>.
+		</p>
+	</section>
+
+</main>
+﻿
+<footer role="contentinfo" class="container">
+	<hr>
+	<div class="row">
+		<div class="col-s-8">
+			<p>
+				<strong>Responsive</strong> is a responsive web development boilerplate built for your benefit by <a
+					href="http://twitter.com/James_M_South" rel="author external" target="_blank"
+					data-ga-category="Home Actions" data-ga-action="Home Links" data-ga-label="Twitter View">@james_m_south</a>
+			</p>
+
+			<p>
+				Excerpts of this code are based on the incredibly hard work by the good people responsible for <a
+					href="http://necolas.github.io/normalize.css/" target="_blank" rel="nofollow">Normalize.css</a>, <a
+					href="http://html5boilerplate.com/" rel="external" target="_blank">HTML5 Boilerplate</a>, and <a
+					href="http://getbootstrap.com/" rel="external" target="_blank">Twitter Bootstrap</a>.
+			</p>
+
+			<p>
+				Licensed under the <a href="http://opensource.org/licenses/MIT" rel="external" target="_blank">MIT
+				License</a>.
+			</p>
+		</div>
+		<div class="col-s-4">
+			<div class="clearfix">
+				<button class="to-top push-right">Back to Top ^</button>
+			</div>
+		</div>
+	</div>
+</footer>
+
+-->
+
+<script src="assets/js/app/test.js"></script>
+
+</body>
+</html>
+

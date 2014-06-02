@@ -1,0 +1,56 @@
+.main-header {
+  .main-nav {
+	@include panel($header-mainnav, $purple);
+	height: 82px;
+	.main-nav-wrapper {
+	  @extend %wrapper;
+	  .uswitch-logo {
+		background-image: url("../images/uswitch-b853e1b5.png");
+		background-repeat: no-repeat;
+		float: left;
+		height: 70px;
+		width: 70px;
+		transform: scale3d(1,1,1);
+	  }
+	  > ul {
+		display: table;
+		width: 92%;
+		padding-top: 50px;
+		text-align: right;
+		li {
+		  display: table-cell;
+		  a {
+			@extend %nav-link;
+			color: $purple;
+		  }
+		}
+	  }
+	}
+  }
+
+  .sub-nav {
+	@include panel($header-subnav, $pink);
+	text-align: right;
+	height: 48px;
+	.sub-nav-wrapper {
+	  @extend %wrapper;
+	  ul {
+		li {
+		  a {
+			@extend %nav-link;
+			color: $pink;
+			line-height: 45px;
+		  }
+		}
+	  }
+	}
+  }
+
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+
