@@ -15,7 +15,7 @@ module.exports = function (grunt) {
             js: [
                 '<%= project.assets %>js/'
             ],
-            img: [
+            images: [
                 '<%= project.assets %>images/'
             ]
         },
@@ -43,14 +43,14 @@ module.exports = function (grunt) {
                 options: {
                     sassDir: '<%= project.scss %>',
                     cssDir: '<%= project.css %>',
-                    imagesDir: '<%= project.img %>',
+                    imagesDir: '<%= project.images %>',
 //                    importPath: '<%= project.scss %>partials/',
-                    imagesPath: '<%= project.images %>',
-                    httpImagesPath: '<%= project.images %>',
-                    generatedImagesDir: '<%= project.images %>commonSprites',
-                    generatedImagesPath: '<%= project.images %>commonSprites',
-                    httpGeneratedImagesPath: '<%= project.images %>/generated/commonSprites',
-//                    spriteLoadPath: '<%= project.images %>commonSprites',
+//                    imagesPath: '<%= project.images %>',
+//                    httpImagesPath: '<%= project.images %>',
+//                    generatedImagesDir: '<%= project.images %>',
+                    generatedImagesPath: '<%= project.images %>generatedSprites',
+                    httpGeneratedImagesPath: '../../<%= project.images %>generatedSprites',
+                    spriteLoadPath: '<%= project.images %>',
                     fontsPath: '<%= project.css %>font/',
                     httpFontsPath: 'font'
                 }

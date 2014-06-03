@@ -1,11 +1,6 @@
 @import "compass/css3";
-@import "compass/utilities/sprites";
 
-//@import "../../images/commonSprites/*.png";
-
-//@include all-commonSprites-sprites;
-
-//$commonSprites: sprite-map("commonSprites/*.png", $new-position: 100%, $new-spacing: 0px, $new-repeat: no-repeat);
+@import "../partials/sprites";
 
 .main-content {
   @include panel($white, $gray);
@@ -63,8 +58,33 @@
 		  .logo {
 			display: block;
 			height: 30px;
-			//		  background: sprite($commonSprites, logo-edf) no-repeat;
 		  }
+		  .logo.british {
+			background: sprite($commonSprites, logo-british) no-repeat;
+			width: commonSprites-sprite-width(logo-british);
+			height: commonSprites-sprite-height(logo-british);
+		  }
+		  .logo.edf {
+			background: sprite($commonSprites, logo-edf) no-repeat;
+			width: commonSprites-sprite-width(logo-edf);
+			height: commonSprites-sprite-height(logo-edf);
+		  }
+		  .logo.scotish {
+			background: sprite($commonSprites, logo-scotish) no-repeat;
+			width: commonSprites-sprite-width(logo-scotish);
+			height: commonSprites-sprite-height(logo-scotish);
+		  }
+		  .logo.npower {
+			background: sprite($commonSprites, logo-npower) no-repeat;
+			width: commonSprites-sprite-width(logo-npower);
+			height: commonSprites-sprite-height(logo-npower);
+		  }
+		  .logo.eon {
+			background: sprite($commonSprites, logo-eon) no-repeat;
+			width: commonSprites-sprite-width(logo-eon);
+			height: commonSprites-sprite-height(logo-eon);
+		  }
+
 		  .award {
 			height: 50px;
 			color: $gray-light;
@@ -143,7 +163,7 @@
 	}
 
 	.notify{
-	  color:$red;
+	  color:$warningText;
 	}
   }
 }

@@ -440,26 +440,13 @@ table {
   border-spacing: 0;
 }
 
-/* line 39, ../scss/partials/_mixins.scss */
-.main-header .main-nav .main-nav-wrapper, .main-header .sub-nav .sub-nav-wrapper, .main-content .main-content-head .content-wrapper, .main-content .main-content-body .content-wrapper, .main-footer .sign-up {
-  width: 942px;
-  margin: 0 auto;
-}
-
-/* line 44, ../scss/partials/_mixins.scss */
-.main-header .main-nav .main-nav-wrapper > ul li a, .main-header .sub-nav .sub-nav-wrapper ul li a {
-  margin: 0 0 0 35px;
-  font-size: 15px;
-  font-weight: bold;
-}
-
 /* ==========================================================================
    Helper classes
    ========================================================================== */
 /*
  * Hide visually and from screen readers: h5bp.com/u
  */
-/* line 9, ../scss/partials/_utilities.scss */
+/* line 11, ../scss/partials/_utilities.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
@@ -468,7 +455,7 @@ table {
 /*
  * Hide only visually, but have it available for screen readers: h5bp.com/v
  */
-/* line 18, ../scss/partials/_utilities.scss */
+/* line 20, ../scss/partials/_utilities.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -484,7 +471,7 @@ table {
  * Extends the .visuallyhidden class to allow the element to be focusable
  * when navigated to via the keyboard: h5bp.com/p
  */
-/* line 34, ../scss/partials/_utilities.scss */
+/* line 36, ../scss/partials/_utilities.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -495,34 +482,70 @@ table {
   width: auto;
 }
 
+/* line 47, ../scss/partials/_utilities.scss */
+.main-header .main-nav .main-nav-wrapper, .main-header .sub-nav .sub-nav-wrapper, .main-content .main-content-head .content-wrapper, .main-content .main-content-body .content-wrapper, .main-footer .sign-up {
+  width: 942px;
+  margin: 0 auto;
+}
+
+/* line 52, ../scss/partials/_utilities.scss */
+.main-header .main-nav .main-nav-wrapper > ul li a, .main-header .sub-nav .sub-nav-wrapper ul li a {
+  margin: 0 0 0 35px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
 /*
  * Hide visually and from screen readers, but maintain layout
  */
-/* line 48, ../scss/partials/_utilities.scss */
+/* line 62, ../scss/partials/_utilities.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 52, ../scss/partials/_utilities.scss */
+/* line 66, ../scss/partials/_utilities.scss */
 .uswitch-btn {
-  background-color: #d64226;
-  border: 1px solid #ab341e;
+  background-color: #e54d42;
+  border: 1px solid #e54d42;
   border-radius: 3px;
   vertical-align: middle;
   color: white;
   text-align: center;
   cursor: pointer;
-  padding: 12px 24px 12px 18px;
+  padding: 12px 35px 12px 18px;
+  box-shadow: 0 6px #be3a31;
 }
 
-/* line 63, ../scss/partials/_utilities.scss */
+/* line 78, ../scss/partials/_utilities.scss */
+.basic-btn {
+  position: relative;
+  overflow: visible;
+  display: inline-block;
+  padding: 0.5em 2em 0.5em 1em;
+  border: 1px solid #d4d4d4;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  outline: none;
+  background-color: #ececec;
+  border-radius: 0.2em;
+  zoom: 1;
+}
+
+/* line 94, ../scss/partials/_utilities.scss */
 .active:after {
   content: "\25B4";
   position: absolute;
-  bottom: 1px;
   font-size: 16px;
-  width: 100%;
-  right: 50%;
+}
+
+/* line 100, ../scss/partials/_utilities.scss */
+.uswitch-btn:after, .basic-btn:after {
+  content: "\25B8";
+  position: absolute;
+  font-size: 16px;
+  padding-left: 10px;
 }
 
 @font-face {
@@ -560,6 +583,11 @@ textarea {
 }
 
 /* line 29, ../scss/page/_base.scss */
+button, input, select, textarea {
+  padding: 5px;
+}
+
+/* line 33, ../scss/page/_base.scss */
 body {
   font-size: 1em;
   -webkit-font-smoothing: antialiased;
@@ -569,7 +597,7 @@ body {
   line-height: 1.4;
 }
 
-/* line 38, ../scss/page/_base.scss */
+/* line 42, ../scss/page/_base.scss */
 h1 {
   margin-top: 0;
 }
@@ -579,13 +607,13 @@ h1 {
  * These selection declarations have to be separate.
  * Customize the background color to match your design.
  */
-/* line 48, ../scss/page/_base.scss */
+/* line 52, ../scss/page/_base.scss */
 ::-moz-selection {
   background: #00ccff;
   text-shadow: none;
 }
 
-/* line 53, ../scss/page/_base.scss */
+/* line 57, ../scss/page/_base.scss */
 ::-moz-selection {
   background: #00ccff;
   text-shadow: none;
@@ -598,7 +626,7 @@ h1 {
 /*
  * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
  */
-/* line 62, ../scss/page/_base.scss */
+/* line 66, ../scss/page/_base.scss */
 img {
   vertical-align: middle;
   max-width: 100%;
@@ -607,7 +635,7 @@ img {
 /*
  * Remove default fieldset styles.
  */
-/* line 71, ../scss/page/_base.scss */
+/* line 75, ../scss/page/_base.scss */
 fieldset {
   border: 0;
   margin: 0;
@@ -617,17 +645,17 @@ fieldset {
 /*
  * Allow only vertical resizing of textareas.
  */
-/* line 81, ../scss/page/_base.scss */
+/* line 85, ../scss/page/_base.scss */
 textarea {
   resize: vertical;
 }
 
-/* line 85, ../scss/page/_base.scss */
+/* line 89, ../scss/page/_base.scss */
 a {
   text-decoration: none;
 }
 
-/* line 90, ../scss/page/_base.scss */
+/* line 94, ../scss/page/_base.scss */
 .pngfix {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)" !important;
   /* IE8 */
@@ -635,7 +663,7 @@ a {
   /* IE6 & 7 */
 }
 
-/* line 96, ../scss/page/_base.scss */
+/* line 100, ../scss/page/_base.scss */
 li {
   display: inline-block;
   list-style-type: none;
@@ -649,185 +677,265 @@ li {
 }
 /* line 7, ../scss/page/_header.scss */
 .main-header .main-nav .main-nav-wrapper .uswitch-logo {
-  background-image: url("../images/uswitch-b853e1b5.png");
+  background-image: url("../images/logo-uswitch.png");
   background-repeat: no-repeat;
   float: left;
   height: 70px;
   width: 70px;
-  -webkit-transform: scale3d(1, 1, 1);
-  transform: scale3d(1, 1, 1);
 }
-/* line 15, ../scss/page/_header.scss */
+/* line 16, ../scss/page/_header.scss */
 .main-header .main-nav .main-nav-wrapper > ul {
   display: table;
   width: 92%;
   padding-top: 50px;
   text-align: right;
 }
-/* line 20, ../scss/page/_header.scss */
+/* line 21, ../scss/page/_header.scss */
 .main-header .main-nav .main-nav-wrapper > ul li {
   display: table-cell;
   position: relative;
   padding-bottom: 20px;
 }
-/* line 24, ../scss/page/_header.scss */
+/* line 25, ../scss/page/_header.scss */
 .main-header .main-nav .main-nav-wrapper > ul li a {
   color: #663366;
 }
-/* line 33, ../scss/page/_header.scss */
+/* line 29, ../scss/page/_header.scss */
+.main-header .main-nav .main-nav-wrapper > ul li a.active:after {
+  color: #660033;
+  bottom: 2px;
+  right: 27%;
+}
+/* line 39, ../scss/page/_header.scss */
 .main-header .sub-nav {
   background-color: #660033;
   color: #ff9999;
   text-align: right;
   height: 48px;
 }
-/* line 41, ../scss/page/_header.scss */
+/* line 46, ../scss/page/_header.scss */
+.main-header .sub-nav .sub-nav-wrapper ul li {
+  position: relative;
+}
+/* line 48, ../scss/page/_header.scss */
 .main-header .sub-nav .sub-nav-wrapper ul li a {
   color: #ff9999;
   line-height: 45px;
 }
+/* line 53, ../scss/page/_header.scss */
+.main-header .sub-nav .sub-nav-wrapper ul li a.active:after {
+  color: #00ccff;
+  bottom: -22px;
+  right: 27%;
+}
 
-/* line 10, ../scss/page/_main.scss */
+/* line 88, commonSprites/*.png */
+.commonSprites-sprite, .commonSprites-logo-british, .commonSprites-logo-edf-big, .commonSprites-logo-edf, .commonSprites-logo-eon, .commonSprites-logo-npower, .commonSprites-logo-scotish {
+  background-image: url('../../assets/images/generatedSprites/commonSprites-s232dbc4919.png');
+  background-repeat: no-repeat;
+}
+
+/* line 84, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/utilities/sprites/_base.scss */
+.commonSprites-logo-british {
+  background-position: 0 0;
+}
+
+/* line 84, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/utilities/sprites/_base.scss */
+.commonSprites-logo-edf-big {
+  background-position: 0 -40px;
+}
+
+/* line 84, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/utilities/sprites/_base.scss */
+.commonSprites-logo-edf {
+  background-position: 0 -125px;
+}
+
+/* line 84, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/utilities/sprites/_base.scss */
+.commonSprites-logo-eon {
+  background-position: 0 -190px;
+}
+
+/* line 84, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/utilities/sprites/_base.scss */
+.commonSprites-logo-npower {
+  background-position: 0 -221px;
+}
+
+/* line 84, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/utilities/sprites/_base.scss */
+.commonSprites-logo-scotish {
+  background-position: 0 -258px;
+}
+
+/* line 5, ../scss/page/_main.scss */
 .main-content {
   background-color: white;
   color: #555555;
 }
-/* line 13, ../scss/page/_main.scss */
+/* line 8, ../scss/page/_main.scss */
 .main-content .main-content-head .content-wrapper, .main-content .main-content-body .content-wrapper {
   padding: 30px 0;
   display: table;
 }
-/* line 17, ../scss/page/_main.scss */
+/* line 12, ../scss/page/_main.scss */
 .main-content .main-content-head .content-wrapper .content-icon, .main-content .main-content-body .content-wrapper .content-icon {
   width: 90px;
   display: table-cell;
 }
-/* line 20, ../scss/page/_main.scss */
+/* line 15, ../scss/page/_main.scss */
 .main-content .main-content-head .content-wrapper .content-icon span, .main-content .main-content-body .content-wrapper .content-icon span {
   font-size: 36px;
 }
-/* line 24, ../scss/page/_main.scss */
+/* line 19, ../scss/page/_main.scss */
 .main-content .main-content-head .content-wrapper .content-body, .main-content .main-content-body .content-wrapper .content-body {
   vertical-align: top;
   display: table-cell;
   text-align: left;
 }
-/* line 28, ../scss/page/_main.scss */
+/* line 23, ../scss/page/_main.scss */
 .main-content .main-content-head .content-wrapper .content-body h2, .main-content .main-content-body .content-wrapper .content-body h2 {
   font-weight: normal;
   font-size: 18px;
   padding: 10px 0;
 }
-/* line 36, ../scss/page/_main.scss */
+/* line 31, ../scss/page/_main.scss */
 .main-content .main-content-head {
   color: white;
   background-color: #00ccff;
 }
-/* line 39, ../scss/page/_main.scss */
+/* line 34, ../scss/page/_main.scss */
 .main-content .main-content-head .description {
   margin: 15px 0;
 }
-/* line 41, ../scss/page/_main.scss */
+/* line 36, ../scss/page/_main.scss */
 .main-content .main-content-head .description a {
   text-decoration: underline;
   color: white;
 }
-/* line 47, ../scss/page/_main.scss */
+/* line 42, ../scss/page/_main.scss */
 .main-content .main-content-body {
   background-color: white;
   color: #00ccff;
 }
-/* line 51, ../scss/page/_main.scss */
+/* line 46, ../scss/page/_main.scss */
 .main-content .main-content-body #energyDeals {
   border-bottom: 1px solid #e9e9e9;
 }
-/* line 54, ../scss/page/_main.scss */
+/* line 49, ../scss/page/_main.scss */
 .main-content .main-content-body #energyDeals .energy-deals p, .main-content .main-content-body #energyDeals .energy-deals a, .main-content .main-content-body #energyDeals .energy-deals span {
   color: #00ccff;
 }
-/* line 58, ../scss/page/_main.scss */
+/* line 53, ../scss/page/_main.scss */
 .main-content .main-content-body #energyDeals .energy-deals li {
   width: 160px;
   padding: 10px 20px;
   vertical-align: top;
   text-align: center;
 }
-/* line 63, ../scss/page/_main.scss */
+/* line 58, ../scss/page/_main.scss */
 .main-content .main-content-body #energyDeals .energy-deals li .logo {
   display: block;
   height: 30px;
 }
-/* line 68, ../scss/page/_main.scss */
+/* line 62, ../scss/page/_main.scss */
+.main-content .main-content-body #energyDeals .energy-deals li .logo.british {
+  background: url('../../assets/images/generatedSprites/commonSprites-s4727f4acae.png') 0 0 no-repeat;
+  width: 94px;
+  height: 40px;
+}
+/* line 67, ../scss/page/_main.scss */
+.main-content .main-content-body #energyDeals .energy-deals li .logo.edf {
+  background: url('../../assets/images/generatedSprites/commonSprites-s4727f4acae.png') 0 -125px no-repeat;
+  width: 55px;
+  height: 65px;
+}
+/* line 72, ../scss/page/_main.scss */
+.main-content .main-content-body #energyDeals .energy-deals li .logo.scotish {
+  background: url('../../assets/images/generatedSprites/commonSprites-s4727f4acae.png') 0 -258px no-repeat;
+  width: 99px;
+  height: 36px;
+}
+/* line 77, ../scss/page/_main.scss */
+.main-content .main-content-body #energyDeals .energy-deals li .logo.npower {
+  background: url('../../assets/images/generatedSprites/commonSprites-s4727f4acae.png') 0 -221px no-repeat;
+  width: 97px;
+  height: 37px;
+}
+/* line 82, ../scss/page/_main.scss */
+.main-content .main-content-body #energyDeals .energy-deals li .logo.eon {
+  background: url('../../assets/images/generatedSprites/commonSprites-s4727f4acae.png') 0 -190px no-repeat;
+  width: 85px;
+  height: 31px;
+}
+/* line 88, ../scss/page/_main.scss */
 .main-content .main-content-body #energyDeals .energy-deals li .award {
   height: 50px;
   color: #999999;
   padding: 5px;
 }
-/* line 74, ../scss/page/_main.scss */
+/* line 94, ../scss/page/_main.scss */
 .main-content .main-content-body #energyDeals .energy-deals li .price span {
   line-height: 30px;
   font-size: 28px;
   font-weight: bold;
 }
-/* line 85, ../scss/page/_main.scss */
+/* line 105, ../scss/page/_main.scss */
 .main-content .main-content-body .content-body p, .main-content .main-content-body .content-body a, .main-content .main-content-body .content-body span {
   color: #999999;
   padding: 10px 0;
 }
-/* line 89, ../scss/page/_main.scss */
+/* line 109, ../scss/page/_main.scss */
 .main-content .main-content-body .content-body span {
   font-size: 18px;
   padding-right: 10px;
 }
-/* line 93, ../scss/page/_main.scss */
+/* line 113, ../scss/page/_main.scss */
 .main-content .main-content-body .content-body a {
   text-decoration: underline;
 }
-/* line 99, ../scss/page/_main.scss */
+/* line 119, ../scss/page/_main.scss */
 .main-content .main-content-body #energyUsage {
   color: #999999;
   border-bottom: 1px solid #999999;
 }
-/* line 103, ../scss/page/_main.scss */
+/* line 123, ../scss/page/_main.scss */
 .main-content .main-content-body #energyUsage li {
   padding: 10px 20px;
   vertical-align: top;
 }
-/* line 107, ../scss/page/_main.scss */
+/* line 127, ../scss/page/_main.scss */
 .main-content .main-content-body #energyUsage li p {
   padding: 0px;
 }
-/* line 111, ../scss/page/_main.scss */
+/* line 131, ../scss/page/_main.scss */
 .main-content .main-content-body #energyUsage li .plan-name {
   line-height: 36px;
 }
-/* line 115, ../scss/page/_main.scss */
+/* line 135, ../scss/page/_main.scss */
 .main-content .main-content-body #energyUsage li .price-tag {
   line-height: 36px;
   font-size: 26px;
 }
-/* line 124, ../scss/page/_main.scss */
+/* line 144, ../scss/page/_main.scss */
 .main-content .main-content-body #energyCurrentProvider .content-body p, .main-content .main-content-body #energyCurrentProvider .content-body a, .main-content .main-content-body #energyCurrentProvider .content-body span {
   color: #999999;
   padding: 10px 0;
 }
-/* line 128, ../scss/page/_main.scss */
+/* line 148, ../scss/page/_main.scss */
 .main-content .main-content-body #energyCurrentProvider .content-body a {
   text-decoration: underline;
 }
-/* line 131, ../scss/page/_main.scss */
+/* line 151, ../scss/page/_main.scss */
 .main-content .main-content-body #energyCurrentProvider .content-body span {
   padding-right: 10px;
 }
-/* line 138, ../scss/page/_main.scss */
+/* line 158, ../scss/page/_main.scss */
 .main-content article {
   background-color: #e9e9e9;
 }
-/* line 141, ../scss/page/_main.scss */
+/* line 161, ../scss/page/_main.scss */
 .main-content article .block-indent {
   padding-left: 100px;
 }
-/* line 145, ../scss/page/_main.scss */
+/* line 165, ../scss/page/_main.scss */
 .main-content article .notify {
   color: #9d261d;
 }

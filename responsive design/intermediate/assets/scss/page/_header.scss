@@ -5,13 +5,14 @@
 	.main-nav-wrapper {
 	  @extend %wrapper;
 	  .uswitch-logo {
-		background-image: url("../images/uswitch-b853e1b5.png");
+		background-image: url("../images/logo-uswitch.png");
 		background-repeat: no-repeat;
 		float: left;
 		height: 70px;
 		width: 70px;
-		transform: scale3d(1,1,1);
-	  }
+//		transform: scale3d(1,1,1);
+
+	    }
 	  > ul {
 		display: table;
 		width: 92%;
@@ -24,6 +25,11 @@
 		  a {
 			@extend %nav-link;
 			color: $purple;
+		  }
+		  a.active:after {
+			color: $magenta;
+			bottom: 2px;
+			right: 27%;
 		  }
 		}
 	  }
@@ -38,14 +44,19 @@
 	  @extend %wrapper;
 	  ul {
 		li {
+		  position: relative;
 		  a {
 			@extend %nav-link;
 			color: $pink;
 			line-height: 45px;
 		  }
+		  a.active:after {
+			color: $blue;
+			bottom: -22px;
+			right: 27%;
+		  }
 		}
 	  }
 	}
   }
-
 }

@@ -26,6 +26,10 @@ textarea {
   color: $main-color;
 }
 
+button, input, select, textarea {
+  padding: 5px;
+}
+
 body {
   font-size: 1em;
   -webkit-font-smoothing: antialiased;
