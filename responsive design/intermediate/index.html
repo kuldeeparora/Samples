@@ -4,7 +4,7 @@
 	<meta charset="utf-8"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	<title>uSwitch frontend developer test</title>
+	<title>uSwitch</title>
 	<meta name="description"
 		  content="Compare and switch gas and electricity suppliers, also compare broadband deals, mobile phone deals, car &amp; home insurance, credit cards, boiler cover &amp; more."/>
 	<meta name="keywords"
@@ -25,9 +25,9 @@
 			<a class="uswitch-logo" href="http://www.uswitch.com" title="uSwitch"></a>
 			<ul>
 				<li><a href="#">Gas & electricity</a></li>
-				<li><a href="#">Broadband, TV & home phone</a></li>
-				<li><a href="#">Mobiles</a></li>
-				<li><a href="#">Money & Insurance</a></li>
+				<li><a href="#" class="active">Broadband, TV & home phone</a></li>
+				<li><a href="#" class="active">Mobiles</a></li>
+				<li><a href="#" class="active">Money & Insurance</a></li>
 				<li><a href="#" class="active">Account</a></li>
 				<li><a href="#">&#128269;</a></li>
 			</ul>
@@ -43,139 +43,149 @@
 		</div>
 	</nav>
 </header>
-<main id="container" role="main">
-	<header class="content-head" role="banner">
-		<div>
-			<h1>Welcome back Andrew, you can save up to 95.77/yr* by switching today!</h1>
-			<button class="uswitch-btn arrow" type="submit">View energy savings</button>
-			<p class="description">* Based on the information you gave us about your current energy plan.</p>
+<main class="main-content" role="main">
+	<header class="main-content-head" role="banner">
+		<div class="content-wrapper">
+			<div class="content-icon">
+				<span>&#128100;</span>
+			</div>
+			<div class="content-body">
+				<h1>Welcome back Andrew, you can save up to 95.77/yr* by switching today!</h1>
+				<button class="uswitch-btn arrow" type="submit">View energy savings</button>
+				<p class="description">* Based on the information you gave us about your <a href="">current energy
+					plan.</a></p>
+			</div>
 		</div>
 	</header>
-	<section class="content-body">
-		<section>Today's top energy deal</section>
-		<section>Your current energy plan</section>
-		<article class="current-plan">current plan</article>
-		<section>current gas provider</section>
+	<section class="main-content-body">
+		<section id="energyDeals">
+			<div class="content-wrapper">
+				<div class="content-icon">
+					<span>&#128165;</span>
+				</div>
+				<div class="content-body">
+					<h2>Today's top energy deal</h2>
+					<ul class="energy-deals">
+						<li>
+							<span class="logo british">british gas</span>
+
+							<div class="award">Discount Energy Bonus Oct 2014</div>
+							<div class="price">
+								<span>£95.</span>77/yr annual savings
+							</div>
+						</li>
+						<li>
+							<span class="logo edf">edf</span>
+
+							<div class="award">Energy Online Oct 2014</div>
+							<div class="price">
+								<span>£78.</span>77/yr annual savings
+							</div>
+						</li>
+						<li>
+							<span class="logo scotish">scottish</span>
+
+							<div class="award">Online Price Fix February 2015</div>
+							<div class="price">
+								<span>£69.</span>95/yr annual savings
+							</div>
+						</li>
+						<li>
+							<span class="logo npower">npower</span>
+
+							<div class="award">Online Energy Saver 23</div>
+							<div class="price">
+								<span>£64.</span>19/yr annual savings
+							</div>
+						</li>
+						<li>
+							<span class="logo eon">eon</span>
+
+							<div class="award">iSave Everyday</div>
+							<div class="price">
+								<span>£56.</span>77/yr annual savings
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section id="energyCurrentPlan">
+			<div class="content-wrapper">
+				<div class="content-icon">
+					<span>&#128161;</span>
+				</div>
+				<div class="content-body">
+					<h2>Your current energy plan</h2>
+
+					<p>Your current electricity provider is <strong>E-on Energy</strong></p>
+					<span>&#58543;</span><a href="#">Hide details</a>
+				</div>
+			</div>
+		</section>
+		<article id="energyUsage">
+			<div class="content-wrapper">
+				<div class="content-icon"></div>
+				<div class="content-body">
+					<ul class="plans">
+						<li>Logo</li>
+						<li>
+							<p><strong>Current Plan:</strong></p>
+							<p class="plan-name">Standard (Variable)</p>
+							<div class="link">
+								<span>&#9881;</span><a href="#">Change my plan</a>
+							</div>
+						</li>
+						<li>
+							<p><strong>Usage Entered:</strong></p>
+							<p  class="plan-name">2032.00kWh per year on electricity</p>
+							<div class="link">
+								<span>&#9881;</span><a href="#">Change my plan</a>
+							</div>
+						</li>
+						<li>
+							<p><strong>Estimated Cost:</strong></p>
+							<p class="plan-name"><span class="price-tag">£336.</span>60/yr</p>
+							<div class="link">
+								<span>&#9881;</span><a href="#">Change my plan</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</article>
+		<article>
+			<div class="content-wrapper">
+				<div class="content-icon"></div>
+				<div class="content-body">
+					<div class="block-indent notify">
+						You were on E-on's Super Saver plan which ended 1 Aug 2013.<br>
+						Since then you have been on E-ons Standard plan.
+					</div>
+				</div>
+			</div>
+		</article>
+
+		<section id="energyCurrentProvider">
+			<div class="content-wrapper">
+				<div class="content-icon">
+					<span>&#128167;</span>
+				</div>
+				<div class="content-body">
+					<p>Your current gas provider is <strong>British Gas</strong></p>
+					<span>&#128269;</span><a href="#">View and edit my plan and consumption details</a>
+				</div>
+			</div>
+		</section>
 	</section>
 </main>
 <footer class="main-footer">
 	<div class="sign-up">
-		<form>Signup for news & money-saving offers: <input type="text"><button name="SignUp">Sign up</button></form>
+		<form>Signup for news & money-saving offers: <input type="text">
+			<button name="SignUp">Sign up</button>
+		</form>
 	</div>
 </footer>
-
-<!--
-
-<main class="container" role="main">
-	<header role="banner">
-		<h1>Responsive
-			<span>A super lightweight HTML, CSS, and JavaScript framework for building responsive websites</span>
-		</h1>
-	</header>
-	<hr/>
-	<section>
-		<a href="https://github.com/ResponsiveBP/Responsive/releases/download/2.5.5/responsive.zip" role="button"
-		   class="download" data-ga-category="Home Actions" data-ga-action="Home Links"
-		   data-ga-label="Framework Download">Download Responsive</a>
-		<ul class="download-links">
-			<li>
-				<a href="https://github.com/responsivebp/responsive" data-ga-category="Home Actions"
-				   data-ga-action="Home Links" data-ga-label="GitHub project" rel="external">GitHub project</a>
-			</li>
-			<li>
-				Version 2.5.5
-			</li>
-		</ul>
-		<ul class="social-icons">
-			<li>
-				<iframe src="http://ghbtns.com/github-btn.html?user=responsivebp&repo=responsive&type=watch&count=true"
-						allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"
-						title="Star on GitHub"></iframe>
-			</li>
-			<li>
-				<iframe src="http://ghbtns.com/github-btn.html?user=responsivebp&repo=responsive&type=fork&count=true"
-						allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"
-						title="Fork on GitHub"></iframe>
-			</li>
-			<li>
-				<a href="https://twitter.com/share" class="twitter-share-button"
-				   data-text="Get Responsive - A smarter, lighter, responsive framework" data-via="responsivebp"
-				   data-hashtags="responsive,css,javascript,html,rwd">Tweet</a>
-			</li>
-			<li>
-				<a href="https://twitter.com/responsivebp" class="twitter-follow-button" data-show-count="false">Follow
-					@responsivebp</a>
-				<script>!function (d, s, id) {
-					var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-					if (!d.getElementById(id)) {
-						js = d.createElement(s);
-						js.id = id;
-						js.src = p + '://platform.twitter.com/widgets.js';
-						fjs.parentNode.insertBefore(js, fjs);
-					}
-				}(document, 'script', 'twitter-wjs');</script>
-			</li>
-		</ul>
-	</section>
-	<section>
-		<h1>
-			Bootstrap and Foundation are too heavy.
-		</h1>
-
-		<p>
-			They're great for prototyping but every time you start a real, front-facing, project with them you have to
-			overwrite lots of
-			designer styles that do nothing to add to the functionality of the website. That's annoying!
-		</p>
-
-		<p>
-			Responsive has been built with that in mind. It has been specifically designed and coded to be as
-			lightweight as possible to prevent the need to undo styles set by the
-			framework itself and allow developers to write efficient code and speed up development time.
-		</p>
-
-		<p>
-			Responsive is tiny. The combined CSS and JavaScript is <strong>only 20.6kb minified and gzipped</strong> but
-			there is a lot of functionality built into the framework.
-			It's designed to be dropped-in, as-is to your website such as you would with <a
-				href="http://necolas.github.io/normalize.css/" target="_blank" rel="nofollow">Normalize.css</a>.
-		</p>
-	</section>
-
-</main>
-﻿
-<footer role="contentinfo" class="container">
-	<hr>
-	<div class="row">
-		<div class="col-s-8">
-			<p>
-				<strong>Responsive</strong> is a responsive web development boilerplate built for your benefit by <a
-					href="http://twitter.com/James_M_South" rel="author external" target="_blank"
-					data-ga-category="Home Actions" data-ga-action="Home Links" data-ga-label="Twitter View">@james_m_south</a>
-			</p>
-
-			<p>
-				Excerpts of this code are based on the incredibly hard work by the good people responsible for <a
-					href="http://necolas.github.io/normalize.css/" target="_blank" rel="nofollow">Normalize.css</a>, <a
-					href="http://html5boilerplate.com/" rel="external" target="_blank">HTML5 Boilerplate</a>, and <a
-					href="http://getbootstrap.com/" rel="external" target="_blank">Twitter Bootstrap</a>.
-			</p>
-
-			<p>
-				Licensed under the <a href="http://opensource.org/licenses/MIT" rel="external" target="_blank">MIT
-				License</a>.
-			</p>
-		</div>
-		<div class="col-s-4">
-			<div class="clearfix">
-				<button class="to-top push-right">Back to Top ^</button>
-			</div>
-		</div>
-	</div>
-</footer>
-
--->
-
 <script src="assets/js/app/test.js"></script>
 
 </body>

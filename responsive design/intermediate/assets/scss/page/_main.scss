@@ -1,13 +1,149 @@
-#container {
+@import "compass/css3";
+@import "compass/utilities/sprites";
+
+//@import "../../images/commonSprites/*.png";
+
+//@include all-commonSprites-sprites;
+
+//$commonSprites: sprite-map("commonSprites/*.png", $new-position: 100%, $new-spacing: 0px, $new-repeat: no-repeat);
+
+.main-content {
   @include panel($white, $gray);
-  > section div, header div{
-	@extend %wrapper;
+  .main-content-head, .main-content-body {
+	.content-wrapper {
+	  padding: 30px 0;
+	  @extend %wrapper;
+	  display: table;
+	  .content-icon {
+		width: 90px;
+		display: table-cell;
+		span {
+		  font-size: 36px;
+		}
+	  }
+	  .content-body {
+		vertical-align: top;
+		display: table-cell;
+		text-align: left;
+		h2 {
+		  font-weight: normal;
+		  font-size: 18px;
+		  padding: 10px 0;
+		}
+	  }
+	}
   }
-  header {
+  .main-content-head {
 	color: $white;
 	background-color: $blue;
 	.description {
 	  margin: 15px 0;
+	  a {
+		text-decoration: underline;
+		color: $white;
+	  }
+	}
+  }
+  .main-content-body {
+	background-color: $white;
+	color: $blue;
+
+	#energyDeals {
+	  border-bottom: 1px solid $gray-lightest;
+	  .energy-deals {
+		p, a, span {
+		  color: $blue;
+		}
+
+		li {
+		  width: 160px;
+		  padding: 10px 20px;
+		  vertical-align: top;
+		  text-align: center;
+		  .logo {
+			display: block;
+			height: 30px;
+			//		  background: sprite($commonSprites, logo-edf) no-repeat;
+		  }
+		  .award {
+			height: 50px;
+			color: $gray-light;
+			padding: 5px;
+		  }
+		  .price {
+			span {
+			  line-height: 30px;
+			  font-size: 28px;
+			  font-weight: bold;
+			}
+		  }
+		}
+	  }
+	}
+
+	.content-body {
+	  p, a, span {
+		color: $gray-light;
+		padding: 10px 0;
+	  }
+	  span {
+		font-size: 18px;
+		padding-right: 10px;
+	  }
+	  a {
+		text-decoration: underline;
+	  }
+
+	}
+
+	#energyUsage {
+	  color: $gray-light;
+	  border-bottom: 1px solid $gray-light;
+
+	  li {
+		padding: 10px 20px;
+		vertical-align: top;
+
+		p{
+		  padding:0px;
+		}
+
+		.plan-name{
+			line-height: 36px;
+		}
+
+		.price-tag{
+		  line-height: 36px;
+		  font-size: 26px;
+		}
+	  }
+	}
+
+	#energyCurrentProvider {
+	  .content-body {
+		p, a, span {
+		  color: $gray-light;
+		  padding: 10px 0;
+		}
+		a {
+		  text-decoration: underline;
+		}
+		span {
+		  padding-right: 10px;
+		}
+	  }
+	}
+  }
+
+  article {
+	background-color: $gray-lightest;
+
+	.block-indent{
+	  padding-left: 100px;
+	}
+
+	.notify{
+	  color:$red;
 	}
   }
 }

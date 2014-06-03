@@ -19,6 +19,8 @@
 		text-align: right;
 		li {
 		  display: table-cell;
+		  position: relative;
+		  padding-bottom: 20px;
 		  a {
 			@extend %nav-link;
 			color: $purple;
@@ -47,10 +49,3 @@
   }
 
 }
-
-li {
-  display: inline-block;
-  list-style-type: none;
-}
-
-

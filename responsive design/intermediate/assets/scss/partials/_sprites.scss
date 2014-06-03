@@ -1,0 +1,9 @@
+//
+// Sprites
+// --------------------------------------------------
+@import "compass/utilities/sprites";
+@import "commonSprites/*.png";
+
+@include all-commonSprites-sprites;
+
+$commonSprites: sprite-map("commonSprites/*.png", $new-position: 100%, $new-spacing: 0px, $new-repeat: no-repeat);
