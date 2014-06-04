@@ -4,10 +4,10 @@
 
 // Breakpoints
 // --------------------------------------------------
-$mq-mobile: 320px;
-$mq-tablet: 768px;
-$mq-desktop: 1024px;
-$mq-widescreen: 1300px;
+$mq-mobile: 319px;
+$mq-tablet: 767px;
+$mq-desktop: 1023px;
+$mq-widescreen: 1299px;
 
 
 // Global values
@@ -43,7 +43,7 @@ $header-mainnav: $pink;
 $header-subnav: $magenta;
 
 // Fonts
-$font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-main: entypo;
 
 // Text selection background color
 $selection-color: $blue;
@@ -51,3 +51,7 @@ $selection-color: $blue;
 // Text Color
 $main-color: $gray-dark;
 $warningText: $red;
+
+// Btn-bg-color
+$btn-bgcolor: #e54d42;
+$btn-bgcolor-shadow: #be3a31;

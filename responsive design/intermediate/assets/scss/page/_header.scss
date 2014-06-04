@@ -11,12 +11,27 @@
 		height: 70px;
 		width: 70px;
 	  }
+	  .uswitch-main-nav-button {
+		@include mq(tablet) {
+		  display: block;
+		}
+		display: none;
+	  }
 	  > ul {
+		@include mq(tablet) {
+		  display: block;
+		  width: 100%;
+		  padding-top: 0;
+		  text-align: left;
+		}
 		display: table;
 		width: 92%;
 		padding-top: 50px;
 		text-align: right;
 		li {
+		  @include mq(tablet) {
+			display: block;
+		  }
 		  display: table-cell;
 		  position: relative;
 		  padding-bottom: 20px;
