@@ -11,6 +11,5 @@
     "eqnull": true,
     "node": true,
     "white": true,
-    "indent": 4,
-    "predef": [ "Vm", "angular", "$", "dialog", "document", "window", "Routing", "alert" ]
+    "indent": 4
 }

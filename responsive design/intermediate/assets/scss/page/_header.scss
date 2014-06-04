@@ -10,9 +10,7 @@
 		float: left;
 		height: 70px;
 		width: 70px;
-//		transform: scale3d(1,1,1);
-
-	    }
+	  }
 	  > ul {
 		display: table;
 		width: 92%;
@@ -42,7 +40,7 @@
 	height: 48px;
 	.sub-nav-wrapper {
 	  @extend %wrapper;
-	  ul {
+	  > ul {
 		li {
 		  position: relative;
 		  a {

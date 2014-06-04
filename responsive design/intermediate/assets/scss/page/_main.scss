@@ -1,5 +1,4 @@
 @import "compass/css3";
-
 @import "../partials/sprites";
 
 .main-content {
@@ -57,32 +56,36 @@
 		  text-align: center;
 		  .logo {
 			display: block;
-			height: 30px;
-		  }
-		  .logo.british {
-			background: sprite($commonSprites, logo-british) no-repeat;
-			width: commonSprites-sprite-width(logo-british);
-			height: commonSprites-sprite-height(logo-british);
-		  }
-		  .logo.edf {
-			background: sprite($commonSprites, logo-edf) no-repeat;
-			width: commonSprites-sprite-width(logo-edf);
-			height: commonSprites-sprite-height(logo-edf);
-		  }
-		  .logo.scotish {
-			background: sprite($commonSprites, logo-scotish) no-repeat;
-			width: commonSprites-sprite-width(logo-scotish);
-			height: commonSprites-sprite-height(logo-scotish);
-		  }
-		  .logo.npower {
-			background: sprite($commonSprites, logo-npower) no-repeat;
-			width: commonSprites-sprite-width(logo-npower);
-			height: commonSprites-sprite-height(logo-npower);
-		  }
-		  .logo.eon {
-			background: sprite($commonSprites, logo-eon) no-repeat;
-			width: commonSprites-sprite-width(logo-eon);
-			height: commonSprites-sprite-height(logo-eon);
+			height: 75px;
+			span {
+			  display: block;
+			  margin: 0 auto;
+			}
+			.british {
+			  background: sprite($commonSprites, logo-british) no-repeat;
+			  width: commonSprites-sprite-width(logo-british);
+			  height: commonSprites-sprite-height(logo-british);
+			}
+			.edf {
+			  background: sprite($commonSprites, logo-edf) no-repeat;
+			  width: commonSprites-sprite-width(logo-edf);
+			  height: commonSprites-sprite-height(logo-edf);
+			}
+			.scotish {
+			  background: sprite($commonSprites, logo-scotish) no-repeat;
+			  width: commonSprites-sprite-width(logo-scotish);
+			  height: commonSprites-sprite-height(logo-scotish);
+			}
+			.npower {
+			  background: sprite($commonSprites, logo-npower) no-repeat;
+			  width: commonSprites-sprite-width(logo-npower);
+			  height: commonSprites-sprite-height(logo-npower);
+			}
+			.eon {
+			  background: sprite($commonSprites, logo-eon) no-repeat;
+			  width: commonSprites-sprite-width(logo-eon);
+			  height: commonSprites-sprite-height(logo-eon);
+			}
 		  }
 
 		  .award {
@@ -108,7 +111,7 @@
 	  }
 	  span {
 		font-size: 18px;
-		padding-right: 10px;
+		padding-right: 4px;
 	  }
 	  a {
 		text-decoration: underline;
@@ -124,15 +127,15 @@
 		padding: 10px 20px;
 		vertical-align: top;
 
-		p{
-		  padding:0px;
+		p {
+		  padding: 0px;
 		}
 
-		.plan-name{
-			line-height: 36px;
+		.plan-name {
+		  line-height: 36px;
 		}
 
-		.price-tag{
+		.price-tag {
 		  line-height: 36px;
 		  font-size: 26px;
 		}
@@ -158,12 +161,12 @@
   article {
 	background-color: $gray-lightest;
 
-	.block-indent{
+	.block-indent {
 	  padding-left: 100px;
 	}
 
-	.notify{
-	  color:$warningText;
+	.notify {
+	  color: $warningText;
 	}
   }
 }

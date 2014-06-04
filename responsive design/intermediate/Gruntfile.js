@@ -39,15 +39,11 @@ module.exports = function (grunt) {
 
         // Configuration to be run (and then tested).
         compass: {
-            dev: {                    // Another target
+            dev: {
                 options: {
                     sassDir: '<%= project.scss %>',
                     cssDir: '<%= project.css %>',
                     imagesDir: '<%= project.images %>',
-//                    importPath: '<%= project.scss %>partials/',
-//                    imagesPath: '<%= project.images %>',
-//                    httpImagesPath: '<%= project.images %>',
-//                    generatedImagesDir: '<%= project.images %>',
                     generatedImagesPath: '<%= project.images %>generatedSprites',
                     httpGeneratedImagesPath: '../../<%= project.images %>generatedSprites',
                     spriteLoadPath: '<%= project.images %>',
@@ -59,9 +55,6 @@ module.exports = function (grunt) {
                 options: {
                     clean: true
                 }
-//            },
-//            options: {
-//                outputStyle: 'compressed'
             }
         },
         autoprefixer: {
@@ -75,30 +68,6 @@ module.exports = function (grunt) {
                 dest: 'assets/css/'
             }
         },
-//        cssmin: {
-//            compress: {
-//                files: {
-//                    '<%= project.css %>/main_combined.css': [
-//                        '<%= project.css %>/tv-carousels.css',
-//                        '<%= project.css %>/tv-global.css',
-//                        '<%= project.css %>/manage-tivo.css',
-//                        '<%= project.css %>/tv-content.css',
-//                        '<%= project.css %>/search.css',
-//                        'web/js/libs/fancybox/jquery.fancybox.css',
-//                        'web/css/libs/html5boilerplate.css',
-//                        '<%= project.css %>/theme.css',
-//                        '<%= project.css %>/layout.css',
-//                        '<%= project.css %>/style.css',
-//                        '<%= project.css %>/newfeature-popup.css',
-//                        '<%= project.css %>/modal.css',
-//                        '<%= project.css %>/non-live.css',
-//                        '<%= project.css %>/overlay.css',
-//                        'web/css/libs/jquery.jscrollpane.css',
-//                        '<%= project.css %>/scrollingPanels.css'
-//                    ]
-//                }
-//            }
-//        },
 
         watch: {
             styles: {
@@ -123,7 +92,6 @@ module.exports = function (grunt) {
 
     // These plugins provide necessary tasks.
     grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-autoprefixer');
@@ -142,17 +110,6 @@ module.exports = function (grunt) {
         'clean'
     ]);
 
-//    grunt.registerTask('watch_dev', [
-//        'jshint',
-//        'clean',
-//        'mkdir:tmp',
-//        'compass:dev',
-//        'watch',
-//        'clean'
-//    ]);
-
     // By default, lint and run all tests.
     grunt.registerTask('default', ['dev']);
-    grunt.registerTask('prod', ['dev', 'cssmin']);
-//    grunt.registerTask('watch', ['watch_dev']); //, 'to watch'
 };
