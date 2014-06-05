@@ -3,6 +3,7 @@
 
 .main-content {
   @include panel($white, $gray);
+  clear: both;
   .main-content-head, .main-content-body {
 	.content-wrapper {
 	  padding: 30px 0;

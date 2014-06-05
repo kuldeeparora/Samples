@@ -9,6 +9,9 @@ $mq-tablet: 767px;
 $mq-desktop: 1023px;
 $mq-widescreen: 1299px;
 
+// to adjust padding of navigation
+$mq-adjust: 830px;
+
 
 // Global values
 // --------------------------------------------------
@@ -43,7 +46,8 @@ $header-mainnav: $pink;
 $header-subnav: $magenta;
 
 // Fonts
-$font-main: entypo;
+$font-entypo: entypo;
+$font-main: Helvetica,Arial,sans-serif;
 
 // Text selection background color
 $selection-color: $blue;

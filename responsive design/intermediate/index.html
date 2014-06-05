@@ -19,12 +19,13 @@
 
 </head>
 <body>
+
 <header class="main-header">
 	<nav role="navigation" class="main-nav">
 		<div class="main-nav-wrapper">
 			<a class="uswitch-logo" href="http://www.uswitch.com" title="uSwitch"></a>
 
-			<div class="uswitch-main-nav-button" onclick="show('mainUswitchNav')"></div>
+			<div id="uswitchNavButton"></div>
 			<ul id="mainUswitchNav">
 				<li><a href="#">Gas & electricity</a></li>
 				<li><a href="#">Broadband, TV & home phone</a></li>
@@ -126,7 +127,7 @@
 					<h2>Your current energy plan</h2>
 
 					<p>Your current electricity provider is <strong>E-on Energy</strong></p>
-					<span>&#58543;</span>
+					<span class="icon">&#58543;</span>
 					<a href="#">Hide details</a>
 				</div>
 			</div>
@@ -189,7 +190,7 @@
 				</div>
 				<div class="content-body">
 					<p>Your current gas provider is <strong>British Gas</strong></p>
-					<span>&#128269;</span><a href="#">View and edit my plan and consumption details</a>
+					<span class="uswitch-search icon"></span><a href="#">View and edit my plan and consumption details</a>
 				</div>
 			</div>
 		</section>
@@ -198,9 +199,9 @@
 <footer class="main-footer">
 	<div class="sign-up">
 		<form>
-			<label>Signup for news & money-saving offers: </label><input type="text" id="uswitchSignup"
-																		 name="emailAddress">
-			<button class="basic-btn" type="submit" onclick="return signupSubmit()">Sign up</button>
+			<label>Signup for news & money-saving offers: </label>
+			<input type="text" id="uswitchSignup" name="emailAddress">
+			<button class="basic-btn" type="submit" id="signupSubmit">Sign up</button>
 		</form>
 	</div>
 </footer>

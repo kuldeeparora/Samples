@@ -1,48 +1,5 @@
 @import "compass/css3";
 
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers: h5bp.com/u
- */
-
-.hidden {
-  display: none !important;
-  visibility: hidden;
-}
-
-/*
- * Hide only visually, but have it available for screen readers: h5bp.com/v
- */
-
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto;
-}
-
 // UTILITY PLACEHOLDER & MIXINS
 %wrapper {
   width: 942px;
@@ -55,24 +12,23 @@
   }
 }
 
-%nav-link {
+.hideNav {
+  display: table !important;
   @include mq(desktop) {
-	margin: 0 5px;
+	display: table;
   }
   @include mq(tablet) {
-	margin: 0 5px;
+	display: none;
   }
-  margin: 0 0 0 35px;
-  font-size: 15px;
+}
+
+%nav-link {
+  font-size: 14px;
   font-weight: bold;
 }
 
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-  visibility: hidden;
+%font-entypo {
+  font-family: $font-entypo;
 }
 
 .uswitch-btn {
@@ -93,6 +49,7 @@
 }
 
 .active:after {
+  @extend %font-entypo;
   content: "\25B4";
   position: absolute;
   font-size: 16px;
@@ -102,21 +59,19 @@
 }
 
 .uswitch-search:after {
+  @extend %font-entypo;
   content: "\1F50D";
-  @include mq(tablet) {
-	content: "Search";
-  }
 }
 
-
 .uswitch-btn:after, .basic-btn:after {
+  @extend %font-entypo;
   content: "\25B8";
   position: absolute;
   font-size: 16px;
   padding-left: 10px;
 }
 
-.uswitch-main-nav-button:after {
+#uswitchNavButton:after {
   content: "\2630";
   position: absolute;
   right: 5px;

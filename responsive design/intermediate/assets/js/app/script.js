@@ -1,4 +1,8 @@
-function signupSubmit() {
+
+//Email Validation
+var signupSubmit = document.getElementById('signupSubmit');
+
+signupSubmit.addEventListener('click', function () {
     "use strict";
 
     var signup = document.getElementById('uswitchSignup');
@@ -10,27 +14,29 @@ function signupSubmit() {
     };
 
     if (signup.value.length === 0) {
-        applyFieldStyle(true);
         alert('Email Address field should not be empty');
+        applyFieldStyle(true);
         return false;
     }
     if (!validEmail) {
-        applyFieldStyle(true);
         alert('Please type Valid Email Address');
+        applyFieldStyle(true);
         return false;
     }
 
-    applyFieldStyle(false);
     alert('Signup Successfully');
+    applyFieldStyle(false);
     return true;
 
-}
+}, false);
 
-function show(target) {
-//    document.getElementById(target).style.display = 'block';
-//    trigger.style.display = "none"
-    var el = document.getElementById(target);
 
-    el.style.display = (el.style.display !== 'table' ? 'table' : 'none');
-}
+//Responsive Menu Nav Button
+var uswitchNavButton = document.getElementById('uswitchNavButton');
 
+uswitchNavButton.addEventListener('click', function () {
+    "use strict";
+
+    var el = document.getElementById('mainUswitchNav');
+    el.className = (el.className !== 'hideNav' ? 'hideNav' : '');
+}, false);

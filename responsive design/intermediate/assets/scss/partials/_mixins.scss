@@ -14,6 +14,10 @@
 	@media #{$media-type} and (#{$direction}: $mq-tablet) {
 	  @content;
 	}
+  } @else if $size == adjust  {
+	@media #{$media-type} and (#{$direction}: $mq-adjust) {
+	  @content;
+	}
   } @else if $size == desktop  {
 	@media #{$media-type} and (#{$direction}: $mq-desktop) {
 	  @content;
@@ -34,20 +38,4 @@
 @mixin panel($bgcolor, $color) {
   background-color: $bgcolor;
   color: $color;
-}
-
-// Clearfix
-// --------
-// For clearing floats like a boss h5bp.com/q
-@mixin clearfix {
-  *zoom: 1;
-  &:before,
-  &:after {
-	display: table;
-	content: "";
-	line-height: 0;
-  }
-  &:after {
-	clear: both;
-  }
 }

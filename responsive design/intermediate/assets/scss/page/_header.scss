@@ -20,7 +20,7 @@
 		height: 70px;
 		width: 70px;
 	  }
-	  .uswitch-main-nav-button {
+	  #uswitchNavButton {
 		@include mq(tablet) {
 		  display: block;
 		  cursor: pointer;
@@ -28,24 +28,32 @@
 		display: none;
 	  }
 	  #mainUswitchNav {
-		@include mq(desktop){
-		  display: table;
-		}
 		@include mq(tablet) {
 		  display: none;
 		  width: 100%;
 		  padding-top: 0;
 		  text-align: left;
+		  .uswitch-search:after {
+			@include mq(tablet) {
+			  content: "Search";
+			}
+		  }
 		}
-		display: table;
 		width: 90%;
 		padding-top: 50px;
 		float: right;
-		z-index: 10;
 		li {
-		  display: table-cell;
+		  display: inline-block;
 		  position: relative;
 		  padding-bottom: 20px;
+		  padding-left: 5%;
+		  z-index: 10;
+		  @include mq(desktop) {
+			padding-left: 3%;
+		  }
+		  @include mq(adjust) {
+			padding-left: 2%;
+		  }
 		  @include mq(tablet) {
 			display: block;
 			background-color: $gray;
@@ -62,7 +70,7 @@
 		  a.active:after {
 			position: absolute;
 			color: $magenta;
-			margin-left: -29px;
+			right: 25%;
 			height: 100%;
 			margin-top: 18px;
 		  }
@@ -75,7 +83,7 @@
   }
 
   .sub-nav {
-	@include mq(tablet){
+	@include mq(tablet) {
 	  display: none;
 	}
 	display: block;
@@ -87,16 +95,23 @@
 	  > ul {
 		li {
 		  position: relative;
+		  padding-left: 5%;
+		  @include mq(desktop) {
+			padding-left: 3%;
+		  }
+		  @include mq(adjust) {
+			padding-left: 2%;
+		  }
 		  a {
 			@extend %nav-link;
 			color: $pink;
-			line-height: 27px;
+			line-height: 36px;
 		  }
 		  a.active:after {
 			color: $blue;
-			margin-left: -50px;
+			right: 25%;
 			height: 100%;
-			margin-top: 23px;
+			margin-top: 20px;
 		  }
 		  a:hover {
 			text-decoration: underline;

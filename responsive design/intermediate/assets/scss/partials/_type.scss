@@ -1,3 +1,7 @@
 @import "compass/css3/font-face";
 
 @include font-face("entypo", font-files("entypo.woff", "entypo.ttf", "entypo.svg"), "entypo.eot");
+
+.content-icon span, .content-body .icon {
+  @extend %font-entypo;
+}
