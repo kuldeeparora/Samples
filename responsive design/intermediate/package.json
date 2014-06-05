@@ -1,18 +1,13 @@
 {
-  "name": "uswitch",
-  "version": "0.0.1",
-  "description": "uSwitch test",
-  "devDependencies": {
-    "grunt": "0.4.5",
-    "grunt-contrib-jshint": "~0.6.0",
-    "grunt-contrib-sass": "0.7.*",
-    "grunt-contrib-watch": "0.6.*",
-    "grunt-contrib-compass": "0.8.*",
-    "grunt-contrib-uglify": "^0.4.0",
-    "grunt-contrib-clean": "^0.5.0",
-    "grunt-compass-compiler": "0.0.8",
-    "grunt-contrib-cssmin": "0.9.*",
-    "grunt-contrib-concat": "^0.4.0",
-    "grunt-autoprefixer": "0.7.*"
-  }
+    "name": "uswitch",
+    "version": "0.0.1",
+    "description": "uSwitch test",
+    "devDependencies": {
+        "grunt": "0.4.5",
+        "grunt-contrib-clean": "^0.5.0",
+        "grunt-contrib-jshint": "~0.6.0",
+        "grunt-contrib-compass": "0.8.*",
+        "grunt-autoprefixer": "0.7.*",
+        "grunt-contrib-watch": "0.6.*"
+    }
 }

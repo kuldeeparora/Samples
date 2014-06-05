@@ -1,14 +1,14 @@
 .main-header {
   .main-nav {
 	@include panel($header-mainnav, $purple);
-	@include mq(tablet) {
+	@include mq(small) {
 	  height: 45px;
 	}
 	height: 82px;
 	.main-nav-wrapper {
 	  @extend %wrapper;
 	  .uswitch-logo {
-		@include mq(tablet) {
+		@include mq(small) {
 		  background-image: url("../images/logo-uswitch-mobile.png");
 		  height: 37px;
 		  width: 37px;
@@ -21,20 +21,20 @@
 		width: 70px;
 	  }
 	  #uswitchNavButton {
-		@include mq(tablet) {
+		@include mq(small) {
 		  display: block;
 		  cursor: pointer;
 		}
 		display: none;
 	  }
 	  #mainUswitchNav {
-		@include mq(tablet) {
+		@include mq(small) {
 		  display: none;
 		  width: 100%;
 		  padding-top: 0;
 		  text-align: left;
 		  .uswitch-search:after {
-			@include mq(tablet) {
+			@include mq(small) {
 			  content: "Search";
 			}
 		  }
@@ -48,13 +48,13 @@
 		  padding-bottom: 20px;
 		  padding-left: 5%;
 		  z-index: 10;
-		  @include mq(desktop) {
+		  @include mq(large) {
 			padding-left: 3%;
 		  }
-		  @include mq(adjust) {
+		  @include mq(medium) {
 			padding-left: 2%;
 		  }
-		  @include mq(tablet) {
+		  @include mq(small) {
 			display: block;
 			background-color: $gray;
 			padding: 10px;
@@ -63,7 +63,7 @@
 		  a {
 			@extend %nav-link;
 			color: $purple;
-			@include mq(tablet) {
+			@include mq(small) {
 			  color: $white;
 			}
 		  }
@@ -72,7 +72,7 @@
 			color: $magenta;
 			right: 25%;
 			height: 100%;
-			margin-top: 18px;
+			margin-top: 20px;
 		  }
 		  a:hover {
 			text-decoration: underline;
@@ -83,7 +83,7 @@
   }
 
   .sub-nav {
-	@include mq(tablet) {
+	@include mq(small) {
 	  display: none;
 	}
 	display: block;
@@ -96,10 +96,10 @@
 		li {
 		  position: relative;
 		  padding-left: 5%;
-		  @include mq(desktop) {
+		  @include mq(large) {
 			padding-left: 3%;
 		  }
-		  @include mq(adjust) {
+		  @include mq(medium) {
 			padding-left: 2%;
 		  }
 		  a {

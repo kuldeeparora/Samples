@@ -10,16 +10,16 @@
 	@media #{$media-type} and (#{$direction}: $mq-mobile) {
 	  @content;
 	}
-  } @else if $size == tablet {
-	@media #{$media-type} and (#{$direction}: $mq-tablet) {
+  } @else if $size == small {
+	@media #{$media-type} and (#{$direction}: $mq-small) {
 	  @content;
 	}
-  } @else if $size == adjust  {
-	@media #{$media-type} and (#{$direction}: $mq-adjust) {
+  } @else if $size == medium  {
+	@media #{$media-type} and (#{$direction}: $mq-medium) {
 	  @content;
 	}
-  } @else if $size == desktop  {
-	@media #{$media-type} and (#{$direction}: $mq-desktop) {
+  } @else if $size == large  {
+	@media #{$media-type} and (#{$direction}: $mq-large) {
 	  @content;
 	}
   } @else if $size == widescreen  {
@@ -38,4 +38,16 @@
 @mixin panel($bgcolor, $color) {
   background-color: $bgcolor;
   color: $color;
+}
+
+
+// Set a rem font size with pixel fallback
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
 }

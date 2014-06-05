@@ -13,8 +13,8 @@
 		width: 90px;
 		display: table-cell;
 		span {
-		  font-size: 36px;
-		  @include mq(tablet) {
+		  @include font-size(36px);
+		  @include mq(small) {
 			margin-left: 25px;
 		  }
 		}
@@ -25,7 +25,7 @@
 		text-align: left;
 		h2 {
 		  font-weight: normal;
-		  font-size: 18px;
+		  @include font-size(18px);
 		  padding: 10px 0;
 		}
 	  }
@@ -35,7 +35,7 @@
 	color: $white;
 	background-color: $blue;
 	.description {
-	  margin: 15px 0;
+	  padding: 20px 0 0;
 	  a {
 		text-decoration: underline;
 		color: $white;
@@ -47,7 +47,7 @@
 	color: $blue;
 
 	#energyDeals {
-	  border-bottom: 1px solid $gray-lightest;
+	  border-bottom: 1px solid $gray-light;
 	  .energy-deals {
 		p, a, span {
 		  color: $blue;
@@ -100,7 +100,7 @@
 		  .price {
 			span {
 			  line-height: 30px;
-			  font-size: 28px;
+			  @include font-size(28px);
 			  font-weight: bold;
 			}
 		  }
@@ -114,7 +114,7 @@
 		padding: 10px 0;
 	  }
 	  span {
-		font-size: 18px;
+		@include font-size(18px);
 		padding-right: 4px;
 	  }
 	  a {
@@ -125,12 +125,12 @@
 
 	#energyUsage {
 	  color: $gray-light;
-	  border-bottom: 1px solid $gray-light;
+	  border-bottom: 1px solid $gray-lightest;
 
 	  li {
 		padding: 10px 20px;
 		vertical-align: top;
-		@include mq(tablet) {
+		@include mq(small) {
 		  display: block;
 		  margin-bottom: 10px;
 		}
@@ -145,7 +145,7 @@
 
 		.price-tag {
 		  line-height: 36px;
-		  font-size: 26px;
+		  @include font-size(28px);
 		}
 	  }
 	  .provider-logo {
@@ -155,7 +155,7 @@
 		  background: sprite($commonSprites, logo-edf-big) no-repeat;
 		  width: commonSprites-sprite-width(logo-edf-big);
 		  height: commonSprites-sprite-height(logo-edf-big);
-		  @include mq(tablet) {
+		  @include mq(small) {
 			margin: 0 auto;
 		  }
 		}
@@ -179,11 +179,11 @@
   }
 
   article {
-	background-color: $gray-lightest;
+	background-color: $article-bgcolor;
 
 	.block-indent {
 	  padding-left: 100px;
-	  @include mq(tablet) {
+	  @include mq(small) {
 		padding: 0;
 	  }
 	}

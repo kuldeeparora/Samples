@@ -3,7 +3,6 @@
 // --------------------------------------------------
 @import "compass/utilities/sprites";
 
-$commonSprites-layout:smart;
 @import "commonSprites/*.png";
 
 @include all-commonSprites-sprites;

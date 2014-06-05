@@ -7,7 +7,7 @@
   @include mq(desktop) {
 	width: 95%;
   }
-  @include mq(tablet) {
+  @include mq(small) {
 	width: 100%;
   }
 }
@@ -17,13 +17,13 @@
   @include mq(desktop) {
 	display: table;
   }
-  @include mq(tablet) {
+  @include mq(small) {
 	display: none;
   }
 }
 
 %nav-link {
-  font-size: 14px;
+  @include font-size(16px);
   font-weight: bold;
 }
 
@@ -52,8 +52,8 @@
   @extend %font-entypo;
   content: "\25B4";
   position: absolute;
-  font-size: 16px;
-  @include mq(tablet) {
+  @include font-size(16px);
+  @include mq(small) {
 	display: none;
   }
 }
@@ -67,7 +67,7 @@
   @extend %font-entypo;
   content: "\25B8";
   position: absolute;
-  font-size: 16px;
+  @include font-size(16px);
   padding-left: 10px;
 }
 
@@ -75,5 +75,5 @@
   content: "\2630";
   position: absolute;
   right: 5px;
-  font-size: 30px;
+  @include font-size(30px);
 }
