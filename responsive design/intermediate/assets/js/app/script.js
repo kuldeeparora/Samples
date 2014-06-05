@@ -2,7 +2,16 @@
 //Email Validation
 var signupSubmit = document.getElementById('signupSubmit');
 
-signupSubmit.addEventListener('click', function () {
+
+// for IE compatability
+if (!signupSubmit.addEventListener) {
+    signupSubmit.attachEvent("onclick", signup);
+}
+else {
+    signupSubmit.addEventListener("click", signup, false);
+}
+
+function signup () {
     "use strict";
 
     var signup = document.getElementById('uswitchSignup');
@@ -28,15 +37,24 @@ signupSubmit.addEventListener('click', function () {
     applyFieldStyle(false);
     return true;
 
-}, false);
+};
 
 
 //Responsive Menu Nav Button
 var uswitchNavButton = document.getElementById('uswitchNavButton');
 
-uswitchNavButton.addEventListener('click', function () {
+// for IE compatability
+if (!uswitchNavButton.addEventListener) {
+    uswitchNavButton.attachEvent("onclick", toggleNav);
+}
+else {
+    uswitchNavButton.addEventListener("click", toggleNav, false);
+}
+
+
+function toggleNav () {
     "use strict";
 
     var el = document.getElementById('mainUswitchNav');
     el.className = (el.className !== 'hideNav' ? 'hideNav' : '');
-}, false);
+};

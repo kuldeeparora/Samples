@@ -445,7 +445,7 @@ table {
   width: 942px;
   margin: 0 auto;
 }
-@media only all and (max-width: 1023px) {
+@media only all and (max-width: desktop) {
   /* line 4, ../scss/partials/_utilities.scss */
   .main-header .main-nav .main-nav-wrapper, .main-header .sub-nav .sub-nav-wrapper, .main-content .main-content-head .content-wrapper, .main-content .main-content-body .content-wrapper, .main-footer .sign-up {
     width: 95%;
@@ -462,7 +462,7 @@ table {
 .hideNav {
   display: table !important;
 }
-@media only all and (max-width: 1023px) {
+@media only all and (max-width: desktop) {
   /* line 15, ../scss/partials/_utilities.scss */
   .hideNav {
     display: table;
@@ -827,226 +827,220 @@ li {
 
 /* line 88, commonSprites/*.png */
 .commonSprites-sprite, .commonSprites-logo-british, .commonSprites-logo-edf-big, .commonSprites-logo-edf, .commonSprites-logo-eon, .commonSprites-logo-npower, .commonSprites-logo-scotish {
-  background-image: url('../../assets/images/generatedSprites/commonSprites-s27a09536fe.png');
+  background-image: url('../../assets/images/generatedSprites/commonSprites-s232dbc4919.png');
   background-repeat: no-repeat;
 }
 
 /* line 84, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/utilities/sprites/_base.scss */
 .commonSprites-logo-british {
-  background-position: 0 -104px;
-}
-
-/* line 84, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/utilities/sprites/_base.scss */
-.commonSprites-logo-edf-big {
-  background-position: 0 -209px;
-}
-
-/* line 84, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/utilities/sprites/_base.scss */
-.commonSprites-logo-edf {
-  background-position: 0 -144px;
-}
-
-/* line 84, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/utilities/sprites/_base.scss */
-.commonSprites-logo-eon {
   background-position: 0 0;
 }
 
 /* line 84, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/utilities/sprites/_base.scss */
+.commonSprites-logo-edf-big {
+  background-position: 0 -40px;
+}
+
+/* line 84, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/utilities/sprites/_base.scss */
+.commonSprites-logo-edf {
+  background-position: 0 -125px;
+}
+
+/* line 84, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/utilities/sprites/_base.scss */
+.commonSprites-logo-eon {
+  background-position: 0 -190px;
+}
+
+/* line 84, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/utilities/sprites/_base.scss */
 .commonSprites-logo-npower {
-  background-position: 0 -67px;
+  background-position: 0 -221px;
 }
 
 /* line 84, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/utilities/sprites/_base.scss */
 .commonSprites-logo-scotish {
-  background-position: 0 -31px;
+  background-position: 0 -258px;
 }
 
 /* line 4, ../scss/page/_main.scss */
 .main-content {
   background-color: white;
   color: #555555;
-  *zoom: 1;
-}
-/* line 56, ../scss/partials/_mixins.scss */
-.main-content:after {
-  content: "";
-  display: table;
   clear: both;
 }
-/* line 11, ../scss/page/_main.scss */
+/* line 8, ../scss/page/_main.scss */
 .main-content .main-content-head .content-wrapper, .main-content .main-content-body .content-wrapper {
   padding: 30px 0;
   display: table;
 }
-/* line 15, ../scss/page/_main.scss */
+/* line 12, ../scss/page/_main.scss */
 .main-content .main-content-head .content-wrapper .content-icon, .main-content .main-content-body .content-wrapper .content-icon {
   width: 90px;
   display: table-cell;
 }
-/* line 18, ../scss/page/_main.scss */
+/* line 15, ../scss/page/_main.scss */
 .main-content .main-content-head .content-wrapper .content-icon span, .main-content .main-content-body .content-wrapper .content-icon span {
   font-size: 36px;
   font-size: 2.25rem;
 }
 @media only all and (max-width: 767px) {
-  /* line 18, ../scss/page/_main.scss */
+  /* line 15, ../scss/page/_main.scss */
   .main-content .main-content-head .content-wrapper .content-icon span, .main-content .main-content-body .content-wrapper .content-icon span {
     margin-left: 25px;
   }
 }
-/* line 25, ../scss/page/_main.scss */
+/* line 22, ../scss/page/_main.scss */
 .main-content .main-content-head .content-wrapper .content-body, .main-content .main-content-body .content-wrapper .content-body {
   vertical-align: top;
   display: table-cell;
   text-align: left;
 }
-/* line 29, ../scss/page/_main.scss */
+/* line 26, ../scss/page/_main.scss */
 .main-content .main-content-head .content-wrapper .content-body h2, .main-content .main-content-body .content-wrapper .content-body h2 {
   font-weight: normal;
   font-size: 18px;
   font-size: 1.125rem;
   padding: 10px 0;
 }
-/* line 37, ../scss/page/_main.scss */
+/* line 34, ../scss/page/_main.scss */
 .main-content .main-content-head {
   color: white;
   background-color: #00ccff;
 }
-/* line 40, ../scss/page/_main.scss */
+/* line 37, ../scss/page/_main.scss */
 .main-content .main-content-head .description {
   padding: 20px 0 0;
 }
-/* line 42, ../scss/page/_main.scss */
+/* line 39, ../scss/page/_main.scss */
 .main-content .main-content-head .description a {
   text-decoration: underline;
   color: white;
 }
-/* line 48, ../scss/page/_main.scss */
+/* line 45, ../scss/page/_main.scss */
 .main-content .main-content-body {
   background-color: white;
   color: #00ccff;
 }
-/* line 52, ../scss/page/_main.scss */
+/* line 49, ../scss/page/_main.scss */
 .main-content .main-content-body #energyDeals {
   border-bottom: 1px solid #999999;
 }
-/* line 55, ../scss/page/_main.scss */
+/* line 52, ../scss/page/_main.scss */
 .main-content .main-content-body #energyDeals .energy-deals p, .main-content .main-content-body #energyDeals .energy-deals a, .main-content .main-content-body #energyDeals .energy-deals span {
   color: #00ccff;
 }
-/* line 59, ../scss/page/_main.scss */
+/* line 56, ../scss/page/_main.scss */
 .main-content .main-content-body #energyDeals .energy-deals li {
   width: 160px;
   padding: 10px 20px;
   vertical-align: top;
   text-align: center;
 }
-/* line 64, ../scss/page/_main.scss */
+/* line 61, ../scss/page/_main.scss */
 .main-content .main-content-body #energyDeals .energy-deals li .logo {
   display: block;
   height: 75px;
 }
-/* line 67, ../scss/page/_main.scss */
+/* line 64, ../scss/page/_main.scss */
 .main-content .main-content-body #energyDeals .energy-deals li .logo span {
   display: block;
   margin: 0 auto;
 }
-/* line 71, ../scss/page/_main.scss */
+/* line 68, ../scss/page/_main.scss */
 .main-content .main-content-body #energyDeals .energy-deals li .logo .british {
   background: url('../../assets/images/generatedSprites/commonSprites-s4727f4acae.png') 0 0 no-repeat;
   width: 94px;
   height: 40px;
 }
-/* line 76, ../scss/page/_main.scss */
+/* line 73, ../scss/page/_main.scss */
 .main-content .main-content-body #energyDeals .energy-deals li .logo .edf {
   background: url('../../assets/images/generatedSprites/commonSprites-s4727f4acae.png') 0 -125px no-repeat;
   width: 55px;
   height: 65px;
 }
-/* line 81, ../scss/page/_main.scss */
+/* line 78, ../scss/page/_main.scss */
 .main-content .main-content-body #energyDeals .energy-deals li .logo .scotish {
   background: url('../../assets/images/generatedSprites/commonSprites-s4727f4acae.png') 0 -258px no-repeat;
   width: 99px;
   height: 36px;
 }
-/* line 86, ../scss/page/_main.scss */
+/* line 83, ../scss/page/_main.scss */
 .main-content .main-content-body #energyDeals .energy-deals li .logo .npower {
   background: url('../../assets/images/generatedSprites/commonSprites-s4727f4acae.png') 0 -221px no-repeat;
   width: 97px;
   height: 37px;
 }
-/* line 91, ../scss/page/_main.scss */
+/* line 88, ../scss/page/_main.scss */
 .main-content .main-content-body #energyDeals .energy-deals li .logo .eon {
   background: url('../../assets/images/generatedSprites/commonSprites-s4727f4acae.png') 0 -190px no-repeat;
   width: 85px;
   height: 31px;
 }
-/* line 98, ../scss/page/_main.scss */
+/* line 95, ../scss/page/_main.scss */
 .main-content .main-content-body #energyDeals .energy-deals li .award {
   height: 50px;
   color: #999999;
   padding: 5px;
 }
-/* line 104, ../scss/page/_main.scss */
+/* line 101, ../scss/page/_main.scss */
 .main-content .main-content-body #energyDeals .energy-deals li .price span {
   line-height: 30px;
   font-size: 28px;
   font-size: 1.75rem;
   font-weight: bold;
 }
-/* line 115, ../scss/page/_main.scss */
+/* line 112, ../scss/page/_main.scss */
 .main-content .main-content-body .content-body p, .main-content .main-content-body .content-body a, .main-content .main-content-body .content-body span {
   color: #999999;
   padding: 10px 0;
 }
-/* line 119, ../scss/page/_main.scss */
+/* line 116, ../scss/page/_main.scss */
 .main-content .main-content-body .content-body span {
   font-size: 18px;
   font-size: 1.125rem;
   padding-right: 4px;
 }
-/* line 123, ../scss/page/_main.scss */
+/* line 120, ../scss/page/_main.scss */
 .main-content .main-content-body .content-body a {
   text-decoration: underline;
 }
-/* line 129, ../scss/page/_main.scss */
+/* line 126, ../scss/page/_main.scss */
 .main-content .main-content-body #energyUsage {
   color: #999999;
   border-bottom: 1px solid #e9e9e9;
 }
-/* line 133, ../scss/page/_main.scss */
+/* line 130, ../scss/page/_main.scss */
 .main-content .main-content-body #energyUsage li {
   padding: 10px 20px;
   vertical-align: top;
 }
 @media only all and (max-width: 767px) {
-  /* line 133, ../scss/page/_main.scss */
+  /* line 130, ../scss/page/_main.scss */
   .main-content .main-content-body #energyUsage li {
     display: block;
     margin-bottom: 10px;
   }
 }
-/* line 140, ../scss/page/_main.scss */
+/* line 137, ../scss/page/_main.scss */
 .main-content .main-content-body #energyUsage li p {
   padding: 0px;
   font-weight: bold;
 }
-/* line 144, ../scss/page/_main.scss */
+/* line 141, ../scss/page/_main.scss */
 .main-content .main-content-body #energyUsage li .plan-name {
   line-height: 36px;
   font-weight: normal;
 }
-/* line 149, ../scss/page/_main.scss */
+/* line 146, ../scss/page/_main.scss */
 .main-content .main-content-body #energyUsage li .price-tag {
   line-height: 36px;
   font-size: 28px;
   font-size: 1.75rem;
 }
-/* line 154, ../scss/page/_main.scss */
+/* line 151, ../scss/page/_main.scss */
 .main-content .main-content-body #energyUsage .provider-logo {
   padding: 0;
 }
-/* line 156, ../scss/page/_main.scss */
+/* line 153, ../scss/page/_main.scss */
 .main-content .main-content-body #energyUsage .provider-logo .edf-big {
   display: block;
   background: url('../../assets/images/generatedSprites/commonSprites-s4727f4acae.png') 0 -40px no-repeat;
@@ -1054,39 +1048,39 @@ li {
   height: 85px;
 }
 @media only all and (max-width: 767px) {
-  /* line 156, ../scss/page/_main.scss */
+  /* line 153, ../scss/page/_main.scss */
   .main-content .main-content-body #energyUsage .provider-logo .edf-big {
     margin: 0 auto;
   }
 }
-/* line 170, ../scss/page/_main.scss */
+/* line 167, ../scss/page/_main.scss */
 .main-content .main-content-body #energyCurrentProvider .content-body p, .main-content .main-content-body #energyCurrentProvider .content-body a, .main-content .main-content-body #energyCurrentProvider .content-body span {
   color: #999999;
   padding: 10px 0;
 }
-/* line 174, ../scss/page/_main.scss */
+/* line 171, ../scss/page/_main.scss */
 .main-content .main-content-body #energyCurrentProvider .content-body a {
   text-decoration: underline;
 }
-/* line 177, ../scss/page/_main.scss */
+/* line 174, ../scss/page/_main.scss */
 .main-content .main-content-body #energyCurrentProvider .content-body span {
   padding-right: 10px;
 }
-/* line 184, ../scss/page/_main.scss */
+/* line 181, ../scss/page/_main.scss */
 .main-content article {
   background-color: #f6f6f6;
 }
-/* line 187, ../scss/page/_main.scss */
+/* line 184, ../scss/page/_main.scss */
 .main-content article .block-indent {
   padding-left: 100px;
 }
 @media only all and (max-width: 767px) {
-  /* line 187, ../scss/page/_main.scss */
+  /* line 184, ../scss/page/_main.scss */
   .main-content article .block-indent {
     padding: 0;
   }
 }
-/* line 194, ../scss/page/_main.scss */
+/* line 191, ../scss/page/_main.scss */
 .main-content article .notify {
   color: #9d261d;
 }
