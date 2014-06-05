@@ -1,10 +1,19 @@
 .main-header {
   .main-nav {
 	@include panel($header-mainnav, $purple);
+	@include mq(tablet) {
+	  height: 45px;
+	}
 	height: 82px;
 	.main-nav-wrapper {
 	  @extend %wrapper;
 	  .uswitch-logo {
+		@include mq(tablet) {
+		  background-image: url("../images/logo-uswitch-mobile.png");
+		  height: 37px;
+		  width: 37px;
+		  margin: 4px;
+		}
 		background-image: url("../images/logo-uswitch.png");
 		background-repeat: no-repeat;
 		float: left;
@@ -14,35 +23,51 @@
 	  .uswitch-main-nav-button {
 		@include mq(tablet) {
 		  display: block;
+		  cursor: pointer;
 		}
 		display: none;
 	  }
-	  > ul {
+	  #mainUswitchNav {
+		@include mq(desktop){
+		  display: table;
+		}
 		@include mq(tablet) {
-		  display: block;
+		  display: none;
 		  width: 100%;
 		  padding-top: 0;
 		  text-align: left;
 		}
 		display: table;
-		width: 92%;
+		width: 90%;
 		padding-top: 50px;
-		text-align: right;
+		float: right;
+		z-index: 10;
 		li {
-		  @include mq(tablet) {
-			display: block;
-		  }
 		  display: table-cell;
 		  position: relative;
 		  padding-bottom: 20px;
+		  @include mq(tablet) {
+			display: block;
+			background-color: $gray;
+			padding: 10px;
+			border-bottom: 1px solid $white;
+		  }
 		  a {
 			@extend %nav-link;
 			color: $purple;
+			@include mq(tablet) {
+			  color: $white;
+			}
 		  }
 		  a.active:after {
+			position: absolute;
 			color: $magenta;
-			bottom: 2px;
-			right: 27%;
+			margin-left: -29px;
+			height: 100%;
+			margin-top: 18px;
+		  }
+		  a:hover {
+			text-decoration: underline;
 		  }
 		}
 	  }
@@ -50,6 +75,10 @@
   }
 
   .sub-nav {
+	@include mq(tablet){
+	  display: none;
+	}
+	display: block;
 	@include panel($header-subnav, $pink);
 	text-align: right;
 	height: 48px;
@@ -61,12 +90,16 @@
 		  a {
 			@extend %nav-link;
 			color: $pink;
-			line-height: 45px;
+			line-height: 27px;
 		  }
 		  a.active:after {
 			color: $blue;
-			bottom: -22px;
-			right: 27%;
+			margin-left: -50px;
+			height: 100%;
+			margin-top: 23px;
+		  }
+		  a:hover {
+			text-decoration: underline;
 		  }
 		}
 	  }

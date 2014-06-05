@@ -23,14 +23,15 @@
 	<nav role="navigation" class="main-nav">
 		<div class="main-nav-wrapper">
 			<a class="uswitch-logo" href="http://www.uswitch.com" title="uSwitch"></a>
-			<div class="uswitch-main-nav-button"></div>
-			<ul>
+
+			<div class="uswitch-main-nav-button" onclick="show('mainUswitchNav')"></div>
+			<ul id="mainUswitchNav">
 				<li><a href="#">Gas & electricity</a></li>
 				<li><a href="#">Broadband, TV & home phone</a></li>
 				<li><a href="#">Mobiles</a></li>
 				<li><a href="#">Money & Insurance</a></li>
 				<li><a href="#" class="active">Account</a></li>
-				<li><a href="#">&#128269;</a></li>
+				<li><a href="#" class="uswitch-search"></a></li>
 			</ul>
 		</div>
 	</nav>
@@ -134,12 +135,12 @@
 			<div class="content-wrapper">
 				<div class="content-icon"></div>
 				<div class="content-body">
-					<ul class="plans">
-						<li>
+					<ul class="provider-plans">
+						<li class="provider-logo">
 							<span class="edf-big"></span>
 						</li>
 						<li>
-							<p><strong>Current Plan:</strong></p>
+							<p>Current Plan:</p>
 
 							<p class="plan-name">Standard (Variable)</p>
 
@@ -148,7 +149,7 @@
 							</div>
 						</li>
 						<li>
-							<p><strong>Usage Entered:</strong></p>
+							<p>Usage Entered:</p>
 
 							<p class="plan-name">2032.00kWh per year on electricity</p>
 
@@ -157,7 +158,7 @@
 							</div>
 						</li>
 						<li>
-							<p><strong>Estimated Cost:</strong></p>
+							<p>Estimated Cost:</p>
 
 							<p class="plan-name"><span class="price-tag">£336.</span>60/yr</p>
 
@@ -197,8 +198,9 @@
 <footer class="main-footer">
 	<div class="sign-up">
 		<form>
-			<label>Signup for news & money-saving offers: </label><input type="text">
-			<button name="SignUp" class="basic-btn">Sign up</button>
+			<label>Signup for news & money-saving offers: </label><input type="text" id="uswitchSignup"
+																		 name="emailAddress">
+			<button class="basic-btn" type="submit" onclick="return signupSubmit()">Sign up</button>
 		</form>
 	</div>
 </footer>

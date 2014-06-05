@@ -135,8 +135,20 @@
 		}
 		p {
 		  padding: 0px;
+		  font-weight: bold;
+		}
+		.plan-name {
+		  line-height: 36px;
+		  font-weight: normal;
 		}
 
+		.price-tag {
+		  line-height: 36px;
+		  font-size: 26px;
+		}
+	  }
+	  .provider-logo {
+		padding: 0;
 		.edf-big {
 		  display: block;
 		  background: sprite($commonSprites, logo-edf-big) no-repeat;
@@ -145,15 +157,6 @@
 		  @include mq(tablet) {
 			margin: 0 auto;
 		  }
-		}
-
-		.plan-name {
-		  line-height: 36px;
-		}
-
-		.price-tag {
-		  line-height: 36px;
-		  font-size: 26px;
 		}
 	  }
 	}
