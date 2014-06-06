@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8"/>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<title>uSwitch</title>
 	<meta name="description"
@@ -128,11 +128,11 @@
 
 					<p>Your current electricity provider is <strong>E-on Energy</strong></p>
 					<span class="icon">&#58543;</span>
-					<a href="#">Hide details</a>
+					<a href="javascript:void(0)" id="hideDetails">Hide details</a>
 				</div>
 			</div>
 		</section>
-		<article id="energyUsage">
+		<section class="energy-usage">
 			<div class="content-wrapper">
 				<div class="content-icon"></div>
 				<div class="content-body">
@@ -170,8 +170,8 @@
 					</ul>
 				</div>
 			</div>
-		</article>
-		<article>
+		</section>
+		<section class="energy-usage">
 			<div class="content-wrapper">
 				<div class="content-icon"></div>
 				<div class="content-body">
@@ -181,8 +181,7 @@
 					</div>
 				</div>
 			</div>
-		</article>
-
+		</section>
 		<section id="energyCurrentProvider">
 			<div class="content-wrapper">
 				<div class="content-icon">
@@ -190,7 +189,8 @@
 				</div>
 				<div class="content-body">
 					<p>Your current gas provider is <strong>British Gas</strong></p>
-					<span class="uswitch-search icon"></span><a href="#">View and edit my plan and consumption details</a>
+					<span class="uswitch-search icon"></span><a href="#">View and edit my plan and consumption
+					details</a>
 				</div>
 			</div>
 		</section>
@@ -198,10 +198,10 @@
 </main>
 <footer class="main-footer">
 	<div class="sign-up">
-		<form>
+		<form id="signupForm">
 			<label>Signup for news & money-saving offers: </label>
 			<input type="text" id="uswitchSignup" name="emailAddress">
-			<button class="basic-btn" type="submit" id="signupSubmit">Sign up</button>
+			<button class="basic-btn" type="submit">Sign up</button>
 		</form>
 	</div>
 </footer>

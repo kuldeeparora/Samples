@@ -154,6 +154,7 @@ dfn {
 /* line 286, ../scss/partials/_normalize.scss */
 hr {
   -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -376,6 +377,7 @@ html input[disabled] {
 input[type="checkbox"],
 input[type="radio"] {
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -392,6 +394,7 @@ input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
   -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   /* 2 */
 }
@@ -445,7 +448,7 @@ table {
   width: 942px;
   margin: 0 auto;
 }
-@media only all and (max-width: desktop) {
+@media only all and (max-width: 1023px) {
   /* line 4, ../scss/partials/_utilities.scss */
   .main-header .main-nav .main-nav-wrapper, .main-header .sub-nav .sub-nav-wrapper, .main-content .main-content-head .content-wrapper, .main-content .main-content-body .content-wrapper, .main-footer .sign-up {
     width: 95%;
@@ -462,7 +465,7 @@ table {
 .hideNav {
   display: table !important;
 }
-@media only all and (max-width: desktop) {
+@media only all and (max-width: 1023px) {
   /* line 15, ../scss/partials/_utilities.scss */
   .hideNav {
     display: table;
@@ -491,22 +494,37 @@ table {
 .uswitch-btn {
   background-color: #e54d42;
   border: none;
+  -webkit-border-radius: 5px;
   border-radius: 5px;
   color: white;
   padding: 12px 35px 12px 18px;
+  -webkit-box-shadow: 0 6px #be3a31;
   box-shadow: 0 6px #be3a31;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  position: relative;
+  z-index: 0;
+  behavior: url(PIE.php);
 }
 
-/* line 43, ../scss/partials/_utilities.scss */
+/* line 47, ../scss/partials/_utilities.scss */
+.uswitch-btn:hover {
+  background-color: #be3a31;
+  -webkit-box-shadow: 6px 0 #e54d42;
+  box-shadow: 6px 0 #e54d42;
+}
+
+/* line 52, ../scss/partials/_utilities.scss */
 .basic-btn {
   padding: 7px 36px 7px 16px;
   border: none;
   background-color: #ececec;
+  -webkit-border-radius: 5px;
   border-radius: 5px;
   zoom: 1;
 }
 
-/* line 51, ../scss/partials/_utilities.scss */
+/* line 60, ../scss/partials/_utilities.scss */
 .active:after {
   content: "\25B4";
   position: absolute;
@@ -514,27 +532,29 @@ table {
   font-size: 1rem;
 }
 @media only all and (max-width: 767px) {
-  /* line 51, ../scss/partials/_utilities.scss */
+  /* line 60, ../scss/partials/_utilities.scss */
   .active:after {
     display: none;
   }
 }
 
-/* line 61, ../scss/partials/_utilities.scss */
+/* line 70, ../scss/partials/_utilities.scss */
 .uswitch-search:after {
   content: "\1F50D";
 }
 
-/* line 66, ../scss/partials/_utilities.scss */
+/* line 75, ../scss/partials/_utilities.scss */
 .uswitch-btn:after, .basic-btn:after {
   content: "\25B8";
-  position: absolute;
+  position: relative;
   font-size: 16px;
   font-size: 1rem;
-  padding-left: 10px;
+  left: 10px;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
-/* line 74, ../scss/partials/_utilities.scss */
+/* line 89, ../scss/partials/_utilities.scss */
 #uswitchNavButton:after {
   content: "\2630";
   position: absolute;
@@ -563,6 +583,7 @@ table {
   margin: 0;
   padding: 0;
   font-family: Helvetica, Arial, sans-serif;
+  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   font-size: 14px;
@@ -650,15 +671,7 @@ a {
   text-decoration: none;
 }
 
-/* line 93, ../scss/page/_base.scss */
-.pngfix {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)" !important;
-  /* IE8 */
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100) !important;
-  /* IE6 & 7 */
-}
-
-/* line 99, ../scss/page/_base.scss */
+/* line 92, ../scss/page/_base.scss */
 li {
   display: inline-block;
   list-style-type: none;
@@ -731,19 +744,13 @@ li {
   display: inline-block;
   position: relative;
   padding-bottom: 20px;
-  padding-left: 5%;
+  padding-left: 3%;
   z-index: 10;
 }
-@media only all and (max-width: 1023px) {
+@media only all and (max-width: 950px) {
   /* line 45, ../scss/page/_header.scss */
   .main-header .main-nav .main-nav-wrapper #mainUswitchNav li {
-    padding-left: 3%;
-  }
-}
-@media only all and (max-width: 830px) {
-  /* line 45, ../scss/page/_header.scss */
-  .main-header .main-nav .main-nav-wrapper #mainUswitchNav li {
-    padding-left: 2%;
+    padding-left: 1%;
   }
 }
 @media only all and (max-width: 767px) {
@@ -755,17 +762,19 @@ li {
     border-bottom: 1px solid white;
   }
 }
-/* line 63, ../scss/page/_header.scss */
+/* line 60, ../scss/page/_header.scss */
 .main-header .main-nav .main-nav-wrapper #mainUswitchNav li a {
   color: #663366;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 @media only all and (max-width: 767px) {
-  /* line 63, ../scss/page/_header.scss */
+  /* line 60, ../scss/page/_header.scss */
   .main-header .main-nav .main-nav-wrapper #mainUswitchNav li a {
     color: white;
   }
 }
-/* line 70, ../scss/page/_header.scss */
+/* line 68, ../scss/page/_header.scss */
 .main-header .main-nav .main-nav-wrapper #mainUswitchNav li a.active:after {
   position: absolute;
   color: #7d112b;
@@ -773,11 +782,11 @@ li {
   height: 100%;
   margin-top: 20px;
 }
-/* line 77, ../scss/page/_header.scss */
+/* line 75, ../scss/page/_header.scss */
 .main-header .main-nav .main-nav-wrapper #mainUswitchNav li a:hover {
-  text-decoration: underline;
+  text-shadow: rgba(255, 255, 255, 0.5) 0px 3px 5px;
 }
-/* line 85, ../scss/page/_header.scss */
+/* line 83, ../scss/page/_header.scss */
 .main-header .sub-nav {
   display: block;
   background-color: #7d112b;
@@ -786,41 +795,45 @@ li {
   height: 48px;
 }
 @media only all and (max-width: 767px) {
-  /* line 85, ../scss/page/_header.scss */
+  /* line 83, ../scss/page/_header.scss */
   .main-header .sub-nav {
     display: none;
   }
 }
-/* line 96, ../scss/page/_header.scss */
+/* line 93, ../scss/page/_header.scss */
+.main-header .sub-nav .sub-nav-wrapper > ul {
+  width: 90%;
+}
+/* line 95, ../scss/page/_header.scss */
 .main-header .sub-nav .sub-nav-wrapper > ul li {
   position: relative;
   padding-left: 5%;
 }
 @media only all and (max-width: 1023px) {
-  /* line 96, ../scss/page/_header.scss */
+  /* line 95, ../scss/page/_header.scss */
   .main-header .sub-nav .sub-nav-wrapper > ul li {
     padding-left: 3%;
   }
 }
-@media only all and (max-width: 830px) {
-  /* line 96, ../scss/page/_header.scss */
+@media only all and (max-width: 950px) {
+  /* line 95, ../scss/page/_header.scss */
   .main-header .sub-nav .sub-nav-wrapper > ul li {
     padding-left: 2%;
   }
 }
-/* line 105, ../scss/page/_header.scss */
+/* line 104, ../scss/page/_header.scss */
 .main-header .sub-nav .sub-nav-wrapper > ul li a {
   color: #ff9999;
   line-height: 36px;
 }
-/* line 110, ../scss/page/_header.scss */
+/* line 109, ../scss/page/_header.scss */
 .main-header .sub-nav .sub-nav-wrapper > ul li a.active:after {
   color: #00ccff;
   right: 25%;
   height: 100%;
   margin-top: 20px;
 }
-/* line 116, ../scss/page/_header.scss */
+/* line 115, ../scss/page/_header.scss */
 .main-header .sub-nav .sub-nav-wrapper > ul li a:hover {
   text-decoration: underline;
 }
@@ -921,168 +934,167 @@ li {
   color: #00ccff;
 }
 /* line 49, ../scss/page/_main.scss */
-.main-content .main-content-body #energyDeals {
-  border-bottom: 1px solid #999999;
+.main-content .main-content-body section {
+  border-bottom: 1px solid #e9e9e9;
 }
-/* line 52, ../scss/page/_main.scss */
+/* line 53, ../scss/page/_main.scss */
+.main-content .main-content-body .content-body p, .main-content .main-content-body .content-body a, .main-content .main-content-body .content-body span {
+  color: #999999;
+  padding: 10px 0;
+}
+/* line 57, ../scss/page/_main.scss */
+.main-content .main-content-body .content-body span {
+  font-size: 18px;
+  font-size: 1.125rem;
+  padding-right: 4px;
+}
+/* line 61, ../scss/page/_main.scss */
+.main-content .main-content-body .content-body a {
+  text-decoration: underline;
+}
+/* line 69, ../scss/page/_main.scss */
 .main-content .main-content-body #energyDeals .energy-deals p, .main-content .main-content-body #energyDeals .energy-deals a, .main-content .main-content-body #energyDeals .energy-deals span {
   color: #00ccff;
 }
-/* line 56, ../scss/page/_main.scss */
+/* line 73, ../scss/page/_main.scss */
 .main-content .main-content-body #energyDeals .energy-deals li {
   width: 160px;
   padding: 10px 20px;
   vertical-align: top;
   text-align: center;
 }
-/* line 61, ../scss/page/_main.scss */
+/* line 78, ../scss/page/_main.scss */
 .main-content .main-content-body #energyDeals .energy-deals li .logo {
   display: block;
   height: 75px;
 }
-/* line 64, ../scss/page/_main.scss */
+/* line 81, ../scss/page/_main.scss */
 .main-content .main-content-body #energyDeals .energy-deals li .logo span {
   display: block;
   margin: 0 auto;
 }
-/* line 68, ../scss/page/_main.scss */
+/* line 85, ../scss/page/_main.scss */
 .main-content .main-content-body #energyDeals .energy-deals li .logo .british {
   background: url('../../assets/images/generatedSprites/commonSprites-s4727f4acae.png') 0 0 no-repeat;
   width: 94px;
   height: 40px;
 }
-/* line 73, ../scss/page/_main.scss */
+/* line 90, ../scss/page/_main.scss */
 .main-content .main-content-body #energyDeals .energy-deals li .logo .edf {
   background: url('../../assets/images/generatedSprites/commonSprites-s4727f4acae.png') 0 -125px no-repeat;
   width: 55px;
   height: 65px;
 }
-/* line 78, ../scss/page/_main.scss */
+/* line 95, ../scss/page/_main.scss */
 .main-content .main-content-body #energyDeals .energy-deals li .logo .scotish {
   background: url('../../assets/images/generatedSprites/commonSprites-s4727f4acae.png') 0 -258px no-repeat;
   width: 99px;
   height: 36px;
 }
-/* line 83, ../scss/page/_main.scss */
+/* line 100, ../scss/page/_main.scss */
 .main-content .main-content-body #energyDeals .energy-deals li .logo .npower {
   background: url('../../assets/images/generatedSprites/commonSprites-s4727f4acae.png') 0 -221px no-repeat;
   width: 97px;
   height: 37px;
 }
-/* line 88, ../scss/page/_main.scss */
+/* line 105, ../scss/page/_main.scss */
 .main-content .main-content-body #energyDeals .energy-deals li .logo .eon {
   background: url('../../assets/images/generatedSprites/commonSprites-s4727f4acae.png') 0 -190px no-repeat;
   width: 85px;
   height: 31px;
 }
-/* line 95, ../scss/page/_main.scss */
+/* line 112, ../scss/page/_main.scss */
 .main-content .main-content-body #energyDeals .energy-deals li .award {
   height: 50px;
   color: #999999;
   padding: 5px;
 }
-/* line 101, ../scss/page/_main.scss */
+/* line 118, ../scss/page/_main.scss */
 .main-content .main-content-body #energyDeals .energy-deals li .price span {
   line-height: 30px;
   font-size: 28px;
   font-size: 1.75rem;
   font-weight: bold;
 }
-/* line 112, ../scss/page/_main.scss */
-.main-content .main-content-body .content-body p, .main-content .main-content-body .content-body a, .main-content .main-content-body .content-body span {
+/* line 128, ../scss/page/_main.scss */
+.main-content .main-content-body .energy-usage {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  opacity: 1;
   color: #999999;
-  padding: 10px 0;
+  background-color: #f6f6f6;
 }
-/* line 116, ../scss/page/_main.scss */
-.main-content .main-content-body .content-body span {
-  font-size: 18px;
-  font-size: 1.125rem;
-  padding-right: 4px;
-}
-/* line 120, ../scss/page/_main.scss */
-.main-content .main-content-body .content-body a {
-  text-decoration: underline;
-}
-/* line 126, ../scss/page/_main.scss */
-.main-content .main-content-body #energyUsage {
-  color: #999999;
-  border-bottom: 1px solid #e9e9e9;
-}
-/* line 130, ../scss/page/_main.scss */
-.main-content .main-content-body #energyUsage li {
+/* line 134, ../scss/page/_main.scss */
+.main-content .main-content-body .energy-usage li {
   padding: 10px 20px;
   vertical-align: top;
 }
 @media only all and (max-width: 767px) {
-  /* line 130, ../scss/page/_main.scss */
-  .main-content .main-content-body #energyUsage li {
+  /* line 134, ../scss/page/_main.scss */
+  .main-content .main-content-body .energy-usage li {
     display: block;
     margin-bottom: 10px;
   }
 }
-/* line 137, ../scss/page/_main.scss */
-.main-content .main-content-body #energyUsage li p {
+/* line 141, ../scss/page/_main.scss */
+.main-content .main-content-body .energy-usage li p {
   padding: 0px;
   font-weight: bold;
 }
-/* line 141, ../scss/page/_main.scss */
-.main-content .main-content-body #energyUsage li .plan-name {
+/* line 145, ../scss/page/_main.scss */
+.main-content .main-content-body .energy-usage li .plan-name {
   line-height: 36px;
   font-weight: normal;
 }
-/* line 146, ../scss/page/_main.scss */
-.main-content .main-content-body #energyUsage li .price-tag {
+/* line 150, ../scss/page/_main.scss */
+.main-content .main-content-body .energy-usage li .price-tag {
   line-height: 36px;
   font-size: 28px;
   font-size: 1.75rem;
 }
-/* line 151, ../scss/page/_main.scss */
-.main-content .main-content-body #energyUsage .provider-logo {
+/* line 155, ../scss/page/_main.scss */
+.main-content .main-content-body .energy-usage .provider-logo {
   padding: 0;
 }
-/* line 153, ../scss/page/_main.scss */
-.main-content .main-content-body #energyUsage .provider-logo .edf-big {
+/* line 157, ../scss/page/_main.scss */
+.main-content .main-content-body .energy-usage .provider-logo .edf-big {
   display: block;
   background: url('../../assets/images/generatedSprites/commonSprites-s4727f4acae.png') 0 -40px no-repeat;
   width: 79px;
   height: 85px;
 }
 @media only all and (max-width: 767px) {
-  /* line 153, ../scss/page/_main.scss */
-  .main-content .main-content-body #energyUsage .provider-logo .edf-big {
+  /* line 157, ../scss/page/_main.scss */
+  .main-content .main-content-body .energy-usage .provider-logo .edf-big {
     margin: 0 auto;
   }
 }
 /* line 167, ../scss/page/_main.scss */
+.main-content .main-content-body .energy-usage .block-indent {
+  padding-left: 100px;
+}
+@media only all and (max-width: 767px) {
+  /* line 167, ../scss/page/_main.scss */
+  .main-content .main-content-body .energy-usage .block-indent {
+    padding: 0;
+  }
+}
+/* line 173, ../scss/page/_main.scss */
+.main-content .main-content-body .energy-usage .notify {
+  color: #9d261d;
+}
+/* line 181, ../scss/page/_main.scss */
 .main-content .main-content-body #energyCurrentProvider .content-body p, .main-content .main-content-body #energyCurrentProvider .content-body a, .main-content .main-content-body #energyCurrentProvider .content-body span {
   color: #999999;
   padding: 10px 0;
 }
-/* line 171, ../scss/page/_main.scss */
+/* line 185, ../scss/page/_main.scss */
 .main-content .main-content-body #energyCurrentProvider .content-body a {
   text-decoration: underline;
 }
-/* line 174, ../scss/page/_main.scss */
+/* line 188, ../scss/page/_main.scss */
 .main-content .main-content-body #energyCurrentProvider .content-body span {
   padding-right: 10px;
-}
-/* line 181, ../scss/page/_main.scss */
-.main-content article {
-  background-color: #f6f6f6;
-}
-/* line 184, ../scss/page/_main.scss */
-.main-content article .block-indent {
-  padding-left: 100px;
-}
-@media only all and (max-width: 767px) {
-  /* line 184, ../scss/page/_main.scss */
-  .main-content article .block-indent {
-    padding: 0;
-  }
-}
-/* line 191, ../scss/page/_main.scss */
-.main-content article .notify {
-  color: #9d261d;
 }
 
 /* line 1, ../scss/page/_footer.scss */

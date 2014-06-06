@@ -89,15 +89,7 @@ a {
   text-decoration: none;
 }
 
-// png Fix
-.pngfix {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)" !important; /* IE8 */
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100) !important;   /* IE6 & 7 */
-}
-
-
 li {
   display: inline-block;
   list-style-type: none;
 }
-

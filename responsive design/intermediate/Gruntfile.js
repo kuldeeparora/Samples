@@ -59,7 +59,7 @@ module.exports = function (grunt) {
         },
         autoprefixer: {
             options: {
-                browsers: ['last 2 version', 'ie 8', 'ie 9']
+                browsers: ['last 8 version', 'ie 8', 'ie 9']
             },
             multiple_files: {
                 expand: true,

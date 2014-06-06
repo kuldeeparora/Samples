@@ -4,7 +4,7 @@
 %wrapper {
   width: 942px;
   margin: 0 auto;
-  @include mq(desktop) {
+  @include mq(large) {
 	width: 95%;
   }
   @include mq(small) {
@@ -14,7 +14,7 @@
 
 .hideNav {
   display: table !important;
-  @include mq(desktop) {
+  @include mq(large) {
 	display: table;
   }
   @include mq(small) {
@@ -38,6 +38,15 @@
   color: $white;
   padding: 12px 35px 12px 18px;
   @include box-shadow(0 6px $btn-bgcolor-shadow);
+  @include transition(all 0.3s ease-in);
+  position:relative;
+  z-index: 0;
+  behavior: url(PIE.php);
+}
+
+.uswitch-btn:hover {
+  background-color: $btn-bgcolor-shadow;
+  @include box-shadow(6px 0 $btn-bgcolor);
 }
 
 .basic-btn {
@@ -66,10 +75,16 @@
 .uswitch-btn:after, .basic-btn:after {
   @extend %font-entypo;
   content: "\25B8";
-  position: absolute;
+  position: relative;
   @include font-size(16px);
-  padding-left: 10px;
+  left: 10px;
+  @include transition(all 0.3s ease-in);
 }
+
+//.uswitch-btn:hover:after, .basic-btn:hover:after {
+//  left:15px;
+//}
+
 
 #uswitchNavButton:after {
   content: "\2630";
