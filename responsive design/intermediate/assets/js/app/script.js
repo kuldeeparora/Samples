@@ -46,13 +46,12 @@ var hideEnergyUsage = document.getElementById('hideDetails');
 hideEnergyUsage.onclick = function () {
     "use strict";
 
-//    var el = document.getElementsByClassName('energy-usage');
     var el =  document.querySelectorAll('.' + 'energy-usage');
     var elLength = el.length;
     hideEnergyUsage.innerHTML = (hideEnergyUsage.innerHTML !== 'Show details' ? 'Show details' : 'Hide details');
 
     for (var i = 0; i < elLength; i++) {
-        el[i].style.display = (el[i].style.display !== 'none' ? 'none' : 'block');
+        el[i].style.display = (el[i].style.display !== 'none' ? 'none' : '');
     }
 };
 
