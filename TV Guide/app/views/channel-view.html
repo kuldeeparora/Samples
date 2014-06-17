@@ -52,7 +52,7 @@
 		<li>05:30</li>
 	</ul>
 </div>
-<div id="tvGuidePanel">
+<div id="tvGuidePanel" style="height: 600px; overflow: scroll">
 	<div class="prev-episode" ng-click="prevEpisode()"> Prev </div>
 	<div class="next-episode" ng-click="nextEpisode()"> Next </div>
 	<ul ng-repeat="channel in channels" ng-show="checkFilter(channel)">

@@ -8,6 +8,7 @@ Demo.TvGuide = {
             'ngCookies',
             'ngResource',
             'ngSanitize',
-            'ngRoute'
+            'ngRoute',
+            'sf.virtualScroll'
         ])
 };
