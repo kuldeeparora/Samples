@@ -1,7 +1,7 @@
 ### BASICS
-Browser Support
+#####Browser Support
 For IE, we most typically support versions 8+. There may be exceptions, given regional markets and their particular metrics, or client mandates.
-Indentation
+#####Indentation
 For all code languages, we require indentation to be done via tab. Hitting Tab in your code editor should be equivalent to four spaces.
 Readability vs. Compression
 We prefer readability over file-size savings when it comes to maintaining existing files. For production versions of CSS and JavaScript files, we deploy them minified using grunt & assetic.
