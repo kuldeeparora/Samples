@@ -1,12 +1,15 @@
-.login-container .panel {
+.panel-container .panel {
   width: 400px;
   margin: 0 auto;
 }
-.login-container .forget-pwd {
+.panel-container .forget-pwd {
   display: block;
   clear: both;
   margin-top: 10px;
 }
-#passwordReset .form-control-feedback {
+.panel-container p strong {
+  color: #003366;
+}
+#validateForm .form-control-feedback {
   right: 10px;
 }
