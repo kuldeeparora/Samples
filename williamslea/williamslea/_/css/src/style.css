@@ -1,3 +1,9 @@
+#myNavbar {
+  margin-bottom: 0;
+}
+#myNavbar .dropdown {
+  margin: 10px;
+}
 .panel-container .panel {
   width: 400px;
   margin: 0 auto;
