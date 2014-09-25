@@ -1,3 +1,6 @@
+body {
+  height: 100%;
+}
 #myNavbar {
   margin-bottom: 0;
 }
@@ -18,4 +21,16 @@
 }
 #validateForm .form-control-feedback {
   right: 10px;
+}
+.table tbody tr td .doc-info,
+.table thead tr th .doc-info,
+.table tfoot tr th .doc-info {
+  display: block;
+  font-size: 12px;
+  color: #999;
+}
+.table tbody tr td span,
+.table thead tr th span,
+.table tfoot tr th span {
+  color: #fff;
 }
