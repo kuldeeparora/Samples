@@ -1,36 +1,128 @@
+html,
 body {
+  background-color: #999999;
+}
+.container {
+  background-color: #ffffff;
+  padding: 0;
+  width: 1170px;
+  height: 800px;
+}
+.container #page-content-wrapper {
+  padding: 20px;
+}
+.container .col-md-2,
+.container .col-md-10 {
+  float: left;
+}
+.container .col-md-2 {
+  width: 195px;
+}
+.container .col-md-10 {
+  width: 975px;
+}
+.container .fill {
+  width: 100%;
   height: 100%;
+  min-height: 100%;
+  padding: 10px;
 }
-#myNavbar {
-  margin-bottom: 0;
-}
-#myNavbar .dropdown {
-  margin: 10px;
-}
-.panel-container .panel {
-  width: 400px;
-  margin: 0 auto;
-}
-.panel-container .forget-pwd {
-  display: block;
+.container .table {
   clear: both;
-  margin-top: 10px;
+  margin-top: 6px !important;
+  margin-bottom: 6px !important;
+  max-width: none !important;
+  width: 100%;
 }
-.panel-container p strong {
-  color: #003366;
+.container .table .document_name {
+  width: 280px;
 }
-#validateForm .form-control-feedback {
-  right: 10px;
+.container .table .document_created {
+  width: 170px;
 }
-.table tbody tr td .doc-info,
-.table thead tr th .doc-info,
-.table tfoot tr th .doc-info {
+.container .table .document_updated {
+  width: 170px;
+}
+.container .table .document_status {
+  width: 180px;
+}
+.container .table thead {
+  background-color: #f3f3f3;
+}
+.container .table thead tr th {
+  border-bottom: 0;
+}
+.container .table tbody tr td .doc-info,
+.container .table thead tr th .doc-info,
+.container .table tfoot tr th .doc-info {
   display: block;
   font-size: 12px;
   color: #999;
 }
-.table tbody tr td span,
-.table thead tr th span,
-.table tfoot tr th span {
+.container .table tbody tr td span,
+.container .table thead tr th span,
+.container .table tfoot tr th span {
   color: #fff;
+}
+.container .table tbody tr td .label,
+.container .table thead tr th .label,
+.container .table tfoot tr th .label {
+  font-size: 100%;
+}
+.container table.dataTable thead .sorting,
+.container table.dataTable thead .sorting_asc,
+.container table.dataTable thead .sorting_desc,
+.container table.dataTable thead .sorting_asc_disabled,
+.container table.dataTable thead .sorting_desc_disabled {
+  cursor: pointer;
+}
+.container table.dataTable thead .sorting {
+  background: url('../../../images/sort_both.png') no-repeat center right;
+}
+.container table.dataTable thead .sorting_asc {
+  background: url('../../../images/sort_asc.png') no-repeat center right;
+}
+.container table.dataTable thead .sorting_desc {
+  background: url('../../../images/sort_desc.png') no-repeat center right;
+}
+.container table.dataTable thead .sorting_asc_disabled {
+  background: url('../../../images/sort_asc_disabled.png') no-repeat center right;
+}
+.container table.dataTable thead .sorting_desc_disabled {
+  background: url('../../../images/sort_desc_disabled.png') no-repeat center right;
+}
+.container div.dataTables_paginate {
+  float: right;
+  margin: 0;
+}
+.container div.dataTables_paginate ul.pagination {
+  margin: 2px 0;
+  white-space: nowrap;
+}
+.container .document_search {
+  margin-bottom: 30px;
+}
+.container .document_search input[type="search"] {
+  width: 250px !important;
+}
+.container #myNavbar {
+  margin-bottom: 0;
+}
+.container #myNavbar .dropdown {
+  margin: 10px;
+}
+.container .panel-container .panel {
+  width: 400px;
+  margin: 0 auto;
+}
+.container .panel-container .forget-pwd {
+  display: block;
+  clear: both;
+  margin-top: 10px;
+}
+.container .panel-container p strong {
+  color: #003366;
+}
+#validateForm .form-control-feedback {
+  right: 10px;
 }

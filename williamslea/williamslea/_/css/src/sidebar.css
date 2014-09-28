@@ -2,9 +2,6 @@
   z-index: 1000;
   position: relative;
 }
-#page-content-wrapper {
-  padding: 20px;
-}
 /* Sidebar Styles */
 .sidebar-nav {
   position: absolute;
