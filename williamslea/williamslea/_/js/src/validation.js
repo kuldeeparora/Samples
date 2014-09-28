@@ -24,6 +24,13 @@ $(document).ready(function () {
                     }
                 }
             },
+            oldPassword: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please enter a valid password'
+                    }
+                }
+            },
             password: {
                 validators: {
                     notEmpty: {
@@ -47,7 +54,7 @@ $(document).ready(function () {
                     },
                     identical: {
                         field: 'password',
-                        message: 'The password and its confirm are not the same'
+                        message: 'Passwords do not match'
                     }
                 }
             },
