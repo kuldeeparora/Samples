@@ -1,6 +1,8 @@
 $(document).ready(function () {
-    $('#validateForm').bootstrapValidator({
+    $('#validateForm')
+        .bootstrapValidator({
         message: 'This value is not valid',
+        excluded: ':disabled',
         feedbackIcons: {
             valid: 'glyphicon glyphicon-ok',
             invalid: 'glyphicon glyphicon-remove',
@@ -71,6 +73,29 @@ $(document).ready(function () {
                         message: 'Enter answer to memorable question'
                     }
                 }
+            },
+            gender: {
+                validators: {
+                    notEmpty: {
+                        message: 'The gender is required'
+                    }
+                }
+            },
+            'languages[]': {
+                validators: {
+                    choice: {
+                        min: 1,
+                        max: 2,
+                        message: 'Please choose 1 - 2 languages you can speak'
+                    }
+                }
+            },
+            country: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please select your country.'
+                    }
+                }
             }
         }
     })
@@ -81,4 +106,48 @@ $(document).ready(function () {
 
            console.log("tested");
         });
+    $('#createNewDoc') .bootstrapValidator({
+        message: 'This value is not valid',
+        excluded: ':disabled',
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            county: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please select your county.'
+                    }
+                }
+            },
+            country: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please select your country.'
+                    }
+                }
+            }
+        }
+    })
+        .on('success.form.bv', function (e) {
+
+            // Prevent form submission
+            e.preventDefault();
+
+            console.log("tested");
+        });
+
 });
+
+//data-bv-notempty="true"
+//data-bv-notempty-message="The first name is required and cannot be empty"
+
+//data-bv-notempty="true"
+//data-bv-notempty-message="The last name is required and cannot be empty"
+
+
+//data-bv-integer-message="The userid is not valid"
+//data-bv-notempty="true"
+//data-bv-notempty-message="The username is required and cannot be empty"

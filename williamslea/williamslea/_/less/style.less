@@ -14,9 +14,12 @@ html, body {
     .document_subheading, h3 {
       margin-left: 10px;
     }
-    .bg-success {
+    .label-close {
       padding: 10px;
       margin: 10px;
+      .close {
+        line-height: 15px;
+      }
     }
     #document_wrapper {
       margin: 10px;
@@ -37,7 +40,6 @@ html, body {
     min-height:100%;
     padding:10px;
   }
-
   .table {
     clear: both;
     margin-top: 6px !important;
@@ -56,6 +58,9 @@ html, body {
     .document_status {
       width: 180px;
     }
+    .doc-title {
+      cursor: pointer;
+    }
     thead {
       background-color: #f3f3f3;
       tr th {
@@ -73,9 +78,6 @@ html, body {
         display: block;
         font-size: 12px;
         color: #999;
-      }
-      span {
-        color: #fff;
       }
       .label {
         font-size: 100%;
@@ -150,4 +152,39 @@ html, body {
 
 #validateForm .form-control-feedback {
   right: 10px;
+}
+
+#createDoc {
+  h4 {
+    margin-top: 0;
+  }
+}
+
+#popover-content {
+  display: none;
+}
+
+.modal {
+  z-index: 1061;
+  .user-id {
+    display: inline !important;
+    width: 70% !important;
+    float: right;
+  }
+  .user-id-label {
+//    padding: 0;
+    line-height: 30px;
+  }
+}
+
+#radioBtn .notActive{
+  color: #3276b1;
+  background-color: #fff;
+}
+
+#createDoc .modal-dialog  {width:900px;}
+
+#createNewDoc .selectContainer .form-control-feedback {
+  /* Adjust feedback icon position */
+  right: -15px;
 }

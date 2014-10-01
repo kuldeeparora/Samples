@@ -16,9 +16,12 @@ body {
 .container #page-content-wrapper h3 {
   margin-left: 10px;
 }
-.container #page-content-wrapper .bg-success {
+.container #page-content-wrapper .label-close {
   padding: 10px;
   margin: 10px;
+}
+.container #page-content-wrapper .label-close .close {
+  line-height: 15px;
 }
 .container #page-content-wrapper #document_wrapper {
   margin: 10px;
@@ -57,6 +60,9 @@ body {
 .container .table .document_status {
   width: 180px;
 }
+.container .table .doc-title {
+  cursor: pointer;
+}
 .container .table thead {
   background-color: #f3f3f3;
 }
@@ -76,11 +82,6 @@ body {
   display: block;
   font-size: 12px;
   color: #999;
-}
-.container .table tbody tr td span,
-.container .table thead tr th span,
-.container .table tfoot tr th span {
-  color: #fff;
 }
 .container .table tbody tr td .label,
 .container .table thead tr th .label,
@@ -143,4 +144,32 @@ body {
 }
 #validateForm .form-control-feedback {
   right: 10px;
+}
+#createDoc h4 {
+  margin-top: 0;
+}
+#popover-content {
+  display: none;
+}
+.modal {
+  z-index: 1061;
+}
+.modal .user-id {
+  display: inline !important;
+  width: 70% !important;
+  float: right;
+}
+.modal .user-id-label {
+  line-height: 30px;
+}
+#radioBtn .notActive {
+  color: #3276b1;
+  background-color: #fff;
+}
+#createDoc .modal-dialog {
+  width: 900px;
+}
+#createNewDoc .selectContainer .form-control-feedback {
+  /* Adjust feedback icon position */
+  right: -15px;
 }
