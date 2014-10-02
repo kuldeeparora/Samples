@@ -154,13 +154,8 @@ body {
 .modal {
   z-index: 1061;
 }
-.modal .user-id {
-  display: inline !important;
-  width: 70% !important;
-  float: right;
-}
 .modal .user-id-label {
-  line-height: 30px;
+  width: 40px;
 }
 #radioBtn .notActive {
   color: #3276b1;

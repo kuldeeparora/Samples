@@ -89,24 +89,14 @@ $(document).ready(function () {
                         message: 'Please choose 1 - 2 languages you can speak'
                     }
                 }
-            },
-            country: {
-                validators: {
-                    notEmpty: {
-                        message: 'Please select your country.'
-                    }
-                }
             }
         }
     })
         .on('success.form.bv', function (e) {
-
             // Prevent form submission
             e.preventDefault();
-
-           console.log("tested");
         });
-    $('#createNewDoc') .bootstrapValidator({
+    $('#createNewDoc').bootstrapValidator({
         message: 'This value is not valid',
         excluded: ':disabled',
         feedbackIcons: {
@@ -115,6 +105,50 @@ $(document).ready(function () {
             validating: 'glyphicon glyphicon-refresh'
         },
         fields: {
+            firstName: {
+                validators: {
+                    notEmpty: {
+                        message: 'First Name is required and cannot be empty'
+                    },
+                    regexp: {
+                        regexp: /^[a-zA-Z\s,'-]*$/,
+                        message: 'Please enter a valid first name'
+                    }
+                }
+            },
+            lastName: {
+                validators: {
+                    notEmpty: {
+                        message: 'Last Name is required and cannot be empty'
+                    },
+                    regexp: {
+                        regexp: /^[A-Za-z]+$/,
+                        message: 'Please enter a valid Last name'
+                    }
+                }
+            },
+            address1: {
+                validators: {
+                    notEmpty: {
+                        message: 'Address is required and cannot be empty'
+                    },
+                    regexp: {
+                        regexp: /^[a-zA-Z0-9\s,'-]*$/,
+                        message: 'Please enter a valid address'
+                    }
+                }
+            },
+            userId: {
+                validators: {
+                    notEmpty: {
+                        message: 'User Id is required and cannot be empty'
+                    },
+                    regexp: {
+                        regexp: /^[0-9]*$/,
+                        message: 'Please enter a valid User ID'
+                    }
+                }
+            },
             county: {
                 validators: {
                     notEmpty: {
@@ -128,26 +162,22 @@ $(document).ready(function () {
                         message: 'Please select your country.'
                     }
                 }
+            },
+            postcode: {
+                validators: {
+                    notEmpty: {
+                        message: 'Post Code is required and cannot be empty'
+                    },
+                    regexp: {
+                        regexp: /^[A-Z]{1,2}[0-9]{1,2} ?[0-9][A-Z]{2}$/i,
+                        message: 'Please enter a valid Post Code'
+                    }
+                }
             }
         }
     })
         .on('success.form.bv', function (e) {
-
             // Prevent form submission
             e.preventDefault();
-
-            console.log("tested");
         });
-
 });
-
-//data-bv-notempty="true"
-//data-bv-notempty-message="The first name is required and cannot be empty"
-
-//data-bv-notempty="true"
-//data-bv-notempty-message="The last name is required and cannot be empty"
-
-
-//data-bv-integer-message="The userid is not valid"
-//data-bv-notempty="true"
-//data-bv-notempty-message="The username is required and cannot be empty"

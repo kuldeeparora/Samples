@@ -103,7 +103,7 @@
                                         Addressee: Thomas Sterling
                                     </span>
                                 </td>
-                                <td>Mortgage Collections}"}</td>
+                                <td>Mortgage Collections</td>
                                 <td>CID102345</td>
                                 <td>Yesterday at 11:50</td>
                             </tr>
@@ -245,11 +245,10 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Change Password</h4>
+                <h4 class="modal-title">Create Document</h4>
             </div>
 
             <div class="modal-body">
-                <!-- The form is placed inside the body of modal -->
                     <h4>Complaint letter</h4>
                     <p>Department: Mortgage Collections</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis mi elementum, feugiat quam id, congue nibh.</p>
@@ -260,7 +259,7 @@
                         <label class="col-lg-3 control-label">Brand</label>
                         <div class="col-lg-8">
                             <div class="btn-group" data-toggle="buttons">
-                                <label class="btn btn-default">
+                                <label class="btn btn-default active">
                                     <input type="radio" name="bank" value="clydesdale" /> Clydesdale Bank
                                 </label>
                                 <label class="btn btn-default">
@@ -273,19 +272,19 @@
                     <div class="form-group">
                         <label class="col-lg-3 control-label">Full name</label>
                         <div class="col-lg-3">
-                            <input type="text" class="form-control" name="firstName" placeholder="First name" />
+                            <input type="text" class="form-control" name="firstName" placeholder="First name" rel="tooltip" title="Alphabet or spaces are allowed" />
                         </div>
                         <label class="col-lg-2 control-label">Last name</label>
                         <div class="col-lg-3">
-                            <input type="text" class="form-control" name="lastName" placeholder="Last name"  />
+                            <input type="text" class="form-control" name="lastName" placeholder="Last name" />
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label class="col-lg-3 control-label">User ID</label>
+                        <div class="control-label col-lg-1 user-id-label">0001\</div>
                         <div class="col-lg-3">
-                            <div class="col-lg-1 user-id-label">0001\</div>
-                            <input type="text" class="form-control user-id col-lg-2" name="userid" />
+                            <input type="text" class="form-control user-id col-lg-2" name="userId" />
 
                         </div>
                     </div>
@@ -293,14 +292,14 @@
                     <div class="form-group">
                         <label class="col-lg-3 control-label">Address 1</label>
                         <div class="col-lg-3">
-                            <input type="text" class="form-control" name="address"  />
+                            <input type="text" class="form-control" name="address1" rel="tooltip" title="Alpha-numerical values and spaces are allowed"/>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label class="col-lg-3 control-label">Address 2(optional)</label>
                         <div class="col-lg-3">
-                            <input type="text" class="form-control" name="address"  />
+                            <input type="text" class="form-control" name="address2" rel="tooltip" title="Alpha-numerical values and spaces are allowed"/>
                         </div>
                     </div>
 
@@ -568,7 +567,7 @@
                     <div class="form-group">
                         <label class="col-lg-3 control-label">Postcode</label>
                         <div class="col-lg-3">
-                            <input type="text" class="form-control" name="postcode"  />
+                            <input type="text" class="form-control" name="postcode" rel="tooltip" title="Alpha-numerical values and spaces are allowed"/>
                         </div>
                     </div>
 
@@ -589,7 +588,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Create Document</h4>
+                <h4 class="modal-title">Change Password</h4>
             </div>
 
             <div class="modal-body">

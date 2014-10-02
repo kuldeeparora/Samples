@@ -14,9 +14,18 @@ $(document).ready(function(){
         'placement': 'right'
     });
 
+    $('[rel=tooltip]').tooltip();
+
     // close button of label
     $('.label-close').on('click', '.close', function() {
         $('.label-close').hide();
+    });
+
+    // tooltip on focus for input
+    $("#createNewDoc [rel=tooltip]").tooltip({ selector: "[title]",
+        placement: "bottom",
+        trigger: "focus",
+        animation: false
     });
 
 });
