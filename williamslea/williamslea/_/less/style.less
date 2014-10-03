@@ -11,6 +11,7 @@ html, body {
   #page-content-wrapper {
     padding: 0;
     border-left: 1px solid #ccc;
+    height: 750px;
     .document_subheading, h3 {
       margin-left: 10px;
     }
@@ -21,8 +22,15 @@ html, body {
         line-height: 15px;
       }
     }
+    .no-result {
+      text-align: center;
+    }
     #document_wrapper {
       margin: 10px;
+      .page-number {
+        float: left;
+        margin-right: 10px;
+      }
     }
   }
   .col-md-2, .col-md-10 {
@@ -186,4 +194,14 @@ html, body {
 #createNewDoc .selectContainer .form-control-feedback {
   /* Adjust feedback icon position */
   right: -15px;
+}
+
+.checkbox {
+ font-weight: normal;
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  .doc-info {
+    margin-left: 22px;
+  }
 }
