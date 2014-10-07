@@ -43,9 +43,9 @@
 
 <div id="sidebar-wrapper" class="col-xs-2">
     <ul class="sidebar-nav">
-        <li class="active"><a href="#">My documents <span class="label label-default">2</span></a></li>
+        <li><a href="#">My documents <span class="label label-default">2</span></a></li>
         <li><a href="#">Create document</a></li>
-        <li><a href="#">Approvals <span class="label label-default">5</span></a></li>
+        <li class="active"><a href="#">Approvals <span class="label label-default">5</span></a></li>
         <li><a href="#">Administration</a></li>
         <li class="last"><a href="#">Training material</a></li>
     </ul>
@@ -53,16 +53,10 @@
 <!-- /#sidebar-wrapper -->
 <div id="page-content-wrapper" class="col-xs-10 fill">
 
-<p class="bg-success label-close">Complaint letter successfully deleted
-    <button type="button" class="close">
-        <span class="glyphicon glyphicon-remove"></span>
-    </button>
-</p>
-
-<h3>My Documents</h3>
+    <h3>Approvals</h3>
 
 <div id="document_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
-<div class="row document_search">
+    <div class="row document_search">
     <div class="col-xs-12  form-group">
         <!--<span class="glyphicon glyphicon-glass"></span>-->
         <li class="dropdown">
@@ -79,38 +73,63 @@
                 <li class="status">
                     <label>Status</label>
                 </li>
-                <li class="divider"></li>
                 <li class="filter-content ">
                     <label class="checkbox">
                         <input type="checkbox" value="option1">Pending Approval
                         <span>(10)</span>
                     </label>
                 </li>
-                <li class="divider"></li>
-                <li class="filter-content">
-                    <label class="checkbox">
-                        <input type="checkbox" value="option1">Pending local print
-                        <span>(10)</span>
-                    </label>
-                </li>
-                <li class="divider"></li>
                 <li class="filter-content">
                     <label class="checkbox">
                         <input type="checkbox" value="option1">Rejected
+                        <span>(10)</span>
+                    </label>
+                </li>
+                <li class="status">
+                    <label>Department</label>
+                </li>
+                <li class="filter-content">
+                    <label class="checkbox">
+                        <input type="checkbox" value="option1">Mortgage Collections
                         <span>(1)</span>
                     </label>
                 </li>
-                <li class="divider"></li>
                 <li class="filter-content">
                     <label class="checkbox">
-                        <input type="checkbox" value="option1">Submitted to print
+                        <input type="checkbox" value="option1">Marketing and Sales
                         <span>(5)</span>
                     </label>
                 </li>
-                <li class="divider"></li>
                 <li class="filter-content">
                     <label class="checkbox">
-                        <input type="checkbox" value="option1">Submitted to archive
+                        <input type="checkbox" value="option1">Human Resources
+                        <span>(8)</span>
+                    </label>
+                </li>
+                <li class="status">
+                    <label>Composer</label>
+                </li>
+                <li class="filter-content">
+                    <label class="checkbox">
+                        <input type="checkbox" value="option1">Jane Davis
+                        <span>(1)</span>
+                    </label>
+                </li>
+                <li class="filter-content">
+                    <label class="checkbox">
+                        <input type="checkbox" value="option1">John Adams
+                        <span>(5)</span>
+                    </label>
+                </li>
+                <li class="filter-content">
+                    <label class="checkbox">
+                        <input type="checkbox" value="option1">Alice Smith
+                        <span>(8)</span>
+                    </label>
+                </li>
+                <li class="filter-content">
+                    <label class="checkbox">
+                        <input type="checkbox" value="option1">Andy Jones
                         <span>(8)</span>
                     </label>
                 </li>
@@ -129,190 +148,8 @@
     </div>
 
 </div>
-<div class="row">
-    <div class="col-xs-12">
-        <div class="page-number">1-10 of 50 documents</div>
-        <div>
-            <button class="btn btn-primary">
-                <i class="fa fa-repeat"></i>
-            </button>
-            <button class="btn btn-primary" data-toggle="modal" data-target="#deleteDocument">
-                <i class="fa fa-trash"></i>
-            </button>
-        </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col-xs-12">
-        <table id="document"
-               class="table table-striped table-bordered table-condensed dataTable no-footer"
-               cellspacing="0" width="100%" role="grid">
-            <thead>
-            <tr role="row">
-                <th class="sorting_asc document_name" rowspan="1" colspan="1">
-                    Document name
-                </th>
-                <th class="sorting_desc document_created" rowspan="1" colspan="1">
-                    Created
-                </th>
-                <th class="sorting document_updated" rowspan="1" colspan="1">
-                    Updated
-                </th>
-                <th class="sorting document_status" rowspan="1" colspan="1">
-                    Status
-                </th>
-            </tr>
-            </thead>
+    <p class="bg-primary label-close no-result">0 documents with pending approval status. <a href="#">View all approvals</a></p>
 
-            <tbody>
-            <tr role="row" class="odd">
-                <td>
-                    <label class="checkbox">
-                        <input type="checkbox" value="option1" id="inlineCheckbox1"> Accounts in arrears
-                        <span class="doc-info">Addressee: Thomas Sterling</span>
-                    </label>
-                </td>
-                <td>Yesterday at 11:50</td>
-                <td>Yesterday at 11:50</td>
-                <td>
-                    <span class="label label-warning">Pending approval</span>
-                </td>
-            </tr>
-            <tr role="row" class="even">
-                <td>
-                    <label class="checkbox">
-                        <input type="checkbox" value="option1" id="inlineCheckbox2"> Accounts in arrears
-                        <span class="doc-info">Addressee: Thomas Sterling</span>
-                    </label>
-                </td>
-                <td>Yesterday at 11:50</td>
-                <td>Yesterday at 11:50</td>
-                <td>
-                    <a href="#" class="label label-danger pop-create" data-toggle="modal" data-target="#createEdit">Rejected</a>
-                </td>
-            </tr>
-            <tr role="row" class="odd">
-                <td>
-                    <label class="checkbox">
-                        <span class="glyphicon glyphicon-lock"></span>
-                        Accounts in arrears
-                        <span class="doc-info">Addressee: Thomas Sterling</span>
-                    </label>
-                </td>
-                <td>Yesterday at 11:50</td>
-                <td>Yesterday at 11:50</td>
-                <td>
-                    <span class="label label-warning">Pending approval</span>
-                </td>
-            </tr>
-            <tr role="row" class="even">
-                <td>
-                    <label class="checkbox">
-                        <input type="checkbox" value="option1" id="inlineCheckbox3" disabled> Accounts in arrears
-                        <span class="doc-info">Addressee: Thomas Sterling</span>
-                    </label>
-                </td>
-                <td>Yesterday at 11:50</td>
-                <td>Yesterday at 11:50</td>
-                <td>
-                    <a href="#" class="label label-danger pop-create" data-toggle="modal" data-target="#createEdit">Rejected</a>
-                </td>
-            </tr>
-            <tr role="row" class="odd">
-                <td>
-                    <label class="checkbox">
-                        <input type="checkbox" value="option1" id="inlineCheckbox4"> Accounts in arrears
-                        <span class="doc-info">Addressee: Thomas Sterling</span>
-                    </label>
-                </td>
-                <td>Today at 14:22</td>
-                <td>Today at 14:22</td>
-                <td>
-                    <span class="label label-success">Pending local print</span>
-                </td>
-            </tr>
-            <tr role="row" class="even">
-                <td>
-                    <label class="checkbox">
-                        <input type="checkbox" value="option1" id="inlineCheckbox5"> Accounts in arrears
-                        <span class="doc-info">Addressee: Thomas Sterling</span>
-                    </label>
-                </td>
-                <td>Today at 14:22</td>
-                <td>Today at 14:22</td>
-                <td>
-                    <span class="label label-success">Pending local print</span>
-                </td>
-            </tr>
-            <tr role="row" class="odd">
-                <td>
-                    <label class="checkbox">
-                        <input type="checkbox" value="option1" id="inlineCheckbox6" disabled> Accounts in arrears
-                        <span class="doc-info">Addressee: Thomas Sterling</span>
-                    </label>
-                </td>
-                <td>Today at 14:45</td>
-                <td>Today at 14:45</td>
-                <td>
-                    <span class="label label-info">Submitted to archive</span>
-                </td>
-            </tr>
-            <tr role="row" class="even">
-                <td>
-                    <label class="checkbox">
-                        <input type="checkbox" value="option1" id="inlineCheckbox7"> Accounts in arrears
-                        <span class="doc-info">Addressee: Thomas Sterling</span>
-                    </label>
-                </td>
-                <td>Today at 14:45</td>
-                <td>Today at 14:45</td>
-                <td>
-                    <span class="label label-info">Submitted to archive</span>
-                </td>
-            </tr>
-            <tr role="row" class="odd">
-                <td>
-                    <label class="checkbox">
-                        <input type="checkbox" value="option1" id="inlineCheckbox8"> Accounts in arrears
-                        <span class="doc-info">Addressee: Thomas Sterling</span>
-                    </label>
-                </td>
-                <td>Today at 10:22</td>
-                <td>Today at 10:22</td>
-                <td>
-                    <span class="label label-primary">Pending approval</span>
-                </td>
-            </tr>
-            <tr role="row" class="even">
-                <td>
-                    <label class="checkbox">
-                        <input type="checkbox" value="option1" id="inlineCheckbox9"> Accounts in arrears
-                        <span class="doc-info">Addressee: Thomas Sterling</span>
-                    </label>
-                </td>
-                <td>Today at 10:22</td>
-                <td>Today at 10:22</td>
-                <td>
-                    <span class="label label-primary">Pending approval</span>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
-<div class="row">
-    <div class="col-xs-12">
-        <div class="dataTables_paginate">
-            <ul class="pagination">
-                <li class="disabled"><a href="#">Previous</a></li>
-                <li class="active" tabindex="0"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">Next</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
 </div>
 
 </div>

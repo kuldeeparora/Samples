@@ -57,6 +57,10 @@ body {
     }
     .no-result {
       text-align: center;
+      a {
+        color: #cccccc;
+        text-decoration: underline ;
+      }
     }
     #document_wrapper {
       margin: 10px;
@@ -111,6 +115,21 @@ body {
     .document_status {
       width: 180px;
     }
+    .document_approve_name {
+      width: 220px;
+    }
+    .document_approve_composer {
+      width: 145px;
+    }
+    .document_approve_submitted {
+      width: 145px;
+    }
+    .document_approve_department {
+      width: 145px;
+    }
+    .document_approve_status {
+      width: 145px;
+    }
     .doc-title {
       cursor: pointer;
     }
@@ -129,6 +148,10 @@ body {
       }
       .doc-info {
         display: block;
+        font-size: 12px;
+        color: #999;
+      }
+      .user-info {
         font-size: 12px;
         color: #999;
       }
@@ -210,7 +233,7 @@ body {
   right: 10px;
 }
 
-#createDoc {
+#createEdit {
   h4 {
     margin-top: 0;
   }
@@ -237,9 +260,9 @@ body {
   background-color: #fff;
 }
 
-#createDoc .modal-dialog  {width:900px;}
+#createEdit .modal-dialog  {width:900px;}
 
-#createNewDoc .selectContainer .form-control-feedback {
+#createEdit .selectContainer .form-control-feedback {
   /* Adjust feedback icon position */
   right: -15px;
 }
@@ -251,6 +274,26 @@ body {
   }
   .doc-info {
     margin-left: 22px;
+  }
+}
+
+.approval-section {
+  .col-xs-7, .col-xs-5 {
+    float: none;
+    display: table-cell;
+  }
+  .col-xs-5 {
+    border-left: 1px solid #ccc;
+    h4 {
+      margin-bottom: 30px;
+    }
+    textarea {
+      width:350px;
+    }
+    .form-group {
+      margin: 30px;
+      float: right;;
+    }
   }
 }
 

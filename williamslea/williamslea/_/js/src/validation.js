@@ -96,7 +96,7 @@ $(document).ready(function () {
             // Prevent form submission
             e.preventDefault();
         });
-    $('#createNewDoc').bootstrapValidator({
+    $('#createEditDoc').bootstrapValidator({
         message: 'This value is not valid',
         excluded: ':disabled',
         feedbackIcons: {
