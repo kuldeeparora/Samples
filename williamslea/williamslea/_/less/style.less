@@ -2,12 +2,45 @@ html, body {
 //  height: 100%;
   background-color: #999999;
 }
+// responsiveness & overwriting default bootstrap.css
+@media (min-width: 768px) {
+  .container {
+    width: 1170px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 1170px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* Account for fixed navbar */
+body {
+  min-width: 970px;
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+/* Finesse the page header spacing */
+.page-header {
+  margin-bottom: 30px;
+}
+.page-header .lead {
+  margin-bottom: 10px;
+}
+
 
 .container {
   background-color: #ffffff;
   padding: 0;
-  width: 1170px;
+//  width: 1170px;
   height: 830px;
+  max-width: none !important;
   #page-content-wrapper {
     padding: 0;
     border-left: 1px solid #ccc;
@@ -30,6 +63,7 @@ html, body {
       .page-number {
         float: left;
         margin-right: 10px;
+        margin-top: 5px;
       }
     }
   }
@@ -54,6 +88,17 @@ html, body {
     margin-bottom: 6px !important;
     max-width: none !important;
     width: 100%;
+    .checkbox {
+      display: inline-block;
+      margin-top: 0;
+      margin-bottom: 0;
+      vertical-align: middle;
+    }
+
+    input[type=checkbox] {
+      position: relative;
+      margin-left: 0;
+    }
     .document_name {
       width: 280px;
     }
@@ -130,6 +175,9 @@ html, body {
     margin-bottom: 30px;
     input[type="search"]{
       width: 250px !important;
+      display: inline-block;
+      margin-bottom: 0;
+      vertical-align: middle;
     }
   }
 
@@ -204,4 +252,64 @@ html, body {
   .doc-info {
     margin-left: 22px;
   }
+}
+
+.dropdown {
+  display: inline-block;
+  .dropdown-menu {
+    width: 200px;
+    padding: 0;
+    padding-bottom: 10px;
+  }
+  .status {
+    padding: 10px 0 0 10px;
+    label {
+      margin: 0;
+    }
+  }
+  li {
+    padding: 0 10px;
+  }
+  a {
+    color: #333333;
+  }
+  li>a:hover, li>a:focus {
+    background-color: transparent;
+  }
+  .filter-head {
+    background-color: #cccccc;
+    line-height: 35px;
+  }
+  .filter-head-link {
+    text-decoration: underline;
+    padding: 0;
+//    margin-right: 10px;
+    line-height: 35px;
+  }
+  .filter-content {
+//    padding: 0 10px;
+    span {
+      color: #cccccc;
+    }
+  }
+}
+.dropdown ul.dropdown-menu:before {
+  content: "";
+  border-bottom: 10px solid #ccc;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  position: absolute;
+  top: -10px;
+  left: 3px;
+  z-index: 10;
+}
+.dropdown ul.dropdown-menu:after {
+  content: "";
+  border-bottom: 12px solid #ccc;
+  border-right: 12px solid transparent;
+  border-left: 12px solid transparent;
+  position: absolute;
+  top: -12px;
+  left: 1px;
+  z-index: 9;
 }

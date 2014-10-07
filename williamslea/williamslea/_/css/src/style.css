@@ -2,11 +2,39 @@ html,
 body {
   background-color: #999999;
 }
+@media (min-width: 768px) {
+  .container {
+    width: 1170px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 1170px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* Account for fixed navbar */
+body {
+  min-width: 970px;
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+/* Finesse the page header spacing */
+.page-header {
+  margin-bottom: 30px;
+}
+.page-header .lead {
+  margin-bottom: 10px;
+}
 .container {
   background-color: #ffffff;
   padding: 0;
-  width: 1170px;
   height: 830px;
+  max-width: none !important;
 }
 .container #page-content-wrapper {
   padding: 0;
@@ -33,6 +61,7 @@ body {
 .container #page-content-wrapper #document_wrapper .page-number {
   float: left;
   margin-right: 10px;
+  margin-top: 5px;
 }
 .container .col-md-2,
 .container .col-md-10 {
@@ -55,6 +84,16 @@ body {
   margin-bottom: 6px !important;
   max-width: none !important;
   width: 100%;
+}
+.container .table .checkbox {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+.container .table input[type=checkbox] {
+  position: relative;
+  margin-left: 0;
 }
 .container .table .document_name {
   width: 280px;
@@ -131,6 +170,9 @@ body {
 }
 .container .document_search input[type="search"] {
   width: 250px !important;
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle;
 }
 .container #myNavbar {
   margin-bottom: 0;
@@ -184,4 +226,60 @@ body {
 }
 .checkbox .doc-info {
   margin-left: 22px;
+}
+.dropdown {
+  display: inline-block;
+}
+.dropdown .dropdown-menu {
+  width: 200px;
+  padding: 0;
+  padding-bottom: 10px;
+}
+.dropdown .status {
+  padding: 10px 0 0 10px;
+}
+.dropdown .status label {
+  margin: 0;
+}
+.dropdown li {
+  padding: 0 10px;
+}
+.dropdown a {
+  color: #333333;
+}
+.dropdown li > a:hover,
+.dropdown li > a:focus {
+  background-color: transparent;
+}
+.dropdown .filter-head {
+  background-color: #cccccc;
+  line-height: 35px;
+}
+.dropdown .filter-head-link {
+  text-decoration: underline;
+  padding: 0;
+  line-height: 35px;
+}
+.dropdown .filter-content span {
+  color: #cccccc;
+}
+.dropdown ul.dropdown-menu:before {
+  content: "";
+  border-bottom: 10px solid #ccc;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  position: absolute;
+  top: -10px;
+  left: 3px;
+  z-index: 10;
+}
+.dropdown ul.dropdown-menu:after {
+  content: "";
+  border-bottom: 12px solid #ccc;
+  border-right: 12px solid transparent;
+  border-left: 12px solid transparent;
+  position: absolute;
+  top: -12px;
+  left: 1px;
+  z-index: 9;
 }
