@@ -1,15 +1,11 @@
 $(document).ready(function(){
     // popover & tooltip position
-    var popOverSettings = {
+    var clickoverettings = {
         placement: 'bottom',
-        container: 'body',
-        html: true,
-        selector: '[rel="popover"]',
-        content: function () {
-            return $('#popover-content').html();
-        }
+        html: true
     }
-    $('body').popover(popOverSettings);
+    $('[rel="clickover"]').clickover(clickoverettings);
+
     $('.doc-info').tooltip({
         'placement': 'right'
     });

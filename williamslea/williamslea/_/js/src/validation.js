@@ -130,7 +130,7 @@ $(document).ready(function () {
             address1: {
                 validators: {
                     notEmpty: {
-                        message: 'Address is required and cannot be empty'
+                        message: 'Mandatory fields cannot be blank'
                     },
                     regexp: {
                         regexp: /^[a-zA-Z0-9\s,'-]*$/,
@@ -141,11 +141,11 @@ $(document).ready(function () {
             userId: {
                 validators: {
                     notEmpty: {
-                        message: 'User Id is required and cannot be empty'
+                        message: 'Customer Id is required and cannot be empty'
                     },
                     regexp: {
                         regexp: /^[0-9]*$/,
-                        message: 'Please enter a valid User ID'
+                        message: 'Please enter a valid Customer ID'
                     }
                 }
             },
@@ -153,6 +153,10 @@ $(document).ready(function () {
                 validators: {
                     notEmpty: {
                         message: 'Please select your county.'
+                    },
+                    regexp: {
+                        regexp: /^[A-Za-z]+$/,
+                        message: 'Please enter a valid county'
                     }
                 }
             },
@@ -160,6 +164,10 @@ $(document).ready(function () {
                 validators: {
                     notEmpty: {
                         message: 'Please select your country.'
+                    },
+                    regexp: {
+                        regexp: /^[A-Za-z]+$/,
+                        message: 'Please enter a valid country'
                     }
                 }
             },
