@@ -63,7 +63,7 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <span class="glyphicon glyphicon-filter"></span>
             </a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu dropdown-filter">
                 <li class="filter-head">
                     <span class="filter-head-text">Filters</span>
                     <a href="#" class="pull-right filter-head-link">
@@ -73,41 +73,37 @@
                 <li class="status">
                     <label>Status</label>
                 </li>
-                <li class="divider"></li>
-                <li class="filter-content ">
+                <li class="filter-content">
                     <label class="checkbox">
                         <input type="checkbox" value="option1">Pending Approval
                         <span>(10)</span>
                     </label>
                 </li>
-                <li class="divider"></li>
                 <li class="filter-content">
                     <label class="checkbox">
                         <input type="checkbox" value="option1">Pending local print
                         <span>(10)</span>
                     </label>
                 </li>
-                <li class="divider"></li>
                 <li class="filter-content">
                     <label class="checkbox">
                         <input type="checkbox" value="option1">Rejected
                         <span>(1)</span>
                     </label>
                 </li>
-                <li class="divider"></li>
                 <li class="filter-content">
                     <label class="checkbox">
                         <input type="checkbox" value="option1">Submitted to print
                         <span>(5)</span>
                     </label>
                 </li>
-                <li class="divider"></li>
                 <li class="filter-content">
                     <label class="checkbox">
                         <input type="checkbox" value="option1">Submitted to archive
                         <span>(8)</span>
                     </label>
                 </li>
+
                 <li class="divider"></li>
                 <li class="filter-content">
                     <button class="btn btn-primary">
@@ -115,6 +111,7 @@
                     </button>
                 </li>
             </ul>
+
         </li>
         <label> Search: </label>
         <input type="search" class="form-control input-sm" placeholder="Search by document name">
@@ -140,16 +137,19 @@
                cellspacing="0" width="100%" role="grid">
             <thead>
             <tr role="row">
-                <th class="sorting_asc document_name" rowspan="1" colspan="1">
+                <th class="sorting_asc document_approve_name" rowspan="1" colspan="1">
                     Document name
                 </th>
-                <th class="sorting_desc document_created" rowspan="1" colspan="1">
-                    Created
+                <th class="sorting_desc document_approve_composer" rowspan="1" colspan="1">
+                    Composer
                 </th>
-                <th class="sorting document_updated" rowspan="1" colspan="1">
-                    Updated
+                <th class="sorting document_approve_submitted" rowspan="1" colspan="1">
+                    Submitted
                 </th>
-                <th class="sorting document_status" rowspan="1" colspan="1">
+                <th class="sorting document_approve_department" rowspan="1" colspan="1">
+                    Submitted
+                </th>
+                <th class="sorting document_approve_status" rowspan="1" colspan="1">
                     Status
                 </th>
             </tr>
@@ -159,12 +159,13 @@
             <tr role="row">
                 <td>
                     <label class="checkbox">
-                        <input type="checkbox" value="option1" id="inlineCheckbox1"> Accounts in arrears
+                        <input type="checkbox" value="option1"> Accounts in arrears
                         <span class="doc-info">Addressee: Thomas Sterling</span>
                     </label>
                 </td>
+                <td>John Adams</td>
                 <td>Yesterday at 11:50</td>
-                <td>Yesterday at 11:50</td>
+                <td>Mortgage Collections</td>
                 <td>
                     <span class="label label-warning">Pending approval</span>
                 </td>
@@ -172,13 +173,13 @@
             <tr role="row">
                 <td>
                     <label class="checkbox">
-                        <input type="checkbox" value="option1" id="inlineCheckbox1"> Accounts in arrears
-                        Accounts in arrears
+                        <input type="checkbox" value="option1"> Accounts in arrears
                         <span class="doc-info">Addressee: Thomas Sterling</span>
                     </label>
                 </td>
+                <td>Jane Doe</td>
                 <td>Yesterday at 11:50</td>
-                <td>Yesterday at 11:50</td>
+                <td>Marketing and Sales</td>
                 <td>
                     <span class="label label-warning">Pending approval</span>
                 </td>
@@ -186,13 +187,13 @@
             <tr role="row">
                 <td>
                     <label class="checkbox">
-                        <input type="checkbox" value="option1" id="inlineCheckbox1"> Accounts in arrears
-                        Accounts in arrears
+                        <input type="checkbox" value="option1"> Complaint letter
                         <span class="doc-info">Addressee: Thomas Sterling</span>
                     </label>
                 </td>
+                <td>John Adams</td>
                 <td>Yesterday at 11:50</td>
-                <td>Yesterday at 11:50</td>
+                <td>Marketing and Sales</td>
                 <td>
                     <span class="label label-warning">Pending approval</span>
                 </td>
@@ -200,13 +201,13 @@
             <tr role="row">
                 <td>
                     <label class="checkbox">
-                        <input type="checkbox" value="option1" id="inlineCheckbox1"> Accounts in arrears
-                        Accounts in arrears
+                        <input type="checkbox" value="option1"> Accounts in arrears
                         <span class="doc-info">Addressee: Thomas Sterling</span>
                     </label>
                 </td>
+                <td>Jane Doe</td>
                 <td>Yesterday at 11:50</td>
-                <td>Yesterday at 11:50</td>
+                <td>Marketing and Sales</td>
                 <td>
                     <span class="label label-warning">Pending approval</span>
                 </td>
@@ -214,13 +215,13 @@
             <tr role="row">
                 <td>
                     <label class="checkbox">
-                        <input type="checkbox" value="option1" id="inlineCheckbox1"> Accounts in arrears
-                        Accounts in arrears
+                        <input type="checkbox" value="option1"> Accounts in arrears
                         <span class="doc-info">Addressee: Thomas Sterling</span>
                     </label>
                 </td>
+                <td>John Adams</td>
                 <td>Yesterday at 11:50</td>
-                <td>Yesterday at 11:50</td>
+                <td>Marketing and Sales</td>
                 <td>
                     <span class="label label-warning">Pending approval</span>
                 </td>
@@ -228,6 +229,7 @@
             </tbody>
         </table>
     </div>
+
 </div>
 </div>
 

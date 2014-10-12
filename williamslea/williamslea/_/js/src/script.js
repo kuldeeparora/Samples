@@ -24,4 +24,10 @@ $(document).ready(function(){
         animation: false
     });
 
+
+    // Submit doc modal
+    $(window).load(function(){
+        $('#submitDoc').modal('show');
+    });
+
 });
