@@ -28,6 +28,7 @@ $(document).ready(function(){
     // Submit doc modal
     $(window).load(function(){
         $('#submitDoc').modal('show');
+        $('#approveDoc').modal('show');
     });
 
 });

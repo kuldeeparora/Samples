@@ -111,8 +111,11 @@ body {
 .container .table .document_status {
   width: 180px;
 }
+.container .table .document_approve0 {
+  width: 30px;
+}
 .container .table .document_approve_name {
-  width: 220px;
+  width: 200px;
 }
 .container .table .document_approve_composer {
   width: 145px;
@@ -125,6 +128,27 @@ body {
 }
 .container .table .document_approve_status {
   width: 145px;
+}
+.container .table .six_column0 {
+  width: 30px;
+}
+.container .table .six_column1 {
+  width: 170px;
+}
+.container .table .six_column2 {
+  width: 130px;
+}
+.container .table .six_column3 {
+  width: 170px;
+}
+.container .table .six_column4 {
+  width: 110px;
+}
+.container .table .six_column5 {
+  width: 110px;
+}
+.container .table .six_column6 {
+  width: 100px;
 }
 .container .table .doc-title {
   cursor: pointer;
