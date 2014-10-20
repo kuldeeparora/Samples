@@ -188,4 +188,63 @@ $(document).ready(function () {
             // Prevent form submission
             e.preventDefault();
         });
+    $('#editUserForm').bootstrapValidator({
+        message: 'This value is not valid',
+        excluded: ':disabled',
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            firstName: {
+                validators: {
+                    notEmpty: {
+                        message: 'First Name is required and cannot be empty'
+                    },
+                    regexp: {
+                        regexp: /^[a-zA-Z\s,'-]*$/,
+                        message: 'Please enter a valid first name'
+                    }
+                }
+            },
+            lastName: {
+                validators: {
+                    notEmpty: {
+                        message: 'Last Name is required and cannot be empty'
+                    },
+                    regexp: {
+                        regexp: /^[A-Za-z]+$/,
+                        message: 'Please enter a valid Last name'
+                    }
+                }
+            },
+            address1: {
+                validators: {
+                    notEmpty: {
+                        message: 'Mandatory fields cannot be blank'
+                    },
+                    regexp: {
+                        regexp: /^[a-zA-Z0-9\s,'-]*$/,
+                        message: 'Please enter a valid address'
+                    }
+                }
+            },
+            userId: {
+                validators: {
+                    notEmpty: {
+                        message: 'Customer Id is required and cannot be empty'
+                    },
+                    regexp: {
+                        regexp: /^[a-zA-Z0-9]+$/,
+                        message: 'Please enter a valid Customer ID'
+                    }
+                }
+            }
+        }
+    })
+        .on('success.form.bv', function (e) {
+            // Prevent form submission
+            e.preventDefault();
+        });
 });

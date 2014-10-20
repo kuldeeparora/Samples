@@ -29,6 +29,15 @@ $(document).ready(function(){
     $(window).load(function(){
         $('#submitDoc').modal('show');
         $('#approveDoc').modal('show');
+        $('#editUser').modal('show');
+        $('#example-collapse').multiselect();
+    });
+
+    $("#input-signature").fileinput({
+        //maxFilesNum: 10,
+        showUpload: false,
+        allowedFileExtensions: ["jpg", "gif", "png"],
+        browseLabel: 'Upload image'
     });
 
 });
