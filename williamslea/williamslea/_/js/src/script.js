@@ -24,20 +24,32 @@ $(document).ready(function(){
         animation: false
     });
 
+    $("#validateForm [rel=tooltip]").tooltip({ selector: "[title]",
+        placement: "bottom",
+        trigger: "focus",
+        animation: false
+    });
 
     // Submit doc modal
     $(window).load(function(){
         $('#submitDoc').modal('show');
         $('#approveDoc').modal('show');
         $('#editUser').modal('show');
-        $('#example-collapse').multiselect();
+        $('#createUser').modal('show');
     });
 
     $("#input-signature").fileinput({
-        //maxFilesNum: 10,
         showUpload: false,
         allowedFileExtensions: ["jpg", "gif", "png"],
         browseLabel: 'Upload image'
     });
+
+    // multiselect
+    $("select[role='multiselect']").multiselect();
+
+    //checkbox password
+    $('.credential input[type="checkbox"]').change(function () {
+        $('.credential-pwd').toggle(this.checked);
+    }).change(); //ensure visible state matches initially
 
 });

@@ -260,20 +260,29 @@ body {
   color: #3276b1;
   background-color: #fff;
 }
-#editUser .modal-dialog {
+#editUser .modal-dialog,
+#createUser .modal-dialog {
   width: 900px;
 }
-#editUser .credential input[type="checkbox"] {
+#editUser .credential,
+#createUser .credential {
+  padding-left: 6px;
+}
+#editUser .credential input[type="checkbox"],
+#createUser .credential input[type="checkbox"] {
   margin-left: 0;
 }
-#editUser .signature-label {
+#editUser .signature-label,
+#createUser .signature-label {
   margin-top: 20px;
 }
-#editUser .signature-label label {
+#editUser .signature-label label,
+#createUser .signature-label label {
   text-align: left;
   padding: 0;
 }
-#editUser .signature-label input[type="file"] {
+#editUser .signature-label input[type="file"],
+#createUser .signature-label input[type="file"] {
   margin-left: 0;
   border: 0;
   border-radius: 0;
@@ -374,10 +383,13 @@ body {
   left: 1px;
   z-index: 9;
 }
-#validateForm .tooltip-inner {
+#validateForm .tooltip-inner,
+#createUserForm .tooltip-inner {
   max-width: 270px;
   width: 270px;
 }
-#validateForm .tooltip-inner ul {
+#validateForm .tooltip-inner ul,
+#createUserForm .tooltip-inner ul {
+  text-align: left !important;
   padding: 0 10px;
 }

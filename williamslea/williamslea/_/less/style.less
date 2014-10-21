@@ -289,10 +289,11 @@ body {
   background-color: #fff;
 }
 
-#editUser .modal-dialog  {width:900px;}
+#editUser .modal-dialog, #createUser .modal-dialog  {width:900px;}
 
-#editUser {
+#editUser, #createUser {
   .credential  {
+    padding-left: 6px;
     input[type="checkbox"] {
       margin-left: 0;
     }
@@ -417,11 +418,11 @@ body {
   z-index: 9;
 }
 
-#validateForm .tooltip-inner {
+#validateForm .tooltip-inner, #createUserForm .tooltip-inner {
   max-width: 270px;
   width: 270px;
   ul {
-//    text-align: left !important;
+    text-align: left !important;
 //    margin: 0 3px;
     padding: 0 10px;
   }
