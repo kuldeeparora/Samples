@@ -60,12 +60,12 @@
 <div id="page-content-wrapper" class="col-xs-10 fill">
 
 
-<p class="bg-success label-close">Users successfully deleted
+<p class="bg-success label-close"><strong>Andrew Smith</strong> successfully created
     <button type="button" class="close">
         <span class="glyphicon glyphicon-remove"></span>
     </button>
 </p>
-<h3>Approvals</h3>
+<h3>Users</h3>
 
 <div id="document_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
 <div class="row document_search">
@@ -169,7 +169,7 @@
         </div>
     </div>
     <div class="col-xs-2">
-        <a href="document.html" class="btn btn-sm btn-default pull-right">Create user</a>
+        <button data-toggle="modal" data-target="#createUser" class="btn btn-sm btn-default pull-right">Create user</button>
     </div>
 </div>
 <div class="row">
@@ -213,8 +213,10 @@
             Bob Smith <span class="user-info">(S123457)</span>
         </label>
     </td>
-    <td>SomeGroupA</td>
-    <td>Mortgage Collections</td>
+    <td>GroupA</td>
+    <td><span class="user-department" data-toggle="tooltip"
+                title="￼Lorem ipsum dolor sit amet, consectetur adipiscing elit. Marketing &
+                                          Sales CID43885 purus tristique, eget euismod orci facilisis. Sed males">Mortgage Collections Mor...</span></td>
     <td>Yes</td>
     <td>Yes</td>
     <td>
@@ -478,7 +480,6 @@
                     </ul>
                 </div>
 
-
                 <p>Are you sure you want to continue?</p>
 
                 <div class="form-group">
@@ -534,7 +535,7 @@
                         <label class="col-lg-3 control-label">Password</label>
                         <div class="col-lg-3">
                             <input type="password" name="password" data-placement="bottom" class="form-control tooltip-html"
-                                   placeholder="New password"  data-html="true" required autofocus rel="tooltip"
+                                   placeholder="New password"  data-html="true" autofocus rel="tooltip"
                                    title="<ul>
                                     <li>Password must contain at lease three of the following character types:</li>
                                     <ul>
@@ -556,13 +557,12 @@
                         <label class="col-lg-3 control-label">Confirm Password</label>
                         <div class="col-lg-3">
                             <input type="password" name="confirmPassword" class="form-control"
-                               placeholder="Confirm Password" required>
+                               placeholder="Confirm Password">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label class="col-lg-3 control-label">Departments</label>
-                        <!--<select id="department"  multiple="multiple"></select>-->
                         <div class="col-lg-3">
                             <select type="text" class="form-control multiselect multiselect-icon" multiple="multiple" role="multiselect">
                                 <option value="0" data-icon="glyphicon-picture">Mortgage Collections</option>
@@ -583,31 +583,8 @@
                         </div>
                     </div>
 
-                    <div class="signature-label form-group">
-                        <div class="col-lg-3"></div>
-                        <div class="col-lg-8">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">Signature block</div>
-                                <div class="panel-body">
-                                    <div class="col-lg-12 form-group">
-                                        <label class="col-lg-3 control-label">Signature name</label>
-
-                                        <div class="col-lg-9">
-                                            <input type="text" class="form-control" placeholder="Enter a name"/>
-                                        </div>
-                                    </div>
-                                    <div class="signature-label form-group col-lg-12">
-                                        <div class="col-lg-12 signature-input">
-                                            <input id="input-signature" type="file" multiple=false class="file-loading">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                     <div class="form-group">
-                        <div class="col-md-4 col-md-offset-4">
+                        <div class="col-md-5 col-md-offset-5">
                              <a href="#" class="btn btn-sm btn-default">Cancel</a>
                             <button type="submit" class="btn btn-sm btn-default">Save</button>
                         </div>

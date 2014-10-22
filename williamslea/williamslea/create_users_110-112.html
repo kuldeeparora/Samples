@@ -60,7 +60,7 @@
 <div id="page-content-wrapper" class="col-xs-10 fill">
 
 
-<p class="bg-success label-close">Users successfully deleted
+<p class="bg-success label-close"><strong>Andrew Smith</strong> successfully deleted
     <button type="button" class="close">
         <span class="glyphicon glyphicon-remove"></span>
     </button>
@@ -169,7 +169,7 @@
         </div>
     </div>
     <div class="col-xs-2">
-        <a href="document.html" class="btn btn-sm btn-default pull-right">Create user</a>
+        <button data-toggle="modal" data-target="#createUser" class="btn btn-sm btn-default pull-right">Create user</button>
     </div>
 </div>
 <div class="row">
@@ -213,8 +213,10 @@
             Bob Smith <span class="user-info">(S123457)</span>
         </label>
     </td>
-    <td>SomeGroupA</td>
-    <td>Mortgage Collections</td>
+    <td>GroupA</td>
+    <td><span class="user-department" data-toggle="tooltip"
+                title="￼Lorem ipsum dolor sit amet, consectetur adipiscing elit. Marketing &
+                                          Sales CID43885 purus tristique, eget euismod orci facilisis. Sed males">Mortgage Collections Mor...</span></td>
     <td>Yes</td>
     <td>Yes</td>
     <td>
@@ -459,25 +461,7 @@
 
             <div class="modal-body">
                 <!-- The form is placed inside the body of modal -->
-                <div class="alert alert-danger" role="alert">
-                    <p>
-                        The following users cannot be deleted because you must have at least 1 administrator:
-                    </p>
-                    <ul>
-                        <li>Bob Smith (S123457)</li>
-                        <li>Bob Smith (S123457)</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <p>You are about to delete:</p>
-                    <ul>
-                        <li>Bob Smith (S123457)</li>
-                        <li>Bob Smith (S123457)</li>
-                        <li>Bob Smith (S123457)</li>
-                    </ul>
-                </div>
-
+                    <p>You are about to delete: <strong>Andrew Smith (S123470)</strong>.</p>
 
                 <p>Are you sure you want to continue?</p>
 
@@ -493,18 +477,16 @@
     </div>
 </div>
 
-<div class="modal fade" id="editUser" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="createUser" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Edit User</h4>
+                <h4 class="modal-title">Create A User</h4>
             </div>
 
             <div class="modal-body">
-                <h4>Bob Smith <a href="document.html" class="btn btn-sm btn-primary">Active</a></h4>
-
-                <form id="userForm" method="post" class="form-horizontal" enctype="multipart/form-data">
+                <form id="createUserForm" method="post" class="form-horizontal" enctype="multipart/form-data">
 
                     <div class="form-group">
                         <label class="col-lg-3 control-label">First name</label>
@@ -512,14 +494,14 @@
                         <div class="col-lg-3">
                             <input type="text" class="form-control" name="firstName" placeholder="Enter first name"
                                    rel="tooltip"
-                                   title="Alphabets, spaces, apostrophe and hyphen are allowed" value="John"/>
+                                   title="Alphabets, spaces, apostrophe and hyphen are allowed"/>
                         </div>
                         <label class="col-lg-2 control-label">Last name</label>
 
                         <div class="col-lg-3">
                             <input type="text" class="form-control" name="lastName" placeholder="Enter last name"
                                    rel="tooltip"
-                                   title="Alphabets, spaces, apostrophe and hyphen are allowed" value="Smith"/>
+                                   title="Alphabets, spaces, apostrophe and hyphen are allowed"/>
                         </div>
                     </div>
 
@@ -528,48 +510,48 @@
 
                         <div class="control-label col-lg-1 user-id-label">0001\</div>
                         <div class="col-lg-3">
-                            <input type="text" class="form-control user-id col-lg-2" name="userId" value="S123456"/>
-
+                            <input type="text" class="form-control user-id col-lg-2" name="userId"/>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <div class="col-lg-12">
-                            <label class="col-lg-3 control-label">Credential reset required</label>
-
-                            <div class="col-lg-1 credential">
-                                <label class="checkbox">
-                                    <input type="checkbox" value="option1">
-                                </label>
-                            </div>
+                        <label class="col-lg-3 control-label">Password</label>
+                        <div class="col-lg-3">
+                            <input type="password" name="password" data-placement="bottom" class="form-control tooltip-html"
+                                   placeholder="New password"  data-html="true" autofocus rel="tooltip"
+                                   title="<ul>
+                                    <li>Password must contain at lease three of the following character types:</li>
+                                    <ul>
+                                        <li>Upper case character</li>
+                                        <li>Lower case character</li>
+                                        <li>Numeric character or</li>
+                                        <li>Punctuation character</li>
+                                    </ul>
+                                    <li>Must not contain special characters except these: { } [ ] , . < > ; : ' &#34; ? / | \ ` ~ ! @ # $ % ^ & * ( ) _ - + =</li>
+                        <li>Must be between 8-15 characters</li>
+                        <li>Must not repeat any character more than twice such as zzzz</li>
+                        <li>Must not be the same as the User ID</li>
+                        <li>Must not repeat any of the previous 5 passwords</li>
+                               </ul>" >
                         </div>
+                    </div>
 
-                        <div class="col-lg-12">
-                            <div class="col-lg-3"></div>
-                            <div class="col-lg-3 credential-pwd">
-                                <div class="form-group">
-                                    <label>Password</label>
-                                    <input type="password" name="credential-password" class="form-control"
-                                           placeholder="Password">
-                                </div>
-                                <div class="form-group">
-                                    <label>Confirm Password</label>
-                                    <input type="password" name="credential-confirmPassword" class="form-control"
-                                           placeholder="Confirm Password">
-                                </div>
-                            </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Confirm Password</label>
+                        <div class="col-lg-3">
+                            <input type="password" name="confirmPassword" class="form-control"
+                               placeholder="Confirm Password">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label class="col-lg-3 control-label">Departments</label>
-                        <!--<select id="department"  multiple="multiple"></select>-->
                         <div class="col-lg-3">
                             <select type="text" class="form-control multiselect multiselect-icon" multiple="multiple" role="multiselect">
                                 <option value="0" data-icon="glyphicon-picture">Mortgage Collections</option>
-                                <option value="1" data-icon="glyphicon-link">M & S</option>
-                                <option value="2" data-icon="glyphicon-pencil">H R</option>
-                                <option value="3" data-icon="glyphicon-shopping-cart">V P</option>
+                                <option value="1" data-icon="glyphicon-link">Marketing & Sales</option>
+                                <option value="2" data-icon="glyphicon-pencil">Human Resources</option>
+                                <option value="3" data-icon="glyphicon-shopping-cart">Vestibulum Placerat</option>
                             </select>
                         </div>
 
@@ -577,33 +559,10 @@
                         <div class="col-lg-3">
                             <select type="text" class="form-control multiselect multiselect-icon" multiple="multiple" role="multiselect">
                                 <option value="0" data-icon="glyphicon-picture">Mortgage Collections</option>
-                                <option value="1" data-icon="glyphicon-link">M & S</option>
-                                <option value="2" data-icon="glyphicon-pencil">H R</option>
-                                <option value="3" data-icon="glyphicon-shopping-cart">V P</option>
+                                <option value="1" data-icon="glyphicon-link">Marketing & Sales</option>
+                                <option value="2" data-icon="glyphicon-pencil">Human Resources</option>
+                                <option value="3" data-icon="glyphicon-shopping-cart">Vestibulum Placerat</option>
                             </select>
-                        </div>
-                    </div>
-
-                    <div class="signature-label form-group">
-                        <div class="col-lg-3"></div>
-                        <div class="col-lg-8">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">Signature block</div>
-                                <div class="panel-body">
-                                    <div class="col-lg-12 form-group">
-                                        <label class="col-lg-3 control-label">Signature name</label>
-
-                                        <div class="col-lg-9">
-                                            <input type="text" class="form-control" placeholder="Enter a name"/>
-                                        </div>
-                                    </div>
-                                    <div class="signature-label form-group col-lg-12">
-                                        <div class="col-lg-12 signature-input">
-                                            <input id="input-signature" type="file" multiple=false class="file-loading">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
 

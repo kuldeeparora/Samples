@@ -129,6 +129,18 @@ body {
 .container .table .document_approve_status {
   width: 145px;
 }
+.container .table .three_column0 {
+  width: 30px;
+}
+.container .table .three_column1 {
+  width: 200px;
+}
+.container .table .three_column2 {
+  width: 500px;
+}
+.container .table .three_column3 {
+  width: 200px;
+}
 .container .table .six_column0 {
   width: 30px;
 }
@@ -384,12 +396,24 @@ body {
   z-index: 9;
 }
 #validateForm .tooltip-inner,
+#userForm .tooltip-inner,
 #createUserForm .tooltip-inner {
   max-width: 270px;
   width: 270px;
 }
 #validateForm .tooltip-inner ul,
+#userForm .tooltip-inner ul,
 #createUserForm .tooltip-inner ul {
   text-align: left !important;
   padding: 0 10px;
+}
+.multiselect-container {
+  width: 400px;
+}
+.multiselect-container label {
+  float: left;
+  width: 250px;
+}
+.multiselect-container .multiselect-textbox {
+  width: 100px;
 }

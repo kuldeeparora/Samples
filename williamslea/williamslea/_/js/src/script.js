@@ -10,6 +10,10 @@ $(document).ready(function(){
         'placement': 'right'
     });
 
+    $('.user-department').tooltip({
+        'placement': 'right'
+    });
+
     $('[rel=tooltip]').tooltip();
 
     // close button of label
@@ -35,7 +39,7 @@ $(document).ready(function(){
         $('#submitDoc').modal('show');
         $('#approveDoc').modal('show');
         $('#editUser').modal('show');
-        $('#createUser').modal('show');
+        $('#editGroup').modal('show');
     });
 
     $("#input-signature").fileinput({
@@ -45,7 +49,19 @@ $(document).ready(function(){
     });
 
     // multiselect
-    $("select[role='multiselect']").multiselect();
+    //$("select[role='multiselect']").multiselect();
+
+    $("select[role='multiselect']").multiselect({
+        templates: {
+            //button: '<button type="button" class="multiselect dropdown-toggle" data-toggle="dropdown"></button>',
+            //ul: '<ul class="multiselect-container dropdown-menu"></ul>',
+            //filter: '<li class="multiselect-item filter"><div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span><input class="form-control multiselect-search" type="text"></div></li>',
+            //filterClearBtn: '<span class="input-group-btn"><button class="btn btn-default multiselect-clear-filter" type="button"><i class="glyphicon glyphicon-remove-circle"></i></button></span>',
+            li: '<li><a href="javascript:void(0);"><label></label><input class="form-control multiselect-textbox" type="text" value="test"></a></li>asas'
+            //divider: '<li class="multiselect-item divider"></li>',
+            //liGroup: '<li class="multiselect-item group"><label class="multiselect-group"></label></li>'
+        }
+    });
 
     //checkbox password
     $('.credential input[type="checkbox"]').change(function () {
