@@ -354,4 +354,90 @@ $(document).ready(function () {
             // Prevent form submission
             e.preventDefault();
         });
+    $('#groupValidate').bootstrapValidator({
+        message: 'This value is not valid',
+        excluded: ':disabled',
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            firstName: {
+                validators: {
+                    notEmpty: {
+                        message: 'First Name is required and cannot be empty'
+                    },
+                    regexp: {
+                        regexp: /^[a-zA-Z\s,'-]*$/,
+                        message: 'Please enter a valid first name'
+                    }
+                }
+            },
+            lastName: {
+                validators: {
+                    notEmpty: {
+                        message: 'Last Name is required and cannot be empty'
+                    },
+                    regexp: {
+                        regexp: /^[A-Za-z]+$/,
+                        message: 'Please enter a valid Last name'
+                    }
+                }
+            },
+            password: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please enter a valid password'
+                    },
+                    stringLength: {
+                        min: 6,
+                        max: 12,
+                        message: 'The username must be more than 6 and less than 12 characters long'
+                    },
+                    identical: {
+                        field: 'confirmPassword',
+                        message: 'The password and its confirm are not the same'
+                    }
+                }
+            },
+            confirmPassword: {
+                validators: {
+                    notEmpty: {
+                        message: 'The confirm password is required and can\'t be empty'
+                    },
+                    identical: {
+                        field: 'password',
+                        message: 'Passwords do not match'
+                    }
+                }
+            },
+            address1: {
+                validators: {
+                    notEmpty: {
+                        message: 'Mandatory fields cannot be blank'
+                    },
+                    regexp: {
+                        regexp: /^[a-zA-Z0-9\s,'-]*$/,
+                        message: 'Please enter a valid address'
+                    }
+                }
+            },
+            userId: {
+                validators: {
+                    notEmpty: {
+                        message: 'Customer Id is required and cannot be empty'
+                    },
+                    regexp: {
+                        regexp: /^[a-zA-Z0-9]+$/,
+                        message: 'Please enter a valid Customer ID'
+                    }
+                }
+            }
+        }
+    })
+        .on('success.form.bv', function (e) {
+            // Prevent form submission
+            e.preventDefault();
+        });
 });

@@ -40,6 +40,7 @@ $(document).ready(function(){
         $('#approveDoc').modal('show');
         $('#editUser').modal('show');
         $('#editGroup').modal('show');
+        $('#editDepartment').modal('show');
     });
 
     $("#input-signature").fileinput({
@@ -57,7 +58,7 @@ $(document).ready(function(){
             //ul: '<ul class="multiselect-container dropdown-menu"></ul>',
             //filter: '<li class="multiselect-item filter"><div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span><input class="form-control multiselect-search" type="text"></div></li>',
             //filterClearBtn: '<span class="input-group-btn"><button class="btn btn-default multiselect-clear-filter" type="button"><i class="glyphicon glyphicon-remove-circle"></i></button></span>',
-            li: '<li><a href="javascript:void(0);"><label></label><input class="form-control multiselect-textbox" type="text" value="test"></a></li>asas'
+            li: '<li><a href="javascript:void(0);"><label></label><input class="form-control multiselect-textbox" type="text" value="test"></a></li>'
             //divider: '<li class="multiselect-item divider"></li>',
             //liGroup: '<li class="multiselect-item group"><label class="multiselect-group"></label></li>'
         }
