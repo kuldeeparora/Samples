@@ -15,6 +15,61 @@
 .sidebar-nav .nav-subsection {
   padding-left: 20px;
 }
+.sidebar-nav .sidebar-filter {
+  position: relative;
+  top: 100%;
+  left: 0px;
+  float: left;
+  width: 100%;
+  padding: 5px 0px;
+  margin: 40px 0px 0px;
+  font-size: 14px;
+  text-align: left;
+  list-style: none outside none;
+  background-color: #FFF;
+  background-clip: padding-box;
+}
+.sidebar-nav .sidebar-filter li {
+  line-height: 20px;
+  padding: 0px;
+}
+.sidebar-nav .sidebar-filter .status {
+  padding: 10px 0px 0px 0px;
+}
+.sidebar-nav .sidebar-filter .status label {
+  display: block;
+}
+.sidebar-nav .sidebar-filter .filter-head {
+  background-color: #cccccc;
+  line-height: 35px;
+}
+.sidebar-nav .sidebar-filter .filter-head-link {
+  text-decoration: underline;
+  padding: 0;
+  line-height: 35px;
+  margin-right: 10px;
+}
+.sidebar-nav .sidebar-filter .filter-content .checkbox {
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  vertical-align: middle;
+}
+.sidebar-nav .sidebar-filter .filter-content input[type=checkbox] {
+  vertical-align: middle;
+  position: relative;
+  display: inline-block;
+  margin: -3px 8px 0px 0px;
+}
+.sidebar-nav .sidebar-filter .filter-content span {
+  color: #cccccc;
+}
+.sidebar-nav .sidebar-filter .divider {
+  height: 1px;
+  margin: 9px 0px;
+  overflow: hidden;
+  background-color: #E5E5E5;
+}
 .sidebar-nav li {
   text-indent: 20px;
   line-height: 40px;

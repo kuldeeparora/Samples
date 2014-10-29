@@ -32,6 +32,15 @@ body {
 .page-header .lead {
   margin-bottom: 10px;
 }
+.padding12 {
+  padding: 12px;
+}
+#branding {
+  margin: 0;
+}
+.branding-page-content-wrapper {
+  height: 700px !important;
+}
 .container {
   background-color: #ffffff;
   padding: 0;
