@@ -15,15 +15,26 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.router',
+    'ionic'
   ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+    .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+        $urlRouterProvider.when('', '/');
+        $stateProvider
+            .state('start', {
+                url: '/',
+                templateUrl: 'views/main.html',
+                controller: 'MainCtrl'
+            });
+    }])
+    .run(['$ionicPlatform', function($ionicPlatform) {
+
+        $ionicPlatform.ready(function () {
+            /*global navigator*/
+            if (navigator && navigator.splashscreen) {
+                navigator.splashscreen.hide();
+            }
+        });
+
+    }]);
