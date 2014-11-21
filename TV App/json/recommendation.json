@@ -1,0 +1,11 @@
+{
+    "rec_id": "rec12",
+    "account_id": "r456",
+    "channel_id": "ch1",
+    "show_id": "sh3",
+    "date": 1397719800,
+    "recommendation": "highly",
+    "comments": "must watch",
+    "liked": true
+
+}

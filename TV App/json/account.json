@@ -1,0 +1,33 @@
+{
+    "firstname": "Kuldeep",
+    "lastname": "Arora",
+    "password": "12345",
+    "gender": "m",
+    "username": "karora",
+    "email": "abc@abc.com",
+    "Mobile": "12345678",
+    "account_id": "k123",
+    "interest": "sports"
+}
+{
+"firstname": "Rajeev",
+"lastname": "Jha",
+"password": "12345",
+"gender": "m",
+"username": "rjha",
+"email": "abc@abc.com",
+"Mobile": "12345678",
+"account_id": "r456",
+"interest": "music"
+}
+{
+"firstname": "Lala",
+"lastname": "dash",
+"password": "12345",
+"gender": "m",
+"username": "ldash",
+"email": "abc@abc.com",
+"Mobile": "12345678",
+"account_id": "l123",
+"interest": "action"
+}
