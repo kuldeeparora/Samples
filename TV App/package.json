@@ -1,0 +1,11 @@
+{
+  "name": "shows",
+  "version": "1.0.0",
+  "description": "\"Recommend shows to others\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kuldeep Arora <kuldeep.arora@gmail.com>",
+  "license": "ISC"
+}
