@@ -1,0 +1,51 @@
+//
+// Variables
+// --------------------------------------------------
+
+// Breakpoints
+// --------------------------------------------------
+$mq-tiny: 320px;
+$mq-small: 640px;
+$mq-medium: 992px;
+$mq-desktop: 1024px;
+$mq-large: 1200px;
+
+// Global values
+// --------------------------------------------------
+
+
+//== Colors
+
+$white:                 #ffffff;
+$black:                 #000000;
+$grey-dark:             lighten(#000000, 20.0%) !default; //#333
+$gray-slightlight:      lighten(#000000, 40.0%) !default; //#666
+$gray-light:            lighten(#000000, 60%) !default; //#999
+$gray-lighter:          lighten(#000000, 80%) !default; //#ccc
+
+$grey-darkest:          #32232f;
+$gray:                  #404040;
+$light-gray:            #F5F5F5;
+$grey-lightest:         #e2e2e2;
+
+$vm-purple:             #322332;
+$vm-red:                #ff0000;
+$vm-purple-darker:      darken($vm-purple, 5%);
+$super-footer-bgcolor:	#3d3643;
+
+//== Infrastructure
+$rounded-corners-sm: 3px;
+$rounded-corners-lg: 6px;
+
+$bootstrap-default-margin:15; /* used to calculate margins and padding on rows. add this number to existing value */
+$discover-more-padding:10px; /* padding btwn 5xcols desktop - this val must be applied to .discover-more left/right margin as well to ensure even spacing */
+
+
+//== Media Queries Breakpoint
+$min-destop-full:     1215px;
+$max-destop:          1214px;
+$min-destop:          $mq-medium;
+$max-tablet:          991px;
+$min-tablet:          $mq-small;
+$max-mobile:          639px;
+
