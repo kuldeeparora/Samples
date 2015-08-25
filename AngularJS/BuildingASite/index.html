@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="BuildingASite">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../SPA%20Framework/public/libs/js/angular.min.js"></script>
+    <script src="js/boot.js"></script>
+    <script src="js/mainCtrl.js"></script>
+</head>
+<body>
+    <div ng-controller="mainCtrl as main">
+        {{ myName }}
+        <ul>
+            <li ng-repeat="country in main.countries">
+                {{ country.name }}
+                <div ng-controller="stateCtrl as sCtrl">
+                    <ul ng-if="country.name !== 'India'">
+                        <li ng-repeat="state in country.states">
+                            {{state.name}}
+                        </li>
+                    </ul>
+                    <input type="text" name="state" ng-model="sCtrl.newState">
+                    <a href ng-click="sCtrl.addStateTo(country)">Add state {{sCtrl.newState}}</a>
+
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

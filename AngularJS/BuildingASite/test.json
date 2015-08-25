@@ -1,0 +1,35 @@
+[
+  {
+    "name": "India",
+    "code": "in",
+    "states": [
+      {
+        "name": null,
+        "Delhi": "Delhi"
+      },
+      {
+        "name": null,
+        "Mumbai": "Mumbai"
+      }
+    ]
+  },
+  {
+    "name": "United Kingdom",
+    "code": "uk",
+    "states": [
+      {
+        "name": null,
+        "London": "London"
+      },
+      {
+        "name": null,
+        "Birmingham": "Birmingham"
+      }
+    ]
+  },
+  {
+    "name": "Germany",
+    "code": "de",
+    "states": []
+  }
+]
