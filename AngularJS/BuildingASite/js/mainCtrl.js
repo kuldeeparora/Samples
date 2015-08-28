@@ -22,14 +22,21 @@
 
     });
 
-    KD.home.app.controller('stateCtrl', function(){
-        this.addStateTo = function(country){
-            if(!country.states){
-                country.states = [];
-                console.log(country.states);
-            }
-            country.states.push({name: this.newState});
-            this.newState = "";
+    KD.home.app.directive('stateView', function(){
+        return {
+            restrict : 'E',
+            templateUrl: 'state-view.html',
+            controller: function(){
+                this.addStateTo = function(country){
+                    if(!country.states){
+                        country.states = [];
+                        console.log(country.states);
+                    }
+                    country.states.push({name: this.newState});
+                    this.newState = "";
+                }
+            },
+            controllerAs : 'stateCtrl'
         }
     });
 

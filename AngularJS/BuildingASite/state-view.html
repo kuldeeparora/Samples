@@ -1,0 +1,10 @@
+<div>
+    <ul ng-if="country.name !== 'India'">
+        <li ng-repeat="state in country.states">
+            {{state.name}}
+        </li>
+    </ul>
+    <input type="text" name="state" ng-model="sCtrl.newState">
+    <a href ng-click="sCtrl.addStateTo(country)">Add state {{sCtrl.newState}}</a>
+
+</div>
