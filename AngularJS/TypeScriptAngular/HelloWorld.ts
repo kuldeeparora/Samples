@@ -1,7 +1,21 @@
-/**
- * Created by kuldeeparora on 26/08/15.
- */
-var SayHello = function(){
-    let x = "hello world";
-    alert(x);
+class Car{
+    engine: string;
+
+    constructor(engine: string){
+        this.engine = engine;
+    }
+
+    start(){
+        console.log("Start this car" + this.engine);
+    }
+
+    stop(){
+        console.log("Stop this car" + this.engine);
+    }
+}
+
+window.onload = function(){
+    var car = new Car('V8');
+    car.start();
+    car.stop();
 };
