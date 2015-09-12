@@ -31,4 +31,7 @@ Scope
         true - 2 different scope(Child scope has a parent property)
         false - default scope
     Isolated Scope - not visible to parent scope
-        scope - {} - 
+        scope - {} -
+         
+Transclusion 
+     

@@ -68,4 +68,9 @@
         $scope.size = 150;
     })
     
+    Vm.home.app.controller('displayBoxCtrl', function ($scope) {
+        $scope.message = "Abhi main hu";
+    })
+    
+    
 })();
