@@ -9,7 +9,7 @@
            link : function (scope, el, attrs) {
                var fn = $parse(attrs['myClick']);
                el.on('click', function () {
-                   scope.$apply(function () {
+                   scope.$apply(function () { // .$apply - binding get updated
                        fn(scope);
                    });
                });

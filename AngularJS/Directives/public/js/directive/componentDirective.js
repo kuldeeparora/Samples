@@ -5,6 +5,23 @@
 (function(){
     "use strict";
 
+    Vm.home.app.directive('stateDisplay', function () {
+        return {
+            link: function (scope, el, attrs) {
+                var parms = attrs['stateDisplay'].split(' ');
+                var linkVar = parms[0];
+                var classes = parms.slice(1);
+
+                scope.$watch(linkVar, function (newVal) {
+                    el.removeClass(classes.join(' ')); //remove all classes
+                    el.addClass(classes[newVal]);
+                });
+            }
+        };
+    });
+
+
+
     Vm.home.app.directive('infoDirective', function () {
        return {
            templateUrl : '../public/directive/component/userInfoCard.html',
@@ -15,6 +32,10 @@
            },
            controller : function ($scope) {
                $scope.collapsed = ($scope.initialCollapsed === 'true');
+               $scope.nextState = function () {
+                   $scope.user.level++;
+                   $scope.user.level = $scope.user.level % 4;
+               };
                $scope.knightMe = function (user) {
                    user.rank = "knight"
                };

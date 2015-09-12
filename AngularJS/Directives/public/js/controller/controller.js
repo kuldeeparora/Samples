@@ -17,7 +17,8 @@
                'KD',
                "AD",
                "GA"
-           ]
+           ],
+           level : 0
        };
         $scope.user2 = {
             name : 'Deepti Arora',
@@ -30,7 +31,8 @@
                 'KD',
                 "AD",
                 "GA"
-            ]
+            ],
+            level : 1
         };
     });
     
@@ -55,5 +57,15 @@
 
     });
 
+    Vm.home.app.controller('usrtileCtrl', function ($scope) {
+        $scope.user1 = {
+            name: "Luke",
+            selected : false
+        };
+    });
 
+    Vm.home.app.controller('fontWatchCtrl', function ($scope) {
+        $scope.size = 150;
+    })
+    
 })();

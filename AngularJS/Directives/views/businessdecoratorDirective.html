@@ -2,6 +2,7 @@
 <html lang="en" ng-app="moodMatrix">
 <head>
     <meta charset="UTF-8">
+    <title></title>
     <link href="../../libs/bootstrap/css/bootstrap.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="../../libs/angular.min.js"></script>
@@ -9,27 +10,16 @@
 
     <script src="../public/js/boots/baseBoot.js"></script>
     <script src="../public/js/controller/controller.js"></script>
-    <script src="../public/js/directive/componentDirective.js"></script>
-
+    <script src="../public/js/directive/businessdecoratorDirective.js"></script>
     <style>
-        .user-ok {
-
-        }
-        .user-warning {
-            color: yellow;
-        }
-        .user-problem {
-            color: orange;
-        }
-        .user-error {
+        .highlight {
             color: red;
         }
     </style>
 </head>
-<body class="container">
-    <div ng-controller="decoratorCtrl">
-        <info-directive person="user1"></info-directive>
-        <info-directive person="user2"></info-directive>
-    </div>
+<body class="container" ng-controller="usrtileCtrl">
+    <user-tile user="user1">
+
+    </user-tile>
 </body>
 </html>

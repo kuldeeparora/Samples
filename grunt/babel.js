@@ -1,13 +1,11 @@
-module.exports = function(){
+module.exports = function () {
     return {
-        babel: {
+        compile: {
             options: {
                 sourceMap: true
             },
-            dist: {
-                files: {
-                    'dist/app.js': 'src/app.js'
-                }
+            files: {
+                'ecma6/dist/first.js': 'ecma6/src/first.js'
             }
         }
     }
