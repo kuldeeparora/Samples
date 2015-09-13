@@ -17,5 +17,4 @@
             transclude : true
         }
     });
-    
 })();
