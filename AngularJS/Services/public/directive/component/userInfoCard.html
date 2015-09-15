@@ -1,0 +1,21 @@
+<div class="panel panel-primary">
+    <div class="panel-heading" ng-click="collapse()">
+        <span state-display="user.level user-ok user-warning user-error user-problem" >{{ user.name }}</span>
+    </div>
+    <div class="panel-body" ng-hide="collapsed">
+
+        <address></address>
+
+        <h4 ng-show='!!user.friends'>Friends </h4>
+        <ul ng-repeat='friend in user.friends'>
+            <li>{{ friend }}</li>
+            <remove-friend method="removeFriend(friend)"></remove-friend>
+        </ul>
+        <div ng-show="!!user.rank">
+            Rank : {{user.rank}}
+        </div>
+        <button ng-show="!user.rank" class="btn btn-success" ng-click="knightMe(user)">Knight Me</button>
+        <button ng-click="nextState()" class="btn">Next State</button>
+    </div>
+
+</div>
