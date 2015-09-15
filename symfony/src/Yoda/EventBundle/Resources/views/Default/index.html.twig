@@ -1,0 +1,28 @@
+<!-- http://127.0.0.1:8000/app_dev.php/hp -->
+<!DOCTYPE html>
+<html lang="en" ng-app="tva">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/libs/angular.min.js"></script>
+    <script src="/bundles/event/js/commonModule.js"></script>
+    <script src="/bundles/event/js/boots/baseBoot.js"></script>
+    <script src="/bundles/event/js/controller/heroCarouselCtrl.js"></script>
+    <script src="/bundles/event/js/controller/moodMatrixController.js"></script>
+</head>
+<body>
+<div class="homepage" ng-controller="HomeCtrl">
+
+    {{ include('EventBundle:Index:hero_carousel.html.php') }}
+    {{ include('EventBundle:Index:secondary_carousel.html.php') }}
+
+</div>
+
+<div ng-controller="moodCtrl">
+    {% verbatim %}
+        {{ test }}
+    {% endverbatim %}
+</div>
+</body>
+</html>
