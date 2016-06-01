@@ -9,13 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+// Decorator or component decorator - A function that add MetaData to a class, its member or its method arguments. Prefex with @
+// Angular provides build in Decorators
+// No semilcolon to decorators
+// selector - directive name use to reference in html
+// template(view layout) - a component should always have a template
+// {{ }} binding
 var AppComponent = (function () {
     function AppComponent() {
+        this.pageTitle = 'My first Angular';
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: '<h1>My First Angular 2 App</h1>'
+            template: '<div><h1>{{pageTitle}}</h1> <div> My First Angular 2 App</div></div>'
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
