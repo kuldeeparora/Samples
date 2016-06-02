@@ -8,8 +8,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+// import statement allows us to use exported members from external modules
+// can import from third party library, our own modules, or from Angular
+// Component in Angular - identify the member we need
+// '@angular/core' - path of the module containing 'Component' member in this case - module path enclose in quotes
 var core_1 = require('@angular/core');
-// Decorator or component decorator - A function that add MetaData to a class, its member or its method arguments. Prefex with @
+var product_list_component_1 = require("../products/product-list.component");
+// Decorator or component decorator - A function that add MetaData to a class, its member or its method arguments. Prefex with @ & Suffix with ()
 // Angular provides build in Decorators
 // No semilcolon to decorators
 // selector - directive name use to reference in html
@@ -17,12 +22,13 @@ var core_1 = require('@angular/core');
 // {{ }} binding
 var AppComponent = (function () {
     function AppComponent() {
-        this.pageTitle = 'My first Angular';
+        this.pageTitle = 'My first Angular 2';
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: '<div><h1>{{pageTitle}}</h1> <div> My First Angular 2 App</div></div>'
+            template: "<div>\n                <h1>{{pageTitle}}</h1>\n                 <pm-products></pm-products>\n              </div>",
+            directives: [product_list_component_1.ProductListComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
