@@ -5,6 +5,7 @@
 // '@angular/core' - path of the module containing 'Component' member in this case - module path enclose in quotes
 import { Component } from '@angular/core';
 import {ProductListComponent} from "../products/product-list.component";
+import {ProductService} from "../products/product.service";
 
 // Decorator or component decorator - A function that add MetaData to a class, its member or its method arguments. Prefex with @ & Suffix with ()
 // Angular provides build in Decorators
@@ -18,7 +19,8 @@ import {ProductListComponent} from "../products/product-list.component";
                 <h1>{{pageTitle}}</h1>
                  <pm-products> </pm-products>
               </div>`,
-  directives: [ProductListComponent]
+  directives: [ProductListComponent],
+  providers: [ProductService]
 })
 
 // Class defined with class name
