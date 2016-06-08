@@ -13,7 +13,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 // Component in Angular - identify the member we need
 // '@angular/core' - path of the module containing 'Component' member in this case - module path enclose in quotes
 var core_1 = require('@angular/core');
+var http_1 = require("@angular/http");
+require('rxjs/Rx');
 var product_list_component_1 = require("../products/product-list.component");
+var product_service_1 = require("../products/product.service");
 // Decorator or component decorator - A function that add MetaData to a class, its member or its method arguments. Prefex with @ & Suffix with ()
 // Angular provides build in Decorators
 // No semilcolon to decorators
@@ -28,7 +31,8 @@ var AppComponent = (function () {
         core_1.Component({
             selector: 'my-app',
             template: "<div>\n                <h1>{{pageTitle}}</h1>\n                 <pm-products> </pm-products>\n              </div>",
-            directives: [product_list_component_1.ProductListComponent]
+            directives: [product_list_component_1.ProductListComponent],
+            providers: [product_service_1.ProductService, http_1.HTTP_PROVIDERS]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
