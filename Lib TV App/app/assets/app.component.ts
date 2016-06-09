@@ -27,12 +27,13 @@ import {ProductDetailComponent} from "../products/product-detail.component";
                 <a class='navbar-brand'>{{pageTitle}}</a>
                 <ul class='nav navbar-nav'>
                     <li class="nav-item"><a class="nav-link" [routerLink]="['/welcome']">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" [routerLink]="['/products', product.productId]">
-                     {{product.productName}} 
+                    <li class="nav-item"><a class="nav-link" [routerLink]="['/products']">
+                     PP 
                      </a></li>
                 </ul>
             </div>
         </nav>
+        <router-outlet></router-outlet>
      </div>`,
   directives: [ROUTER_DIRECTIVES],
   providers: [ProductService, HTTP_PROVIDERS, ROUTER_PROVIDERS]
@@ -54,4 +55,5 @@ import {ProductDetailComponent} from "../products/product-detail.component";
 // add appropriate datastype - eg string is DataType in this case
 export class AppComponent {
   pageTitle: string = 'TV Lib';
+  constructor(private router: Router) {}
 }

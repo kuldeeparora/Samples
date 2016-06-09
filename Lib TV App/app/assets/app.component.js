@@ -34,7 +34,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "<div>\n        <nav class='navbar navbar-light bg-faded'>\n            <div class='container-fluid'>\n                <a class='navbar-brand'>{{pageTitle}}</a>\n                <ul class='nav navbar-nav'>\n                    <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['/welcome']\">Home</a></li>\n                    <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['/products', product.productId]\">\n                     {{product.productName}} \n                     </a></li>\n                </ul>\n            </div>\n        </nav>\n     </div>",
+            template: "<div>\n        <nav class='navbar navbar-light bg-faded'>\n            <div class='container-fluid'>\n                <a class='navbar-brand'>{{pageTitle}}</a>\n                <ul class='nav navbar-nav'>\n                    <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['/welcome']\">Home</a></li>\n                    <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['/products']\">\n                     PP \n                     </a></li>\n                </ul>\n            </div>\n        </nav>\n        <router-outlet></router-outlet>\n     </div>",
             directives: [router_1.ROUTER_DIRECTIVES],
             providers: [product_service_1.ProductService, http_1.HTTP_PROVIDERS, router_1.ROUTER_PROVIDERS]
         }),
