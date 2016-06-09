@@ -6,9 +6,12 @@
 import { Component } from '@angular/core';
 import {HTTP_PROVIDERS} from "@angular/http";
 import 'rxjs/Rx';
+import {ROUTER_PROVIDERS, Routes, ROUTER_DIRECTIVES, Router} from "@angular/router";
 
 import {ProductListComponent} from "../products/product-list.component";
 import {ProductService} from "../products/product.service";
+import {WelcomeComponent} from "../home/welcome.component";
+import {ProductDetailComponent} from "../products/product-detail.component";
 
 // Decorator or component decorator - A function that add MetaData to a class, its member or its method arguments. Prefex with @ & Suffix with ()
 // Angular provides build in Decorators
@@ -19,12 +22,29 @@ import {ProductService} from "../products/product.service";
 @Component({
   selector: 'my-app',
   template: `<div>
-                <h1>{{pageTitle}}</h1>
-                 <pm-products> </pm-products>
-              </div>`,
-  directives: [ProductListComponent],
-  providers: [ProductService, HTTP_PROVIDERS]
+        <nav class='navbar navbar-light bg-faded'>
+            <div class='container-fluid'>
+                <a class='navbar-brand'>{{pageTitle}}</a>
+                <ul class='nav navbar-nav'>
+                    <li class="nav-item"><a class="nav-link" [routerLink]="['/welcome']">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" [routerLink]="['/products', product.productId]">
+                     {{product.productName}} 
+                     </a></li>
+                </ul>
+            </div>
+        </nav>
+     </div>`,
+  directives: [ROUTER_DIRECTIVES],
+  providers: [ProductService, HTTP_PROVIDERS, ROUTER_PROVIDERS]
 })
+
+@Routes([
+  { path: '/', component: WelcomeComponent },
+  { path: '/welcome', component: WelcomeComponent },
+  { path: '/products', component: ProductListComponent },
+  { path: '/product/:id', component: ProductDetailComponent }
+])
+
 
 // Class defined with class name
 // Class Name - AppComponent in below example - Use PascalCasing
@@ -33,5 +53,5 @@ import {ProductService} from "../products/product.service";
 // pageTitle is property with camelCase
 // add appropriate datastype - eg string is DataType in this case
 export class AppComponent {
-  pageTitle: string = 'My first Angular 2';
+  pageTitle: string = 'TV Lib';
 }

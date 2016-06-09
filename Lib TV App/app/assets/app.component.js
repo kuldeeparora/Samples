@@ -15,8 +15,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var http_1 = require("@angular/http");
 require('rxjs/Rx');
+var router_1 = require("@angular/router");
 var product_list_component_1 = require("../products/product-list.component");
 var product_service_1 = require("../products/product.service");
+var welcome_component_1 = require("../home/welcome.component");
+var product_detail_component_1 = require("../products/product-detail.component");
 // Decorator or component decorator - A function that add MetaData to a class, its member or its method arguments. Prefex with @ & Suffix with ()
 // Angular provides build in Decorators
 // No semilcolon to decorators
@@ -24,17 +27,24 @@ var product_service_1 = require("../products/product.service");
 // template(view layout) - a component should always have a template
 // {{ }} binding
 var AppComponent = (function () {
-    function AppComponent() {
-        this.pageTitle = 'My first Angular 2';
+    function AppComponent(router) {
+        this.router = router;
+        this.pageTitle = 'TV Lib';
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "<div>\n                <h1>{{pageTitle}}</h1>\n                 <pm-products> </pm-products>\n              </div>",
-            directives: [product_list_component_1.ProductListComponent],
-            providers: [product_service_1.ProductService, http_1.HTTP_PROVIDERS]
-        }), 
-        __metadata('design:paramtypes', [])
+            template: "<div>\n        <nav class='navbar navbar-light bg-faded'>\n            <div class='container-fluid'>\n                <a class='navbar-brand'>{{pageTitle}}</a>\n                <ul class='nav navbar-nav'>\n                    <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['/welcome']\">Home</a></li>\n                    <li class=\"nav-item\"><a class=\"nav-link\" [routerLink]=\"['/products', product.productId]\">\n                     {{product.productName}} \n                     </a></li>\n                </ul>\n            </div>\n        </nav>\n     </div>",
+            directives: [router_1.ROUTER_DIRECTIVES],
+            providers: [product_service_1.ProductService, http_1.HTTP_PROVIDERS, router_1.ROUTER_PROVIDERS]
+        }),
+        router_1.Routes([
+            { path: '/', component: welcome_component_1.WelcomeComponent },
+            { path: '/welcome', component: welcome_component_1.WelcomeComponent },
+            { path: '/products', component: product_list_component_1.ProductListComponent },
+            { path: '/product/:id', component: product_detail_component_1.ProductDetailComponent }
+        ]), 
+        __metadata('design:paramtypes', [router_1.Router])
     ], AppComponent);
     return AppComponent;
 }());
