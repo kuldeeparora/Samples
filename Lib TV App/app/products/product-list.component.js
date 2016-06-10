@@ -12,6 +12,7 @@ var core_1 = require("@angular/core");
 var product_filter_pipe_1 = require("./product-filter.pipe");
 var star_component_1 = require("../shared/star.component");
 var product_service_1 = require("./product.service");
+var router_1 = require("@angular/router");
 var ProductListComponent = (function () {
     function ProductListComponent(_productService) {
         this._productService = _productService;
@@ -37,7 +38,7 @@ var ProductListComponent = (function () {
             templateUrl: 'app/products/product-list.component.html',
             styleUrls: ['app/products/product-list.component.css'],
             pipes: [product_filter_pipe_1.ProductFilterPipe],
-            directives: [star_component_1.StarComponent]
+            directives: [star_component_1.StarComponent, router_1.ROUTER_DIRECTIVES]
         }), 
         __metadata('design:paramtypes', [product_service_1.ProductService])
     ], ProductListComponent);

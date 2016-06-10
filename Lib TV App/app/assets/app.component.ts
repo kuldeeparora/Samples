@@ -32,8 +32,8 @@ import {ProductDetailComponent} from "../products/product-detail.component";
                      </a></li>
                 </ul>
             </div>
+            <router-outlet></router-outlet>
         </nav>
-        <router-outlet></router-outlet>
      </div>`,
   directives: [ROUTER_DIRECTIVES],
   providers: [ProductService, HTTP_PROVIDERS, ROUTER_PROVIDERS]

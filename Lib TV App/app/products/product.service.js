@@ -19,10 +19,16 @@ var ProductService = (function () {
     ProductService.prototype.getProducts = function () {
         return this._http.get(this._productUrl)
             .map(function (response) { return response.json(); })
-            .do(function (data) { return console.log("All: " + JSON.stringify(data)); })
+            .do(function (data) { return console.log('All: ' + JSON.stringify(data)); })
             .catch(this.handleError);
     };
+    ProductService.prototype.getProduct = function (id) {
+        return this.getProducts()
+            .map(function (products) { return products.find(function (p) { return p.productId === id; }); });
+    };
     ProductService.prototype.handleError = function (error) {
+        // in a real world app, we may send the server to some remote logging infrastructure
+        // instead of just logging it to the console
         console.error(error);
         return Observable_1.Observable.throw(error.json().error || 'Server error');
     };
