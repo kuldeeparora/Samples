@@ -28,7 +28,7 @@ import {ProductDetailComponent} from "../products/product-detail.component";
                 <ul class='nav navbar-nav'>
                     <li class="nav-item"><a class="nav-link" [routerLink]="['/welcome']">Home</a></li>
                     <li class="nav-item"><a class="nav-link" [routerLink]="['/products']">
-                     PP 
+                     My Library 
                      </a></li>
                 </ul>
             </div>
