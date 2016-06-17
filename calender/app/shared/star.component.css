@@ -1,0 +1,19 @@
+.crop {
+  overflow: hidden;
+}
+
+div {
+  cursor: pointer;
+}
+
+span {
+  display: inline-block;
+  background-color: #bbb;
+  width: 20px;
+  text-align: center;
+  font-size: 15px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 30%;
+  cursor: pointer;
+}
